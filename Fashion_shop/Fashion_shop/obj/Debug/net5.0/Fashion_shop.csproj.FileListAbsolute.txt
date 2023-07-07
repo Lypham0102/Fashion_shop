@@ -42,3 +42,10 @@
 /Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.genruntimeconfig.cache
 /Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/ref/Fashion_shop.dll
 /Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.csproj.CopyComplete
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Npgsql.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/phamcongly/Desktop/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
