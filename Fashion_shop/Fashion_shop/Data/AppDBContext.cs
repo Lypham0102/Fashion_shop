@@ -13,9 +13,15 @@ namespace Fashion_shop.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseNpgsql(Configuration.GetConnectionString("WebApiDatabase"));
+            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Admin> Admin { get; set; }
+
+        public DbSet<Product> Product { get; set; }
+
+        public DbSet<Fashion_shop.Models.Customer> Customer { get; set; }
     }
 }

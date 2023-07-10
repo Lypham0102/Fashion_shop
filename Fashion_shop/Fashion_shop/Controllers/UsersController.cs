@@ -19,10 +19,30 @@ namespace Fashion_shop.Controllers
             _context = context;
         }
 
-        // GET: Users
-        public async Task<IActionResult> Index()
+        [HttpGet]
+        public IActionResult Login()
+        {          
+            return View();
+        }
+
+        // GET: Users(Login)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(User User)
         {
-            return View(await _context.Users.ToListAsync());
+            if (ModelState.IsValid)
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u=>u.UserName == User.UserName && u.Password == User.Password);
+                if(user != null)
+                {
+                    return RedirectToAction("Index", "User");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                }
+            }
+            return View(User);
         }
 
         // GET: Users/Details/5
@@ -33,8 +53,7 @@ namespace Fashion_shop.Controllers
                 return NotFound();
             }
 
-            var user = await _context.Users
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var user = await _context.Users.FindAsync(id);
             if (user == null)
             {
                 return NotFound();

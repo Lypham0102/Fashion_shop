@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4KgTg01b+IUeCvB9GPRFk2GDrNKoHnqmTBx3NFydq/qURDvkJzPAlwwI98GHZMWOR5wrHbtcmXCnphvC/rIwFQ==",
+  "dgSpecHash": "V++cFIlP/cdsro/dsC000WFmsTYADsj0suB+hl8nSiQZldvMRKuJn8Xzc99FTHH3hdZEeaBWk4jhdMFlyFa8tw==",
   "success": true,
   "projectFilePath": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leong\\.nuget\\packages\\entityframework\\6.4.0\\entityframework.6.4.0.nupkg.sha512",
     "C:\\Users\\leong\\.nuget\\packages\\entityframework6.npgsql\\6.4.3\\entityframework6.npgsql.6.4.3.nupkg.sha512",
+    "C:\\Users\\leong\\.nuget\\packages\\fluentassertions\\6.11.0\\fluentassertions.6.11.0.nupkg.sha512",
     "C:\\Users\\leong\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\leong\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\leong\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

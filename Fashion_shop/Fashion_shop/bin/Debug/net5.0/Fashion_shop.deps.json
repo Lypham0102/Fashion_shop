@@ -34,6 +34,7 @@
       "Fashion_shop/1.0.0": {
         "dependencies": {
           "EntityFramework6.Npgsql": "6.4.3",
+          "FluentAssertions": "6.11.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
@@ -365,6 +366,20 @@
         },
         "compile": {
           "lib/netstandard2.1/EntityFramework6.Npgsql.dll": {}
+        }
+      },
+      "FluentAssertions/6.11.0": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.7.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {
+            "assemblyVersion": "6.11.0.0",
+            "fileVersion": "6.11.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/FluentAssertions.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -4016,6 +4031,13 @@
       "sha512": "sha512-iZnc+FlaBaK97zGHR0KS0bnwKQ2gWPpaOoSYNHfjLZ4lr4UEPRFQnh/bpW9Q50ZbNNbDRCs+W12QyVn+sKsSwA==",
       "path": "entityframework6.npgsql/6.4.3",
       "hashPath": "entityframework6.npgsql.6.4.3.nupkg.sha512"
+    },
+    "FluentAssertions/6.11.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aBaagwdNtVKkug1F3imGXUlmoBd8ZUZX8oQ5niThaJhF79SpESe1Gzq7OFuZkQdKD5Pa4Mone+jrbas873AT4g==",
+      "path": "fluentassertions/6.11.0",
+      "hashPath": "fluentassertions.6.11.0.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
