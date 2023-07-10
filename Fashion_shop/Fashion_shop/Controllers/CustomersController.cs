@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fashion_shop.Data;
 using Fashion_shop.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Fashion_shop.Controllers
 {
@@ -18,7 +19,33 @@ namespace Fashion_shop.Controllers
         {
             _context = context;
         }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(Customer Customer)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _context.Customer.FirstOrDefaultAsync(u => u.Username == Customer.Username && u.Password == Customer.Password);
+                if (user != null)
+                {
+                    // Authentication successful, perform login logic
+
+                    // Redirect to the desired page after successful login
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                }
+            }
+            return View(Customer);
+        }
         // GET: Customers
         public async Task<IActionResult> Index()
         {
@@ -34,7 +61,7 @@ namespace Fashion_shop.Controllers
             }
 
             var customer = await _context.Customer
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -54,7 +81,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Gender,Address,PhoneNumber,Day_of_birth,Email,Password,UserName")] Customer customer)
+        public async Task<IActionResult> Create([Bind("id,Name,Gender,Address,PhoneNumber,Day_of_birth,Email,Password,Username")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +113,9 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Gender,Address,PhoneNumber,Day_of_birth,Email,Password,UserName")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Gender,Address,PhoneNumber,Day_of_birth,Email,Password,Username")] Customer customer)
         {
-            if (id != customer.Id)
+            if (id != customer.id)
             {
                 return NotFound();
             }
@@ -102,7 +129,7 @@ namespace Fashion_shop.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CustomerExists(customer.Id))
+                    if (!CustomerExists(customer.id))
                     {
                         return NotFound();
                     }
@@ -125,7 +152,7 @@ namespace Fashion_shop.Controllers
             }
 
             var customer = await _context.Customer
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -147,7 +174,7 @@ namespace Fashion_shop.Controllers
 
         private bool CustomerExists(int id)
         {
-            return _context.Customer.Any(e => e.Id == id);
+            return _context.Customer.Any(e => e.id == id);
         }
     }
 }

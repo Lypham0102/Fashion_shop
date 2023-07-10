@@ -16,8 +16,6 @@ namespace Fashion_shop.Data
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
 
-        public DbSet<User> Users { get; set; }
-
         public DbSet<Admin> Admin { get; set; }
 
         public DbSet<Product> Product { get; set; }
