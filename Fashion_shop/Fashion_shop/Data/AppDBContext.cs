@@ -25,5 +25,7 @@ namespace Fashion_shop.Data
         public DbSet<Fashion_shop.Models.Staff> Staff { get; set; }
 
         public DbSet<Fashion_shop.Models.Product_Type> Product_Type { get; set; }
+
+        public DbSet<Fashion_shop.Models.Bill> Bill { get; set; }
     }
 }
