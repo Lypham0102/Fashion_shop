@@ -429,6 +429,7 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Shop.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Store.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Details_item.cshtml.g.cs
+<<<<<<< HEAD
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.csproj.AssemblyReference.cache
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.GeneratedMSBuildEditorConfig.editorconfig
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.AssemblyInfoInputs.cache
@@ -623,3 +624,6 @@ D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_s
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.csproj.CopyComplete
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.genruntimeconfig.cache
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\ref\Fashion_shop.dll
+=======
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Contact.cshtml.g.cs
+>>>>>>> 2c862c2d31daed8898f21a9e1d8af07c7b86f7ab
