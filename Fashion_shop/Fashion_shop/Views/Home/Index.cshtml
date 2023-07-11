@@ -82,22 +82,26 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="@Url.Action("Store","Home")">Store</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="@Url.Action("","")">Contact</a>
                         </li>
                         <li class="nav-item">
-                            @Html.ActionLink("Login", "Login", "Customers", null, new { @class = "nav-link" })
-                        </li>
-                        @model string
-                        <li class="nav-item">
-                            <p>Username: @Model</p>
+                            @if (String.IsNullOrEmpty(Model))
+                            {
+                                @Html.ActionLink("Login", "Login", "Customers", null, new { @class = "nav-link" })
+                            }
+                            else
+                            {
+                                <a>Xin chào: @Model</a>
+                            }
                         </li>
                     </ul>
+                    
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">

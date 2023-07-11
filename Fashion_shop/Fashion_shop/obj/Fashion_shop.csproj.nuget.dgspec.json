@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj": {}
+    "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj": {}
   },
   "projects": {
-    "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj": {
+    "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj",
+        "projectUniqueName": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj",
         "projectName": "Fashion_shop",
-        "projectPath": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj",
-        "packagesPath": "C:\\Users\\leong\\.nuget\\packages\\",
-        "outputPath": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\obj\\",
+        "projectPath": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj",
+        "packagesPath": "/Users/phamcongly/.nuget/packages/",
+        "outputPath": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leong\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/phamcongly/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -87,6 +86,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -95,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
         }
       }
     }

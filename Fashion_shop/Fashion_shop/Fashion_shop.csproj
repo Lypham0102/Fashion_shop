@@ -84,6 +84,7 @@
     <Content Remove="wwwroot\assets\webfonts\slick.ttf" />
     <Content Remove="wwwroot\assets\webfonts\slick.woff" />
     <Content Remove="wwwroot\assets\" />
+    <Content Remove="Views\Home\shop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\css\bootstrap.min.css" />
