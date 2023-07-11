@@ -93,6 +93,10 @@
                         <li class="nav-item">
                             @Html.ActionLink("Login", "Login", "Customers", null, new { @class = "nav-link" })
                         </li>
+                        @model string
+                        <li class="nav-item">
+                            <p>Username: @Model</p>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar align-self-center d-flex">

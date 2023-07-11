@@ -21,7 +21,12 @@ namespace Fashion_shop.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var userName = Request.Cookies["UserName"];
+            if(userName == null )
+            {
+               return RedirectToAction("Login", "Customers");
+            }
+            return View(model: userName);
         }
 
         public IActionResult Privacy()

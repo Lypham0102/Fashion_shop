@@ -16,10 +16,14 @@ namespace Fashion_shop.Data
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
 
-        public DbSet<Admin> Admin { get; set; }
-
         public DbSet<Product> Product { get; set; }
 
-        public DbSet<Fashion_shop.Models.Customer> Customer { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+
+        public DbSet<Office> Office { get; set; }
+
+        public DbSet<Fashion_shop.Models.Staff> Staff { get; set; }
+
+        public DbSet<Fashion_shop.Models.Product_Type> Product_Type { get; set; }
     }
 }

@@ -10,22 +10,22 @@ using Fashion_shop.Models;
 
 namespace Fashion_shop.Controllers
 {
-    public class AdminsController : Controller
+    public class OfficesController : Controller
     {
         private readonly AppDbContext _context;
 
-        public AdminsController(AppDbContext context)
+        public OfficesController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Admins
+        // GET: Offices
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Admin.ToListAsync());
+            return View(await _context.Office.ToListAsync());
         }
 
-        // GET: Admins/Details/5
+        // GET: Offices/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace Fashion_shop.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (admin == null)
+            var office = await _context.Office
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (office == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(office);
         }
 
-        // GET: Admins/Create
+        // GET: Offices/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admins/Create
+        // POST: Offices/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Author,IsAdmin,UserId")] Admin admin)
+        public async Task<IActionResult> Create([Bind("id,name,salary")] Office office)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(admin);
+                _context.Add(office);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(office);
         }
 
-        // GET: Admins/Edit/5
+        // GET: Offices/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace Fashion_shop.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin.FindAsync(id);
-            if (admin == null)
+            var office = await _context.Office.FindAsync(id);
+            if (office == null)
             {
                 return NotFound();
             }
-            return View(admin);
+            return View(office);
         }
 
-        // POST: Admins/Edit/5
+        // POST: Offices/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Author,IsAdmin,UserId")] Admin admin)
+        public async Task<IActionResult> Edit(int id, [Bind("id,name,salary")] Office office)
         {
-            if (id != admin.Id)
+            if (id != office.id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace Fashion_shop.Controllers
             {
                 try
                 {
-                    _context.Update(admin);
+                    _context.Update(office);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AdminExists(admin.Id))
+                    if (!OfficeExists(office.id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace Fashion_shop.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(admin);
+            return View(office);
         }
 
-        // GET: Admins/Delete/5
+        // GET: Offices/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace Fashion_shop.Controllers
                 return NotFound();
             }
 
-            var admin = await _context.Admin
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (admin == null)
+            var office = await _context.Office
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (office == null)
             {
                 return NotFound();
             }
 
-            return View(admin);
+            return View(office);
         }
 
-        // POST: Admins/Delete/5
+        // POST: Offices/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var admin = await _context.Admin.FindAsync(id);
-            _context.Admin.Remove(admin);
+            var office = await _context.Office.FindAsync(id);
+            _context.Office.Remove(office);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AdminExists(int id)
+        private bool OfficeExists(int id)
         {
-            return _context.Admin.Any(e => e.Id == id);
+            return _context.Office.Any(e => e.id == id);
         }
     }
 }
