@@ -31,11 +31,19 @@ namespace Fashion_shop.Controllers
 
         public IActionResult Store()
         {
-            return View();
+            var userName = Request.Cookies["UserName"];
+            return View(model: userName);
         }
         public IActionResult Details_item()
         {
-            return View();
+            var userName = Request.Cookies["UserName"];
+            return View(model: userName);
+        }
+
+        public IActionResult Contact()
+        {
+            var userName = Request.Cookies["UserName"];
+            return View(model: userName);
         }
 
         public IActionResult Privacy()
