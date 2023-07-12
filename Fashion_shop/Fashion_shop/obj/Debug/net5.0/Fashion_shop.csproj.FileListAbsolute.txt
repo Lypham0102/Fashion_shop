@@ -193,3 +193,8 @@ D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\refint\Fa
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.pdb
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.genruntimeconfig.cache
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\ref\Fashion_shop.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Create.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Delete.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Details.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Edit.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Index.cshtml.g.cs
