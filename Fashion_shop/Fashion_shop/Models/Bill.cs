@@ -10,7 +10,8 @@ namespace Fashion_shop.Models
         public int Staff_id  { get; set; } 
         public int Customer_id { get; set; }
         public int Voucher_id { get; set; }
+        public Bill() {
 
-
+        }
     }
 }
