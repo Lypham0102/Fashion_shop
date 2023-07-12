@@ -19,10 +19,17 @@ namespace Fashion_shop.Controllers
             _context = context;
         }
 
+        private List<Item> SelectItem(int count)
+        {
+            var a = _context.Item.OrderByDescending(a => a.id).Take(count).ToList();
+            return a;
+        }
+
         // GET: Items
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Item.ToListAsync());
+            var select = SelectItem(24); 
+            return View(select);
         }
 
         // GET: Items/Details/5
