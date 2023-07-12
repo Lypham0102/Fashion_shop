@@ -198,3 +198,8 @@ D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Vie
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Details.cshtml.g.cs
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Edit.cshtml.g.cs
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Index.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Create.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Delete.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Details.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Edit.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Index.cshtml.g.cs

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Fashion_shop.Controllers
 {
     public class CustomersController : Controller
-    {
+    {      
         private readonly AppDbContext _context;
 
         public CustomersController(AppDbContext context)
