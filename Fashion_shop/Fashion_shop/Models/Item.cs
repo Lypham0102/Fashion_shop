@@ -11,29 +11,9 @@
         public int Count { get; set; }
         public string Size { get; set; }
         public string Country { get; set; }
-        public string Image { get; set; }
+        public string image { get; set; }
         public int Materials_id { get; set; }
         public int User_Item_Id { get; set; }
         public int Product_Type_Id { get; set; }
-<<<<<<< HEAD
-        //public Item(Item item)
-        //{
-        //    this.id = item.id;
-        //    this.Name = item.Name;
-        //    this.Image = item.Image;
-        //    this.Brand = item.Brand;
-        //    this.Color = item.Color;
-        //    this.Price = item.Price;
-        //    this.Gender = item.Gender;
-        //    this.Count = item.Count;
-        //    this.Size = item.Size;
-        //    this.Country = item.Country;
-        //    this.Materials_id = item.Materials_id;
-        //    this.User_Item_Id = item.User_Item_Id;
-        //    this.Product_Type_Id = item.Product_Type_Id;
-        //}
-=======
-
->>>>>>> 4f116ae327bfd6a33db4c0170c6d0b771b896628
     }
 }
