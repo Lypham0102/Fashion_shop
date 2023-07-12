@@ -74,13 +74,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.0, )"
-<<<<<<< Updated upstream
             },
             "System.Linq": {
               "target": "Package",
               "version": "[4.3.0, )"
-=======
->>>>>>> Stashed changes
             }
           },
           "imports": [

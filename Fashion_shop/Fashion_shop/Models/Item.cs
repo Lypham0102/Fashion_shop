@@ -11,7 +11,7 @@
         public int Count { get; set; }
         public string Size { get; set; }
         public string Country { get; set; }
-        public string image { get; set; }
+        public string Image { get; set; }
         public int Materials_id { get; set; }
         public int User_Item_Id { get; set; }
         public int Product_Type_Id { get; set; }

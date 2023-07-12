@@ -5,22 +5,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\bootstrap.min.css</RelativePath>
-=======
-      <RelativePath>css/bootstrap.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\bootstrap.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -29,22 +21,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\custom.css</RelativePath>
-=======
-      <RelativePath>css/custom.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\custom.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -53,22 +37,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\fontawesome.css</RelativePath>
-=======
-      <RelativePath>css/fontawesome.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\fontawesome.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -77,22 +53,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\fontawesome.min.css</RelativePath>
-=======
-      <RelativePath>css/fontawesome.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\fontawesome.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -101,22 +69,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\site.css</RelativePath>
-=======
-      <RelativePath>css/site.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\site.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -125,22 +85,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\slick-theme.css</RelativePath>
-=======
-      <RelativePath>css/slick-theme.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\slick-theme.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -149,22 +101,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\slick-theme.min.css</RelativePath>
-=======
-      <RelativePath>css/slick-theme.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\slick-theme.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -173,22 +117,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\slick.min.css</RelativePath>
-=======
-      <RelativePath>css/slick.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\slick.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -197,22 +133,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\templatemo.css</RelativePath>
-=======
-      <RelativePath>css/templatemo.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\templatemo.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -221,22 +149,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>css\templatemo.min.css</RelativePath>
-=======
-      <RelativePath>css/templatemo.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\css\templatemo.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -252,11 +172,7 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</OriginalItemSpec>
     </StaticWebAsset>
@@ -265,22 +181,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\about-hero.svg</RelativePath>
-=======
-      <RelativePath>img/about-hero.svg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\about-hero.svg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -289,22 +197,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\ajax-loader.gif</RelativePath>
-=======
-      <RelativePath>img/ajax-loader.gif</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\ajax-loader.gif))</OriginalItemSpec>
     </StaticWebAsset>
@@ -313,22 +213,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\Ao.jpg</RelativePath>
-=======
-      <RelativePath>img/Ao.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\Ao.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -337,22 +229,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\AoKhoac.jpg</RelativePath>
-=======
-      <RelativePath>img/AoKhoac.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\AoKhoac.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -361,22 +245,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\apple-icon.png</RelativePath>
-=======
-      <RelativePath>img/apple-icon.png</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\apple-icon.png))</OriginalItemSpec>
     </StaticWebAsset>
@@ -385,22 +261,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\banner_img_01.jpg</RelativePath>
-=======
-      <RelativePath>img/banner_img_01.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\banner_img_01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -409,22 +277,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\banner_img_02.jpg</RelativePath>
-=======
-      <RelativePath>img/banner_img_02.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\banner_img_02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -433,22 +293,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\banner_img_03.jpg</RelativePath>
-=======
-      <RelativePath>img/banner_img_03.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\banner_img_03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -457,22 +309,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\banner_img_04.jpg</RelativePath>
-=======
-      <RelativePath>img/banner_img_04.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\banner_img_04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -481,22 +325,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\brand_01.png</RelativePath>
-=======
-      <RelativePath>img/brand_01.png</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\brand_01.png))</OriginalItemSpec>
     </StaticWebAsset>
@@ -505,22 +341,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\brand_02.png</RelativePath>
-=======
-      <RelativePath>img/brand_02.png</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\brand_02.png))</OriginalItemSpec>
     </StaticWebAsset>
@@ -529,22 +357,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\brand_03.png</RelativePath>
-=======
-      <RelativePath>img/brand_03.png</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\brand_03.png))</OriginalItemSpec>
     </StaticWebAsset>
@@ -553,22 +373,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\brand_04.png</RelativePath>
-=======
-      <RelativePath>img/brand_04.png</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\brand_04.png))</OriginalItemSpec>
     </StaticWebAsset>
@@ -577,22 +389,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\category_img_01.jpg</RelativePath>
-=======
-      <RelativePath>img/category_img_01.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\category_img_01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -601,22 +405,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\category_img_02.jpg</RelativePath>
-=======
-      <RelativePath>img/category_img_02.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\category_img_02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -625,22 +421,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\category_img_03.jpg</RelativePath>
-=======
-      <RelativePath>img/category_img_03.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\category_img_03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -649,22 +437,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\DayNit.jpg</RelativePath>
-=======
-      <RelativePath>img/DayNit.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\DayNit.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -673,22 +453,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\favicon.ico</RelativePath>
-=======
-      <RelativePath>img/favicon.ico</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\favicon.ico))</OriginalItemSpec>
     </StaticWebAsset>
@@ -697,22 +469,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\feature_prod_01.jpg</RelativePath>
-=======
-      <RelativePath>img/feature_prod_01.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\feature_prod_01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -721,22 +485,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\feature_prod_02.jpg</RelativePath>
-=======
-      <RelativePath>img/feature_prod_02.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\feature_prod_02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -745,22 +501,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\feature_prod_03.jpg</RelativePath>
-=======
-      <RelativePath>img/feature_prod_03.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\feature_prod_03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -769,22 +517,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\Giay.jpg</RelativePath>
-=======
-      <RelativePath>img/Giay.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\Giay.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -793,22 +533,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\PhuKien.jpg</RelativePath>
-=======
-      <RelativePath>img/PhuKien.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\PhuKien.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -817,22 +549,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_01.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_01.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -841,22 +565,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_02.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_02.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -865,22 +581,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_03.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_03.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -889,22 +597,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_04.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_04.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -913,22 +613,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_05.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_05.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -937,22 +629,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_06.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_06.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_06.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -961,22 +645,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_07.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_07.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_07.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -985,22 +661,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_08.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_08.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_08.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1009,22 +677,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_09.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_09.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_09.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1033,22 +693,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\product_single_10.jpg</RelativePath>
-=======
-      <RelativePath>img/product_single_10.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\product_single_10.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1057,22 +709,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\Quan.jpg</RelativePath>
-=======
-      <RelativePath>img/Quan.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\Quan.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1081,22 +725,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\QuanAo.jpg</RelativePath>
-=======
-      <RelativePath>img/QuanAo.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\QuanAo.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1105,22 +741,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_01.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_01.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_01.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1129,22 +757,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_02.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_02.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_02.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1153,22 +773,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_03.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_03.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_03.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1177,22 +789,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_04.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_04.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_04.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1201,22 +805,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_05.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_05.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_05.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1225,22 +821,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_06.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_06.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_06.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1249,22 +837,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_07.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_07.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_07.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1273,22 +853,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_08.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_08.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_08.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1297,22 +869,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_09.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_09.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_09.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1321,22 +885,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_10.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_10.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_10.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1345,22 +901,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>img\shop_11.jpg</RelativePath>
-=======
-      <RelativePath>img/shop_11.jpg</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\img\shop_11.jpg))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1369,22 +917,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\bootstrap.bundle.min.js</RelativePath>
-=======
-      <RelativePath>js/bootstrap.bundle.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\bootstrap.bundle.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1393,22 +933,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\custom.js</RelativePath>
-=======
-      <RelativePath>js/custom.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\custom.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1417,22 +949,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\jquery-1.11.0.min.js</RelativePath>
-=======
-      <RelativePath>js/jquery-1.11.0.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\jquery-1.11.0.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1441,22 +965,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\jquery-migrate-1.2.1.min.js</RelativePath>
-=======
-      <RelativePath>js/jquery-migrate-1.2.1.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\jquery-migrate-1.2.1.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1465,22 +981,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\site.js</RelativePath>
-=======
-      <RelativePath>js/site.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\site.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1489,22 +997,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\slick.min.js</RelativePath>
-=======
-      <RelativePath>js/slick.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\slick.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1513,22 +1013,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\templatemo.js</RelativePath>
-=======
-      <RelativePath>js/templatemo.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\templatemo.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1537,22 +1029,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>js\templatemo.min.js</RelativePath>
-=======
-      <RelativePath>js/templatemo.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\js\templatemo.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1561,22 +1045,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-grid.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-grid.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1585,22 +1061,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-grid.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-grid.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1609,22 +1077,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-grid.min.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-grid.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1633,22 +1093,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-grid.min.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-grid.min.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-grid.min.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1657,22 +1109,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-reboot.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-reboot.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1681,22 +1125,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-reboot.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-reboot.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1705,22 +1141,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-reboot.min.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-reboot.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1729,22 +1157,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap-reboot.min.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap-reboot.min.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1753,22 +1173,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1777,22 +1189,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1801,22 +1205,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap.min.css</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap.min.css</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1825,22 +1221,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\css\bootstrap.min.css.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/css/bootstrap.min.css.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.min.css.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1849,22 +1237,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.bundle.js</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.bundle.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1873,22 +1253,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.bundle.js.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.bundle.js.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.js.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1897,22 +1269,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.bundle.min.js</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.bundle.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1921,22 +1285,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.bundle.min.js.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.bundle.min.js.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1945,22 +1301,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.js</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1969,22 +1317,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.js.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.js.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.js.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -1993,22 +1333,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.min.js</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2017,22 +1349,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\dist\js\bootstrap.min.js.map</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/dist/js/bootstrap.min.js.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\js\bootstrap.min.js.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2041,22 +1365,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\bootstrap\LICENSE</RelativePath>
-=======
-      <RelativePath>lib/bootstrap/LICENSE</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\LICENSE))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2065,22 +1381,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2089,22 +1397,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2113,22 +1413,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation-unobtrusive\LICENSE.txt</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation-unobtrusive/LICENSE.txt</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation-unobtrusive\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2137,22 +1429,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation\dist\additional-methods.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation/dist/additional-methods.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation\dist\additional-methods.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2161,22 +1445,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation\dist\additional-methods.min.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation/dist/additional-methods.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation\dist\additional-methods.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2185,22 +1461,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation\dist\jquery.validate.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation/dist/jquery.validate.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation\dist\jquery.validate.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2209,22 +1477,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation\dist\jquery.validate.min.js</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation/dist/jquery.validate.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation\dist\jquery.validate.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2233,22 +1493,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery-validation\LICENSE.md</RelativePath>
-=======
-      <RelativePath>lib/jquery-validation/LICENSE.md</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery-validation\LICENSE.md))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2257,22 +1509,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery\dist\jquery.js</RelativePath>
-=======
-      <RelativePath>lib/jquery/dist/jquery.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\dist\jquery.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2281,22 +1525,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery\dist\jquery.min.js</RelativePath>
-=======
-      <RelativePath>lib/jquery/dist/jquery.min.js</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\dist\jquery.min.js))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2305,22 +1541,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery\dist\jquery.min.map</RelativePath>
-=======
-      <RelativePath>lib/jquery/dist/jquery.min.map</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\dist\jquery.min.map))</OriginalItemSpec>
     </StaticWebAsset>
@@ -2329,22 +1557,14 @@
       <SourceId>Fashion_shop</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Fashion_shop</BasePath>
-<<<<<<< Updated upstream
       <RelativePath>lib\jquery\LICENSE.txt</RelativePath>
-=======
-      <RelativePath>lib/jquery/LICENSE.txt</RelativePath>
->>>>>>> Stashed changes
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< Updated upstream
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-=======
-      <CopyToOutputDirectory></CopyToOutputDirectory>
->>>>>>> Stashed changes
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt))</OriginalItemSpec>
     </StaticWebAsset>
