@@ -15,6 +15,7 @@
         public int Materials_id { get; set; }
         public int User_Item_Id { get; set; }
         public int Product_Type_Id { get; set; }
+<<<<<<< HEAD
         //public Item(Item item)
         //{
         //    this.id = item.id;
@@ -31,5 +32,8 @@
         //    this.User_Item_Id = item.User_Item_Id;
         //    this.Product_Type_Id = item.Product_Type_Id;
         //}
+=======
+
+>>>>>>> 4f116ae327bfd6a33db4c0170c6d0b771b896628
     }
 }
