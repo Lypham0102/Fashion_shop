@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "wJvsCHwdNnEMxSeHMDkd7ckS4lDGlWPToYIG44P9mZ08NTCplzjxZHYaQi/44inp3Jlmt482da7TqhTxK6wSpg==",
+=======
+  "dgSpecHash": "0CvWFI8//tHwlJalT2iH2JMACipVt6bvb1Iw70zcrOYLqlauqDwWmv5YPFucXJxiUNjij3WUYFfiLw325e1JDQ==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj",
   "expectedPackageFiles": [

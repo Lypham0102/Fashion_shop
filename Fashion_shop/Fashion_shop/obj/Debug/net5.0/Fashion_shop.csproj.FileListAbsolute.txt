@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/appsettings.Development.json
 D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/appsettings.json
@@ -199,6 +200,8 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Details.cshtml.g.cs
 D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Edit.cshtml.g.cs
 D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Index.cshtml.g.cs
+=======
+>>>>>>> Stashed changes
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/appsettings.Development.json
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/appsettings.json
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Fashion_shop
@@ -349,11 +352,14 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.TagHelpers.output.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.RazorCoreGenerate.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Shop.cshtml.g.cs
+<<<<<<< Updated upstream
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Create.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Delete.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Details.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Edit.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Index.cshtml.g.cs
+=======
+>>>>>>> Stashed changes
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Customers/Create.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Customers/Delete.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Customers/Details.cshtml.g.cs
@@ -363,6 +369,7 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Contact.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Details_item.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+<<<<<<< Updated upstream
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Privacy.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Store.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Items/Create.cshtml.g.cs
@@ -370,6 +377,9 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Items/Details.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Items/Edit.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Items/Index.cshtml.g.cs
+=======
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Home/Store.cshtml.g.cs
+>>>>>>> Stashed changes
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Offices/Create.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Offices/Delete.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Offices/Details.cshtml.g.cs
@@ -404,6 +414,7 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.pdb
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.genruntimeconfig.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/ref/Fashion_shop.dll
+<<<<<<< Updated upstream
 =======
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\appsettings.Development.json
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\appsettings.json
@@ -611,3 +622,5 @@ D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Vie
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Edit.cshtml.g.cs
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Items\Index.cshtml.g.cs
 >>>>>>> 4f116ae327bfd6a33db4c0170c6d0b771b896628
+=======
+>>>>>>> Stashed changes
