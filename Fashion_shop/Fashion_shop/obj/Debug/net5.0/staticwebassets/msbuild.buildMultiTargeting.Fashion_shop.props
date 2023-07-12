@@ -1,3 +1,7 @@
 ﻿<Project>
+<<<<<<< Updated upstream
   <Import Project="..\build\Fashion_shop.props" />
+=======
+  <Import Project="../build/Fashion_shop.props" />
+>>>>>>> Stashed changes
 </Project>
