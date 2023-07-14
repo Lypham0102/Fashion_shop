@@ -37,5 +37,7 @@ namespace Fashion_shop.Data
 
         public DbSet<Fashion_shop.Models.Item_Details> Item_Details { get; set; }
 
+        public DbSet<Fashion_shop.Models.Bill_Details> Bill_Details { get; set; }
+
     }
 }

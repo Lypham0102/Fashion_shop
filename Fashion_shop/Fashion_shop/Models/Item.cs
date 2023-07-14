@@ -16,7 +16,5 @@ namespace Fashion_shop.Models
         public int User_Item_id { get; set; }
         public int Product_Type_id { get; set; }
 
-        // Navigation property for Item_Details
-        public List<Item_Details> Item_Details { get; set; }
     }
 }

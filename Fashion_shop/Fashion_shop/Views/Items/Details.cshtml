@@ -7,25 +7,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>TL Store - Contact</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="apple-touch-icon" href="/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/templatemo.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+
+    <!-- Load map styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <!--
+
     TemplateMo 559 Zay Shop
+
     https://templatemo.com/tm-559-zay-shop
+
     -->
     <style>
         body {
             width: 100vw;
             overflow-x: hidden;
         }
+
+        #map-container {
+            width: 100%;
+            height: 65vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            #map-container iframe {
+                width: 80%;
+                height: 100%;
+                border: 0;
+            }
 
         .container {
             width: 100%;
@@ -65,19 +90,9 @@
                 background-color: gray;
                 color: white;
             }
-
-        .navbar-nav .nav-link {
-            margin-right: 10px;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-        }
-
-            .navbar-nav .nav-link:hover {
-                margin-right: 15px;
-                background-color: #f2f2f2;
-            }
     </style>
 </head>
+
 <body>
     <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
@@ -85,7 +100,7 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="abc@gmail.com">info@company.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
                 </div>
@@ -108,6 +123,7 @@
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -115,7 +131,7 @@
                             <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Index","Items")">Store</a>
+                            <a class="nav-link" href="@Url.Action("Store","Home")">Store</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a>
@@ -165,23 +181,24 @@
     </div>
     @*Create Menu*@
     <div class="container">
+        Ï
         <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-dark" href="https://somehow.vn/collections/ao-men">Áo</a>
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/ao-men">Áo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-dark" href="https://somehow.vn/collections/quan-men">Quần</a>
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/quan-men">Quần</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-dark" href="https://somehow.vn/collections/set-quan-ao">Set Quần Áo</a>
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/set-quan-ao">Set Quần Áo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-dark" href="https://somehow.vn/collections/giay-dep">Giày - Dép</a>
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/giay-dep">Giày - Dép</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold text-dark" href="https://somehow.vn/collections/phu-kien-men">Phụ Kiện</a>
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/phu-kien-men">Phụ Kiện</a>
                     </li>
                 </ul>
             </div>
@@ -242,52 +259,148 @@
                         <dd class="col-sm-8">
                             @ViewBag.C
                         </dd>
-                        @*<dt class="col-sm-4">
-                            Color
-                        </dt>
-                        <dd class="col-sm-8">
-                            @ViewBag.D
-                        </dd>
-                        <dt class="col-sm-4">
-                            Size
-                        </dt>
-                        <dd class="col-sm-8">
-                            @ViewBag.E
-                        </dd>*@
                     </dl>
                 </div>
                 <form>
                     <label for="size">Size:</label>
-                    <div class="size-option">
-                        <input type="radio" id="size-s" name="size" value="S">
-                        <label for="size-s">S</label>
-                    </div>
-                    <div class="size-option">
-                        <input type="radio" id="size-m" name="size" value="M">
-                        <label for="size-m">M</label>
-                    </div>
-                    <div class="size-option">
-                        <input type="radio" id="size-l" name="size" value="L">
-                        <label for="size-l">L</label>
-                    </div>
-                    <div class="size-option">
-                        <input type="radio" id="size-xl" name="size" value="XL">
-                        <label for="size-xl">XL</label>
-                    </div>
-                    <div class="size-option">
-                        <input type="radio" id="size-xxl" name="size" value="XXL">
-                        <label for="size-xxl">XXL</label>
-                    </div>
-                    <div class="size-option">
-                        <input type="radio" id="size-xxxl" name="size" value="XXXL">
-                        <label for="size-xxxl">XXXL</label>
-                    </div>
+                    @foreach (var size in ViewBag.E)
+                    {
+                        <div class="size-option">
+                            <input style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size">
+                            <label for="size-@size">@size</label>
+                        </div>
+                    }
                 </form>
+                <form>
+                    <label for="color">Color:</label>
+                    @foreach (var color in ViewBag.D)
+                    {
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="selectedColor" id="color-@color" value="@color">
+                            <label class="form-check-label" for="color-@color">@color</label>
+                        </div>
+                    }
+                </form>
+                <div style="height: 50px;"></div>
+                @*Button Add Cart*@
+                <div style="background-color: black; color: white; width: 450px; text-align: center; padding: 10px; cursor: pointer; display: inline-block; margin-left: 200px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: color 0.3s ease;"
+                     onmouseover="this.style.backgroundColor='black'; this.style.color='gray';"
+                     onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
+                     id="addToCartBtn">
+                    Thêm vào giỏ hàng
+                </div>
             </div>
         </div>
     </div>
-    <div>
-        <a asp-action="Index">Back</a>
+    <div style="background-color: black; color: white; border: 2px solid white; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 20px;">
+        <a asp-action="Index" style="text-decoration: none;">Back</a>
     </div>
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">TL Shop</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
+                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
+                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
+                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
+                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
+                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
+                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
+                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2023 TL Team
+                            | Designed by <a rel="sponsored" href="https://www.facebook.com/profile.php?id=100011091134802" target="_blank">TL</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- End Footer -->
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>function addToCart() {
+            var selectedColor = document.querySelector('input[name="selectedColor"]:checked');
+            var selectedSize = document.querySelector('input[name="size"]:checked');
+
+            if (!selectedColor || !selectedSize) {
+                alert("Vui lòng chọn size và màu sắc trước khi thêm vào giỏ hàng.");
+            } else {
+                // Thêm sản phẩm vào giỏ hàng nếu đã chọn đủ size và color
+                // Your code to add the item to the cart goes here
+                alert("Sản phẩm đã được thêm vào giỏ hàng!");
+            }
+        }
+        document.getElementById("addToCartBtn").addEventListener("click", addToCart);</script>
+    <!-- End Script -->
 </body>
-</html
+</html>

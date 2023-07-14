@@ -71,6 +71,13 @@ namespace Fashion_shop.Controllers
             var c = await ctProductTypes.Details(item.Product_Type_id);
             ViewBag.C = c;
 
+            // Gọi phương thức GetColors trên đối tượng ctItem_Details và lưu kết quả vào biến colors
+            var d = await ctItem_Details.GetColors(item.id);
+            ViewBag.D = d;
+
+            // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
+            var e = await ctItem_Details.GetSizes(item.id);
+            ViewBag.E = e;
 
             return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }

@@ -14,49 +14,60 @@ namespace Fashion_shop.Controllers
     public class Item_DetailsController : Controller
     {
         private readonly AppDbContext _context;
+        private ColorController _ctColor;
+        private SizeController _ctSize;
 
         public Item_DetailsController(AppDbContext context)
         {
             _context = context;  
         }
-
         // GET: Item_Details/GetColors/5
-        public async Task<int> GetSize(int? id)
+        public async Task<List<string>> GetColors(int? id)
         {
+            _ctColor = new ColorController(_context);
             if (id == null)
             {
-                return 0;
+                return null;
             }
 
-            var item = await _context.Item_Details.FirstOrDefaultAsync(a => a.id == id);
-            if (item == null)
+            var itemDetails = await _context.Item_Details
+                .Where(details => details.Item_id == id)
+                .Select(details => details.Color_id)
+                .ToListAsync();
+
+            var colorNames = new List<string>();
+            foreach (var colorId in itemDetails)
             {
-                return 0;
+                // Gọi phương thức GetColorsName
+                var colorName = _ctColor.GetColorsName(colorId);
+                colorNames.AddRange(colorName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
             }
 
-            return item.Size_id;
-
+            return colorNames;
         }
-        public async Task<int> GetColor(int? id)
+
+        // GET: Item_Details/GetSizes/5
+        public async Task<List<string>> GetSizes(int? id)
         {
+            _ctSize = new SizeController(_context);
             if (id == null)
             {
-                return 0;
+                return null;
             }
+            var itemDetails = await _context.Item_Details
+                .Where(details => details.Item_id == id)
+                .Select(details => details.Size_id)
+                .ToListAsync();
 
-            var item = await _context.Item_Details.FirstOrDefaultAsync(a => a.id == id);
-            if (item == null)
+            var sizeNames = new List<string>();
+            foreach (var sizeId in itemDetails)
             {
-                return 0;
+                // Gọi phương thức GetSizeName
+                var sizeName = _ctSize.GetSizeName(sizeId);
+                sizeNames.AddRange(sizeName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
             }
 
-            return item.Color_id;
-
-        }
-        public async Task<Item_Details> GetItemDetailsByItemIdAsync(int itemId)
-        {
-            // Sử dụng AppDbContext để lấy thông tin chi tiết của sản phẩm dựa trên itemId
-            return await _context.Item_Details.FirstOrDefaultAsync(d => d.Item_id == itemId);
+            return sizeNames;
         }
     }
 }
