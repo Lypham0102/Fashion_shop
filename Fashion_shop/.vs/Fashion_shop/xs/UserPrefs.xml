@@ -1,10 +1,22 @@
 ﻿<Properties StartupConfiguration="{C61217ED-C83B-4C8C-9F29-A4015B92DD23}|Default">
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Home/Contact.cshtml">
     <Files>
       <File FileName="Fashion_shop/Controllers/HomeController.cs" Line="46" Column="42" />
       <File FileName="Fashion_shop/Views/Home/Index.cshtml" Line="39" Column="7" />
       <File FileName="Fashion_shop/Startup.cs" />
       <File FileName="Fashion_shop/Program.cs" Line="8" Column="36" />
+=======
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Home/Index.cshtml">
+    <Files>
+      <File FileName="Fashion_shop/Controllers/HomeController.cs" />
+      <File FileName="Fashion_shop/Views/Home/Index.cshtml" Line="100" Column="26" />
+      <File FileName="Fashion_shop/Startup.cs" />
+      <File FileName="Fashion_shop/Program.cs" />
+>>>>>>> Stashed changes
       <File FileName="Fashion_shop/appsettings.json" />
       <File FileName="Fashion_shop/Controllers/CustomersController.cs" />
       <File FileName="Fashion_shop/Views/Customers/Login.cshtml" />
@@ -13,11 +25,46 @@
       <File FileName="Fashion_shop/shop-single.html" Line="1" Column="1" />
       <File FileName="Fashion_shop/Models/Customer.cs" />
       <File FileName="Fashion_shop/Data/AppDBContext.cs" />
+<<<<<<< Updated upstream
       <File FileName="Fashion_shop/Views/Home/Store.cshtml" Line="98" Column="21" />
       <File FileName="Fashion_shop/Shop.cshtml" />
       <File FileName="Fashion_shop/contact.html" Line="1" Column="1" />
       <File FileName="Fashion_shop/Views/Home/Details_item.cshtml" Line="104" Column="20" />
       <File FileName="Fashion_shop/Views/Home/Contact.cshtml" Line="67" Column="10" />
+=======
+      <File FileName="Fashion_shop/Views/Home/Store.cshtml" />
+      <File FileName="Fashion_shop/Shop.cshtml" />
+      <File FileName="Fashion_shop/contact.html" />
+      <File FileName="Fashion_shop/Views/Home/Details_item.cshtml" />
+      <File FileName="Fashion_shop/Views/Home/Contact.cshtml" />
+      <File FileName="Fashion_shop/Controllers/OfficesController.cs" />
+      <File FileName="Fashion_shop/Controllers/Product_TypeController.cs" />
+      <File FileName="Fashion_shop/Controllers/StaffsController.cs" />
+      <File FileName="Fashion_shop/Models/ErrorViewModel.cs" />
+      <File FileName="Fashion_shop/Models/Item.cs" />
+      <File FileName="Fashion_shop/Models/Materials.cs" />
+      <File FileName="Fashion_shop/Models/Office.cs" />
+      <File FileName="Fashion_shop/Models/Staff.cs" />
+      <File FileName="Fashion_shop/Properties/launchSettings.json" />
+      <File FileName="Fashion_shop/Views/Customers/Details.cshtml" />
+      <File FileName="Fashion_shop/Views/Customers/Create.cshtml" />
+      <File FileName="Fashion_shop/Views/Customers/Delete.cshtml" />
+      <File FileName="Fashion_shop/Models/Bill.cs" />
+      <File FileName="Fashion_shop/Models/Bill_Details.cs" />
+      <File FileName="Fashion_shop/Models/Cart.cs" />
+      <File FileName="Fashion_shop/Models/Cart_Details.cs" />
+      <File FileName="Fashion_shop/Models/Product Type.cs" />
+      <File FileName="Fashion_shop/Models/User Item.cs" />
+      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="144" Column="63" />
+      <File FileName="Fashion_shop/Views/Items/Details.cshtml" />
+      <File FileName="Fashion_shop/Views/Customers/Index.cshtml" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.EolTargetFrameworks.targets" />
+      <File FileName="Fashion_shop/Views/Items/Create.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/Edit.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/Delete.cshtml" />
+      <File FileName="Fashion_shop/Controllers/ItemsController.cs" />
+>>>>>>> Stashed changes
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,18 +72,30 @@
           <Node name="Fashion_shop">
             <Node name="Fashion_shop">
               <Node name="Controllers" expanded="True" />
+<<<<<<< Updated upstream
               <Node name="Views">
                 <Node name="Home">
                   <Node name="Contact.cshtml" selected="True" />
                 </Node>
               </Node>
               <Node name="wwwroot" expanded="True" />
+=======
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Items" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="img" expanded="True" />
+              </Node>
+>>>>>>> Stashed changes
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
@@ -44,4 +103,10 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+>>>>>>> Stashed changes
 </Properties>
