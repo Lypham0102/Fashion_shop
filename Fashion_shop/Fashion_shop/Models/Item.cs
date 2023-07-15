@@ -15,5 +15,6 @@
         public int Materials_id { get; set; }
         public int User_Item_Id { get; set; }
         public int Product_Type_Id { get; set; }
+        //public Materials id { get; set; }
     }
 }

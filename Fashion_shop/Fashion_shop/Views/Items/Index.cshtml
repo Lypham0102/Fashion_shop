@@ -9,29 +9,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <!--
     TemplateMo 559 Zay Shop
-
     https://templatemo.com/tm-559-zay-shop
-
     -->
     <style>
         body {
             width: 100vw;
             overflow-x: hidden;
         }
-
         .container {
             width: 100%;
             max-width: 100%;
@@ -40,10 +34,19 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         .navbar-brand {
             font-family: 'Futura', sans-serif;
         }
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+            .navbar-nav .nav-link:hover {
+                margin-right: 15px;
+                background-color: #f2f2f2;
+            }
     </style>
 </head>
 <body>
@@ -100,7 +103,6 @@
                                 }
                             </li>*@
                     </ul>
-
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
@@ -124,7 +126,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </nav>
     <!-- Close Header -->
@@ -145,34 +146,36 @@
         </div>
     </div>
     @*Create Menu*@
-    <div class="row">
-        <div class="col-12">
-            <ul class="nav justify-content-center">
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tùy chọn 1</a>
+                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/ao-men">Áo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tùy chọn 2</a>
+                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/quan-men">Quần</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tùy chọn 3</a>
+                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/set-quan-ao">Set Quần Áo</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tùy chọn 4</a>
+                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/giay-dep">Giày - Dép</a>
                 </li>
-                <!-- Add more menu items as needed -->
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/phu-kien-men">Phụ Kiện</a>
+                </li>
             </ul>
         </div>
-    </div>
-
-
+    </nav>
+</div>
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-sm-3 col-lg-3 col-md-3">
                 <div class="thumbnail">
                     <a href="@Url.Action("Details", "Items", new { id = item.id })">
-                        <img alt="@item.id" src="~/img/Ao.jpg" width="250" />
+                        <img alt="@item.id" src="./img_items/@item.Image" width="250" />
                         <div>
                             <br />
                             <h4 style="text-align: center"> @item.Name </h4>
@@ -180,13 +183,6 @@
                         </div>
                         <div class="ratings">
                             <p class="pull-right">Comment</p>
-                            <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                            </p>
                         </div>
                     </a>
                 </div>

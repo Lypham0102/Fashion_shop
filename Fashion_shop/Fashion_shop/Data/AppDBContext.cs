@@ -28,5 +28,9 @@ namespace Fashion_shop.Data
         public DbSet<Fashion_shop.Models.Bill> Bill { get; set; }
 
         public DbSet<Fashion_shop.Models.Item> Item { get; set; }
+
+        public DbSet<Fashion_shop.Models.Materials> Materials { get; set; }
+
+        public DbSet<Fashion_shop.Models.User_Item> User_Item { get; set; }
     }
 }

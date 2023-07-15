@@ -1,36 +1,37 @@
 ﻿<Properties StartupConfiguration="{C61217ED-C83B-4C8C-9F29-A4015B92DD23}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Controllers/ItemsController.cs">
     <Files>
-      <File FileName="Fashion_shop/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Home/Privacy.cshtml" />
-      <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
-      <File FileName="Fashion_shop/Startup.cs" Line="14" Column="25" />
-      <File FileName="Fashion_shop/Program.cs" Line="8" Column="36" />
-      <File FileName="Fashion_shop/appsettings.json" />
-      <File FileName="Fashion_shop/Controllers/CustomersController.cs" />
-      <File FileName="Fashion_shop/Views/Customers/Login.cshtml" />
-      <File FileName="Fashion_shop/Views/Shared/_Layout.cshtml" />
-      <File FileName="Fashion_shop/Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="Fashion_shop/shop-single.html" />
-      <File FileName="Fashion_shop/Models/Customer.cs" />
-      <File FileName="Fashion_shop/Data/AppDBContext.cs" />
-      <File FileName="Fashion_shop/Views/Home/Store.cshtml" Line="7" Column="2" />
-      <File FileName="Fashion_shop/Shop.cshtml" />
-      <File FileName="Fashion_shop/contact.html" />
+      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="67" Column="1" />
+      <File FileName="Fashion_shop/Controllers/ItemsController.cs" Line="28" Column="48" />
+      <File FileName="Fashion_shop/Controllers/MaterialsController.cs" Line="28" Column="1" />
+      <File FileName="Fashion_shop/Models/Item.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Models/Materials.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Controllers/User_ItemController.cs" Line="38" Column="14" />
+      <File FileName="Fashion_shop/Models/User Item.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Data/AppDBContext.cs" Line="34" Column="62" />
+      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Models/Product Type.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Controllers/Product_TypeController.cs" Line="41" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Fashion_shop" expanded="True">
             <Node name="Fashion_shop">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="ItemsController.cs" selected="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Items" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="img" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -40,6 +41,4 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MultiItemStartupConfigurations />
 </Properties>

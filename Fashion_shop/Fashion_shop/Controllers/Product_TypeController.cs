@@ -26,21 +26,20 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Product_Type/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<string> Details(int? id)
         {
             if (id == null)
             {
-                return NotFound();
+                return null;
             }
 
-            var product_Type = await _context.Product_Type
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (product_Type == null)
+            var item = await _context.Product_Type.FirstOrDefaultAsync(a => a.id == id);
+            if (item == null)
             {
-                return NotFound();
+                return null;
             }
 
-            return View(product_Type);
+            return item.Name;
         }
 
         // GET: Product_Type/Create

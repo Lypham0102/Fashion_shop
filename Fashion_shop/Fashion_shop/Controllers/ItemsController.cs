@@ -13,10 +13,14 @@ namespace Fashion_shop.Controllers
     public class ItemsController : Controller
     {
         private readonly AppDbContext _context;
+        private MaterialsController ctMaterials;
+        private User_ItemController ctUserItems;
+        private Product_TypeController ctProductTypes;
 
         public ItemsController(AppDbContext context)
         {
             _context = context;
+
         }
 
         private List<Item> SelectItem(int count)
@@ -26,28 +30,39 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Items
-        public async Task<IActionResult> Index()
+        public ActionResult Index()
         {
             var select = SelectItem(24); 
             return View(select);
         }
 
-        // GET: Items/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
+            ctMaterials = new MaterialsController(_context);
+            ctUserItems = new User_ItemController(_context);
+            ctProductTypes = new Product_TypeController(_context);
             if (id == null)
             {
                 return NotFound();
             }
 
-            var item = await _context.Item
-                .FirstOrDefaultAsync(m => m.id == id);
+            var item = await _context.Item.FirstOrDefaultAsync(m => m.id == id);
             if (item == null)
             {
                 return NotFound();
             }
 
-            return View(item);
+            var a = await ctMaterials.Details(item.Materials_id);
+            ViewBag.A = a;
+
+            var b = await ctUserItems.Details(item.User_Item_Id);
+            ViewBag.B = b;
+
+            var c = await ctProductTypes.Details(item.Product_Type_Id);
+            ViewBag.C = c;
+
+            return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
 
         // GET: Items/Create
