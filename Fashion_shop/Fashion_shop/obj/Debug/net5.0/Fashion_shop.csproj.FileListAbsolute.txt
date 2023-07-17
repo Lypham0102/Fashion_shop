@@ -400,3 +400,12 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.csproj.CopyComplete
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.genruntimeconfig.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/ref/Fashion_shop.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/HomeBi.Libraries.PagedList.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.MvcApplicationPartsAssemblyInfo.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Microsoft.Extensions.DependencyModel.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.Mvc.Core.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.Web.Common.dll

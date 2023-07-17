@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fashion_shop.Data;
 using Fashion_shop.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using X.PagedList;
 
 namespace Fashion_shop.Controllers
 {
@@ -30,9 +32,12 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Items
-        public ActionResult Index()
+        public ActionResult Index(int ? page)
         {
-            var select = SelectItem(24); 
+            const int pageSize = 40; // Số mục trên mỗi trang
+            int pageNumber = (page ?? 1); // Số trang hiện tại (nếu không có, mặc định là trang 1)
+
+            var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
             return View(select);
         }
 

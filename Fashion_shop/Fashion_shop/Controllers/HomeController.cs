@@ -13,7 +13,7 @@ namespace Fashion_shop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private AppDbContext dbContext;
+        //private AppDbContext dbContext;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

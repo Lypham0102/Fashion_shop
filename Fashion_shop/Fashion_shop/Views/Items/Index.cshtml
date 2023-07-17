@@ -1,5 +1,7 @@
-﻿@model IEnumerable<Fashion_shop.Models.Item>
-
+﻿@*@model IEnumerable<Fashion_shop.Models.Item>*@
+@model IPagedList<Fashion_shop.Models.Item>
+@using X.PagedList.Mvc.Core;
+@using X.PagedList;
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -25,6 +27,40 @@
         body {
             width: 100vw;
             overflow-x: hidden;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .page-link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .current-page {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fdc22d;
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 14px;
         }
         .container {
             width: 100%;
@@ -146,29 +182,29 @@
         </div>
     </div>
     @*Create Menu*@
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/ao-men">Áo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/quan-men">Quần</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/set-quan-ao">Set Quần Áo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/giay-dep">Giày - Dép</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/phu-kien-men">Phụ Kiện</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/ao-men">Áo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/quan-men">Quần</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/set-quan-ao">Set Quần Áo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/giay-dep">Giày - Dép</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="https://somehow.vn/collections/phu-kien-men">Phụ Kiện</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="row">
         @foreach (var item in Model)
         {
@@ -189,9 +225,129 @@
             </div>
         }
     </div>
+    <!-- Hiển thị phân trang -->
+    <div style="font-family: Arial">
+        @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+    </div>
+    <div class="pagination">
+        @if (Model.HasPreviousPage)
+        {
+            <a href="@Url.Action("Index", new { page = 1 })" class="page-link">&lt;&lt;</a>
+            <a href="@Url.Action("Index", new { page = Model.PageNumber - 1 })" class="page-link">&lt;</a>
+        }
 
+        @for (int i = 1; i <= Model.PageCount; i++)
+        {
+            if (i == Model.PageNumber)
+            {
+                <a href="@Url.Action("Index", new { page = i })" class="current-page">@i</a>
+            }
+            else
+            {
+                <a href="@Url.Action("Index", new { page = i })" class="page-link">@i</a>
+            }
+        }
 
-    @* Tao liên kết các trang *@
+        @if (Model.HasNextPage)
+        {
+            <a href="@Url.Action("Index", new { page = Model.PageNumber + 1 })" class="page-link">&gt;</a>
+            <a href="@Url.Action("Index", new { page = Model.PageCount })" class="page-link">&gt;&gt;</a>
+        }
+    </div>
+    <div style="height: 30px"></div>
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            123 Consectetur at ligula 10660
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Luxury</a></li>
+                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
+                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
+                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
+                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
+                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
+                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Home</a></li>
+                        <li><a class="text-decoration-none" href="#">About Us</a></li>
+                        <li><a class="text-decoration-none" href="#">Shop Locations</a></li>
+                        <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Email address</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2023 TL Team
+                            | Designed by <a rel="sponsored" href="https://www.facebook.com/profile.php?id=100011091134802" target="_blank">TL</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- End Footer -->
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
