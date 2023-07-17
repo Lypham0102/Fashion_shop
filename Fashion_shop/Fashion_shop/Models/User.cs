@@ -12,6 +12,7 @@ namespace Fashion_shop.Models
         public string Address { get; set;}
         public string Bank { get; set;}
         public string CardNumber { get; set;}
+        public string Username { get; set; }
         public DateTime Date_of_birth { get; set;}
         public int Role_id { get;}
     }

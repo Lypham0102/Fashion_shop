@@ -27,11 +27,11 @@ namespace Fashion_shop.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(Customer Customer)
+        public async Task<IActionResult> Login(User Customer)
         {
             if (ModelState.IsValid)
             {
-                var user = await _context.Customer.FirstOrDefaultAsync(u => u.Username == Customer.Username && u.Password == Customer.Password);
+                var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username && u.Password == User.Password);
                 if (user != null)
                 {
                     // Authentication successful, perform login logic

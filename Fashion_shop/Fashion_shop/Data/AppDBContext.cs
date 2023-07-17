@@ -17,6 +17,7 @@ namespace Fashion_shop.Data
         }
 
 
+        public DbSet<User> User { get; set; }
         public DbSet<Customer> Customer { get; set; }
 
         public DbSet<Office> Office { get; set; }

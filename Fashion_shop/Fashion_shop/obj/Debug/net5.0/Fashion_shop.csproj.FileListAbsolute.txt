@@ -409,3 +409,8 @@ D:/ASP-PROJECT/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Vie
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.dll
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.Mvc.Core.dll
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/bin/Debug/net5.0/X.PagedList.Web.Common.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Create.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Delete.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Details.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Edit.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Index.cshtml.g.cs
