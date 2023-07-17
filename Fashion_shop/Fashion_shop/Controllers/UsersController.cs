@@ -27,7 +27,7 @@ namespace Fashion_shop.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(User Customer)
+        public async Task<IActionResult> Login(User User)
         {
             if (ModelState.IsValid)
             {
@@ -45,7 +45,7 @@ namespace Fashion_shop.Controllers
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                 }
             }
-            return View(Customer);
+            return View(User);
         }
 
         // GET: Users

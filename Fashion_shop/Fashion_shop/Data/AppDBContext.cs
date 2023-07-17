@@ -18,11 +18,8 @@ namespace Fashion_shop.Data
 
 
         public DbSet<User> User { get; set; }
-        public DbSet<Customer> Customer { get; set; }
 
         public DbSet<Office> Office { get; set; }
-
-        public DbSet<Fashion_shop.Models.Staff> Staff { get; set; }
 
         public DbSet<Fashion_shop.Models.Product_Type> Product_Type { get; set; }
 
