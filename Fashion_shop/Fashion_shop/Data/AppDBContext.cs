@@ -30,5 +30,12 @@ namespace Fashion_shop.Data
         public DbSet<Fashion_shop.Models.Materials> Materials { get; set; }
 
         public DbSet<Fashion_shop.Models.User_Item> User_Item { get; set; }
+
+        public DbSet<Fashion_shop.Models.Color> Color { get; set; }
+
+        public DbSet<Fashion_shop.Models.Size> Size { get; set; }
+
+        public DbSet<Fashion_shop.Models.Item_Details> Item_Details { get; set; }
+
     }
 }

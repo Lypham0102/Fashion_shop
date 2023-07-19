@@ -10,6 +10,7 @@ using Fashion_shop.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using X.PagedList;
 
+
 namespace Fashion_shop.Controllers
 {
     public class ItemsController : Controller
@@ -18,6 +19,7 @@ namespace Fashion_shop.Controllers
         private MaterialsController ctMaterials;
         private User_ItemController ctUserItems;
         private Product_TypeController ctProductTypes;
+        private Item_DetailsController ctItem_Details;
 
         public ItemsController(AppDbContext context)
         {
@@ -40,13 +42,12 @@ namespace Fashion_shop.Controllers
             var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
             return View(select);
         }
-
-
         public async Task<IActionResult> Details(int? id)
         {
             ctMaterials = new MaterialsController(_context);
             ctUserItems = new User_ItemController(_context);
             ctProductTypes = new Product_TypeController(_context);
+            ctItem_Details = new Item_DetailsController(_context);
             if (id == null)
             {
                 return NotFound();
@@ -61,11 +62,12 @@ namespace Fashion_shop.Controllers
             var a = await ctMaterials.Details(item.Materials_id);
             ViewBag.A = a;
 
-            var b = await ctUserItems.Details(item.User_Item_Id);
+            var b = await ctUserItems.Details(item.User_Item_id);
             ViewBag.B = b;
 
-            var c = await ctProductTypes.Details(item.Product_Type_Id);
+            var c = await ctProductTypes.Details(item.Product_Type_id);
             ViewBag.C = c;
+
 
             return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
