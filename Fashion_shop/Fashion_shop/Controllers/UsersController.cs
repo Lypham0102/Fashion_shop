@@ -7,11 +7,18 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fashion_shop.Data;
 using Fashion_shop.Models;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace Fashion_shop.Controllers
 {
+
     public class UsersController : Controller
     {
+
         private readonly AppDbContext _context;
 
         public UsersController(AppDbContext context)
@@ -32,14 +39,25 @@ namespace Fashion_shop.Controllers
             if (ModelState.IsValid)
             {
                 var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username && u.Password == User.Password);
-                if (user != null)
+                if(user != null)
                 {
-                    // Authentication successful, perform login logic
-                    Response.Cookies.Append("UserName", user.Username);
-                    Response.Cookies.Append("UserId", user.id.ToString());
-                    // Redirect to the desired page after successful login
+                    Response.Cookies.Append("User_Id",user.id.ToString());
+                    Response.Cookies.Append("UserName", user.id.ToString());
+
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Name, user.Username),
+                        new Claim(ClaimTypes.Role, user.Role_id.ToString()) // Gán vai trò vào claim
+                    };
+
+                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
                     return RedirectToAction("Index", "Home");
-                }
+                }    
+
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
@@ -47,6 +65,7 @@ namespace Fashion_shop.Controllers
             }
             return View(User);
         }
+
 
         // GET: Users
         public async Task<IActionResult> Index()
@@ -73,6 +92,7 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Users/Create
+        [Authorize(Policy = "AdminOnly")]
         public IActionResult Create()
         {
             return View();
@@ -88,6 +108,7 @@ namespace Fashion_shop.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(user);
+                
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
