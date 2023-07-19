@@ -9,10 +9,13 @@ using Fashion_shop.Data;
 using Fashion_shop.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using X.PagedList;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 
 namespace Fashion_shop.Controllers
 {
+
     public class ItemsController : Controller
     {
         private readonly AppDbContext _context;
@@ -71,7 +74,6 @@ namespace Fashion_shop.Controllers
 
             return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
-
         // GET: Items/Create
         public IActionResult Create()
         {
