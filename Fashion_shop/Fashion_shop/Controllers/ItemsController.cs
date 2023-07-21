@@ -12,6 +12,7 @@ using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 
+
 namespace Fashion_shop.Controllers
 {
 
@@ -21,6 +22,7 @@ namespace Fashion_shop.Controllers
         private MaterialsController ctMaterials;
         private User_ItemController ctUserItems;
         private Product_TypeController ctProductTypes;
+        private Item_DetailsController ctItem_Details;
 
         public ItemsController(AppDbContext context)
         {
@@ -43,13 +45,12 @@ namespace Fashion_shop.Controllers
             var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
             return View(select);
         }
-
-
         public async Task<IActionResult> Details(int? id)
         {
             ctMaterials = new MaterialsController(_context);
             ctUserItems = new User_ItemController(_context);
             ctProductTypes = new Product_TypeController(_context);
+            ctItem_Details = new Item_DetailsController(_context);
             if (id == null)
             {
                 return NotFound();
@@ -69,6 +70,14 @@ namespace Fashion_shop.Controllers
 
             var c = await ctProductTypes.Details(item.Product_Type_id);
             ViewBag.C = c;
+
+            // Gọi phương thức GetColors trên đối tượng ctItem_Details và lưu kết quả vào biến colors
+            var d = await ctItem_Details.GetColors(item.id);
+            ViewBag.D = d;
+
+            // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
+            var e = await ctItem_Details.GetSizes(item.id);
+            ViewBag.E = e;
 
             return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }

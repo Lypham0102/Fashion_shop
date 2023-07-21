@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Fashion_shop.Data;
+using Fashion_shop.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace Fashion_shop.Controllers
+{
+    public class Item_DetailsController : Controller
+    {
+        private readonly AppDbContext _context;
+        private ColorController _ctColor;
+        private SizeController _ctSize;
+
+        public Item_DetailsController(AppDbContext context)
+        {
+            _context = context;  
+        }
+        // GET: Item_Details/GetColors/5
+        public async Task<List<string>> GetColors(int? id)
+        {
+            _ctColor = new ColorController(_context);
+            if (id == null)
+            {
+                return null;
+            }
+
+            var itemDetails = await _context.Item_Details
+                .Where(details => details.Item_id == id)
+                .Select(details => details.Color_id)
+                .ToListAsync();
+
+            var colorNames = new List<string>();
+            foreach (var colorId in itemDetails)
+            {
+                // Gọi phương thức GetColorsName
+                var colorName = _ctColor.GetColorsName(colorId);
+                colorNames.AddRange(colorName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
+            }
+
+            return colorNames;
+        }
+
+        // GET: Item_Details/GetSizes/5
+        public async Task<List<string>> GetSizes(int? id)
+        {
+            _ctSize = new SizeController(_context);
+            if (id == null)
+            {
+                return null;
+            }
+            var itemDetails = await _context.Item_Details
+                .Where(details => details.Item_id == id)
+                .Select(details => details.Size_id)
+                .ToListAsync();
+
+            var sizeNames = new List<string>();
+            foreach (var sizeId in itemDetails)
+            {
+                // Gọi phương thức GetSizeName
+                var sizeName = _ctSize.GetSizeName(sizeId);
+                sizeNames.AddRange(sizeName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
+            }
+
+            return sizeNames;
+        }
+    }
+}
+

@@ -67,6 +67,32 @@
         .navbar-brand {
             font-family: 'Futura', sans-serif;
         }
+
+        .size-option {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+            .size-option input[type="radio"] {
+                display: none;
+            }
+
+            .size-option label {
+                display: block;
+                width: 80px;
+                height: 40px;
+                border: 2px solid lightgray;
+                border-radius: 5px;
+                background-color: white;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+            }
+
+            .size-option input[type="radio"]:checked + label {
+                background-color: gray;
+                color: white;
+            }
     </style>
 </head>
 

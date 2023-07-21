@@ -1,4 +1,6 @@
-﻿namespace Fashion_shop.Models
+﻿using System.Collections.Generic;
+
+namespace Fashion_shop.Models
 {
     public class Item
     {
@@ -13,6 +15,6 @@
         public int Materials_id { get; set; }
         public int User_Item_id { get; set; }
         public int Product_Type_id { get; set; }
-        //public Materials id { get; set; }
+
     }
 }

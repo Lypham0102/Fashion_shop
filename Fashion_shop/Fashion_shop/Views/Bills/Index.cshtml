@@ -14,16 +14,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Date_Time)
+                @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Total)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Staff_id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Customer_id)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Voucher_id)
@@ -35,16 +29,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Date_Time)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Total)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Staff_id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer_id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Voucher_id)
