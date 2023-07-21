@@ -54,8 +54,22 @@ namespace Fashion_shop.Controllers
                     var principal = new ClaimsPrincipal(identity);
 
                     await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                    if(user.Role_id.ToString() == Role.User.ToString())
+                    {
+                        return RedirectToAction("Index", "Home");
 
-                    return RedirectToAction("Index", "Home");
+                    }
+                    if (user.Role_id.ToString() == Role.Admin.ToString())
+                    {
+                        return RedirectToAction("Index", "Home");
+
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+
+                    }
+
                 }    
 
                 else
@@ -68,6 +82,7 @@ namespace Fashion_shop.Controllers
 
 
         // GET: Users
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.User.ToListAsync());
