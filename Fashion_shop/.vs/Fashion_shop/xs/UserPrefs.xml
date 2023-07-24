@@ -4,15 +4,15 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Items/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Items/Details.cshtml">
     <Files>
       <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="383" Column="1" />
-      <File FileName="Fashion_shop/Controllers/ItemsController.cs" Line="35" Column="1" />
+      <File FileName="Fashion_shop/Controllers/ItemsController.cs" />
       <File FileName="Fashion_shop/Controllers/MaterialsController.cs" />
       <File FileName="Fashion_shop/Models/Item.cs" />
       <File FileName="Fashion_shop/Models/Materials.cs" />
       <File FileName="Fashion_shop/Controllers/User_ItemController.cs" />
-      <File FileName="Fashion_shop/Data/AppDBContext.cs" Line="42" Column="6" />
+      <File FileName="Fashion_shop/Data/AppDBContext.cs" />
       <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="203" Column="3" />
       <File FileName="Fashion_shop/Controllers/Product_TypeController.cs" />
       <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
@@ -29,11 +29,11 @@
       <File FileName="Fashion_shop/Models/Office.cs" />
       <File FileName="Fashion_shop/Startup.cs" />
       <File FileName="Fashion_shop/appsettings.json" />
-      <File FileName="Fashion_shop/Models/Bill.cs" Line="19" Column="1" />
-      <File FileName="Fashion_shop/Models/Item_Details.cs" Line="16" Column="1" />
+      <File FileName="Fashion_shop/Models/Bill.cs" />
+      <File FileName="Fashion_shop/Models/Item_Details.cs" />
       <File FileName="Fashion_shop/Models/ErrorViewModel.cs" />
       <File FileName="Fashion_shop/Models/Cart_Details.cs" />
-      <File FileName="Fashion_shop/Controllers/BillsController.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Controllers/BillsController.cs" />
       <File FileName="Fashion_shop/Controllers/OfficesController.cs" />
       <File FileName="Fashion_shop/Shop.cshtml" />
       <File FileName="Fashion_shop/shop-single.html" />
@@ -41,8 +41,8 @@
       <File FileName="Fashion_shop/Models/Size.cs" />
       <File FileName="Fashion_shop/Models/Product_Type.cs" />
       <File FileName="Fashion_shop/Program.cs" />
-      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" Line="35" Column="9" />
-      <File FileName="Fashion_shop/Models/Cart.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" />
+      <File FileName="Fashion_shop/Models/Cart.cs" />
       <File FileName="Fashion_shop/Views/Users/Index.cshtml" />
       <File FileName="Fashion_shop/Views/Users/Edit.cshtml" />
       <File FileName="Fashion_shop/Controllers/ColorController.cs" />
@@ -51,26 +51,23 @@
       <File FileName="Fashion_shop/Views/Home/Contact.cshtml" />
       <File FileName="Fashion_shop/Views/Home/Details_item.cshtml" />
       <File FileName="Fashion_shop/Views/Bills/Edit.cshtml" />
-      <File FileName="Fashion_shop/Views/Bills/Create.cshtml" Line="25" Column="19" />
+      <File FileName="Fashion_shop/Views/Bills/Create.cshtml" />
       <File FileName="Fashion_shop/Views/Bills/Index.cshtml" />
       <File FileName="Fashion_shop/Views/Bills/Delete.cshtml" />
-      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" Line="25" Column="14" />
+      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" />
       <File FileName="Fashion_shop/Views/Users/Details.cshtml" />
-      <File FileName="Fashion_shop/Models/Bill_Details.cs" Line="14" Column="1" />
-      <File FileName="Fashion_shop/Controllers/Bill_DetailsController.cs" Line="21" Column="1" />
-      <File FileName="Fashion_shop/Controllers/CartController.cs" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Models/Bill_Details.cs" />
+      <File FileName="Fashion_shop/Controllers/Bill_DetailsController.cs" />
+      <File FileName="Fashion_shop/Controllers/CartController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Fashion_shop" expanded="True">
-            <Node name="Fashion_shop">
-              <Node name="Data" expanded="True" />
+          <Node name="Fashion_shop">
+            <Node name="Fashion_shop" expanded="True">
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Bills" expanded="True" />
-                <Node name="Items" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="Items" expanded="True" />
                 <Node name="Users" expanded="True" />
               </Node>
             </Node>
