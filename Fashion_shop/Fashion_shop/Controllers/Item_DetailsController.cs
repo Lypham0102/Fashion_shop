@@ -48,7 +48,6 @@ namespace Fashion_shop.Controllers
 
             return colorNames;
         }
-
         // GET: Item_Details/GetSizes/5
         public async Task<List<Models.Size>> GetSizes(int? id)
         {
@@ -73,6 +72,7 @@ namespace Fashion_shop.Controllers
 
             return sizeNames;
         }
+
     }
 }
 
