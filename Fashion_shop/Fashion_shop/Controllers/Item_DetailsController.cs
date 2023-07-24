@@ -22,9 +22,9 @@ namespace Fashion_shop.Controllers
             _context = context;  
         }
         // GET: Item_Details/GetColors/5
-        public async Task<List<string>> GetColors(int? id)
+        public async Task<List<Color>> GetColors(int? id)
         {
-            _ctColor = new ColorController(_context);
+            //_ctColor = new ColorController(_context);
             if (id == null)
             {
                 return null;
@@ -35,12 +35,14 @@ namespace Fashion_shop.Controllers
                 .Select(details => details.Color_id)
                 .ToListAsync();
 
-            var colorNames = new List<string>();
+            var colorNames = new List<Color>();
             foreach (var colorId in itemDetails)
             {
                 // Gọi phương thức GetColorsName
-                var colorName = _ctColor.GetColorsName(colorId);
-                colorNames.AddRange(colorName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
+                //var colorName = _ctColor.GetColorsName(colorId);
+                Color colorName = await _context.Color
+                .FirstOrDefaultAsync(color => color.id == colorId);
+                colorNames.Add(colorName); // Thêm tất cả các tên màu sắc vào danh sách colorNames
             }
 
             return colorNames;

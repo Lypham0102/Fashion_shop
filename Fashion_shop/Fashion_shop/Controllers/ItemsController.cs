@@ -12,7 +12,6 @@ using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 
-
 namespace Fashion_shop.Controllers
 {
 
@@ -73,7 +72,7 @@ namespace Fashion_shop.Controllers
 
             // Gọi phương thức GetColors trên đối tượng ctItem_Details và lưu kết quả vào biến colors
             var d = await ctItem_Details.GetColors(item.id);
-            ViewBag.D = d;
+            ViewBag.D = d.Select(color => color.Name).ToList();
 
             // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
             var e = await ctItem_Details.GetSizes(item.id);
