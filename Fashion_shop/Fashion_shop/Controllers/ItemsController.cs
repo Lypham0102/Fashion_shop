@@ -76,7 +76,7 @@ namespace Fashion_shop.Controllers
 
             // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
             var e = await ctItem_Details.GetSizes(item.id);
-            ViewBag.E = e;
+            ViewBag.E = e.Select(size => size.Name).ToList();
 
             return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
