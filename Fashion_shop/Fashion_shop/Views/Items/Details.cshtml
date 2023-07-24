@@ -1,4 +1,4 @@
-﻿@model Fashion_shop.Models.Item
+﻿@model Fashion_shop.Models.Item_list
 
 @{
     ViewData["Title"] = "Details";
@@ -206,38 +206,38 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <img src="~/img_items/@Html.DisplayFor(model => model.Image)" alt="Product Image" class="img-fluid">
+                <img src="~/img_items/@Html.DisplayFor(model => model.item.Image)" alt="Product Image" class="img-fluid">
             </div>
             <div class="col-lg-6">
                 <div>
-                    <h4 style="color: #757575;">@Html.DisplayFor(model => model.Name)</h4>
-                    <h5 style="font-weight: bold;">@Html.DisplayFor(model => model.Price) đ</h5>
+                    <h4 style="color: #757575;">@Html.DisplayFor(model => model.item.Name)</h4>
+                    <h5 style="font-weight: bold;">@Html.DisplayFor(model => model.item.Price) đ</h5>
                     <hr />
                     <h4>Thông tin sản phẩm</h4>
                     <dl class="row">
                         <dt class="col-sm-4">
-                            @Html.DisplayNameFor(model => model.Brand)
+                            @Html.DisplayNameFor(model => model.item.Brand)
                         </dt>
                         <dd class="col-sm-8">
-                            @Html.DisplayFor(model => model.Brand)
+                            @Html.DisplayFor(model => model.item.Brand)
                         </dd>
                         <dt class="col-sm-4">
-                            @Html.DisplayNameFor(model => model.Gender)
+                            @Html.DisplayNameFor(model => model.item.Gender)
                         </dt>
                         <dd class="col-sm-8">
-                            @Html.DisplayFor(model => model.Gender)
+                            @Html.DisplayFor(model => model.item.Gender)
                         </dd>
                         <dt class="col-sm-4">
-                            @Html.DisplayNameFor(model => model.Count)
+                            @Html.DisplayNameFor(model => model.item.Count)
                         </dt>
                         <dd class="col-sm-8">
-                            @Html.DisplayFor(model => model.Count)
+                            @Html.DisplayFor(model => model.item.Count)
                         </dd>
                         <dt class="col-sm-4">
-                            @Html.DisplayNameFor(model => model.Country)
+                            @Html.DisplayNameFor(model => model.item.Country)
                         </dt>
                         <dd class="col-sm-8">
-                            @Html.DisplayFor(model => model.Country)
+                            @Html.DisplayFor(model => model.item.Country)
                         </dd>
                         <dt class="col-sm-4">
                             Materials
@@ -261,20 +261,20 @@
                 </div>
                 <form>
                     <label for="size">Size:</label>
-                    @foreach (var size in ViewBag.E)
+                    @foreach (var size in Model.sizes)
                     {
                         <div class="size-option">
-                            <input style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size">
+                            <input style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size.id">
                             <label for="size-@size">@size</label>
                         </div>
                     }
                 </form>
                 <form>
                     <label for="color">Color:</label>
-                    @foreach (var color in ViewBag.D)
+                    @foreach (var color in Model.colors)
                     {
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="selectedColor" id="color-@color" value="@color">
+                            <input class="form-check-input" type="radio" name="selectedColor" id="color-@color" value="@color.id">
                             <label class="form-check-label" for="color-@color">@color</label>
                         </div>
                     }

@@ -14,7 +14,6 @@ using System.Data;
 
 namespace Fashion_shop.Controllers
 {
-
     public class ItemsController : Controller
     {
         private readonly AppDbContext _context;
@@ -72,13 +71,15 @@ namespace Fashion_shop.Controllers
 
             // Gọi phương thức GetColors trên đối tượng ctItem_Details và lưu kết quả vào biến colors
             var d = await ctItem_Details.GetColors(item.id);
-            ViewBag.D = d.Select(color => color.Name).ToList();
+            //ViewBag.D = d.Select(color => color.Name).ToList();
 
             // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
             var e = await ctItem_Details.GetSizes(item.id);
-            ViewBag.E = e.Select(size => size.Name).ToList();
+            //ViewBag.E = e.Select(size => size.Name).ToList();
+            Item_list il;
+            il = new Item_list(item, d, e);
 
-            return View("Details", item); // Truyền giá trị của item và ViewBag.A vào view "Details"
+            return View("Details", il); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
         // GET: Items/Create
         public IActionResult Create()
