@@ -12,7 +12,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
-
+using Org.BouncyCastle.Crypto.Generators;
+using Bcrypt = BCrypt.Net.BCrypt;
 namespace Fashion_shop.Controllers
 {
 
@@ -38,8 +39,10 @@ namespace Fashion_shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username && u.Password == User.Password);
-                if(user != null)
+
+                var confirm = Bcrypt.Verify(User.Password, Bcrypt.HashPassword(User.Password));
+                var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username /*&& u.Password == User.Password*/);
+                if(user != null && confirm)
                 {
                     Response.Cookies.Append("User_Id",user.id.ToString());
                     Response.Cookies.Append("UserName", user.id.ToString());
@@ -107,7 +110,7 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Users/Create
-        [Authorize(Policy = "AdminOnly")]
+        //[Authorize(Policy = "AdminOnly")]
         public IActionResult Create()
         {
             return View();
@@ -122,6 +125,7 @@ namespace Fashion_shop.Controllers
         {
             if (ModelState.IsValid)
             {
+                user.Password = Bcrypt.HashPassword(user.Password);
                 _context.Add(user);
                 
                 await _context.SaveChangesAsync();

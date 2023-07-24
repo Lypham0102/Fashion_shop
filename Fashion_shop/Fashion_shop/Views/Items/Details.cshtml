@@ -261,23 +261,22 @@
                         </dd>
                     </dl>
                 </div>
-                <form>
+                <form asp-action="AddtoCart">
                     <label for="size">Size:</label>
                     @foreach (var size in Model.sizes)
                     {
                         <div class="size-option">
                             <input style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size.id">
-                            <label for="size-@size">@size</label>
+                            <label for="size-@size">@size.Name</label>
                         </div>
                     }
-                </form>
-                <form>
+                    </br>
                     <label for="color">Color:</label>
                     @foreach (var color in Model.colors)
                     {
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="selectedColor" id="color-@color" value="@color.id">
-                            <label class="form-check-label" for="color-@color">@color</label>
+                            <label class="form-check-label" for="color-@color">@color.Name</label>
                         </div>
                     }
                 </form>

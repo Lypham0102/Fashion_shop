@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Fashion_shop/1.0.0": {
         "dependencies": {
+          "BCrypt.Net": "0.1.0",
           "EntityFramework6.Npgsql": "6.4.3",
           "FluentAssertions": "6.11.0",
           "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
@@ -42,6 +43,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.10",
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.1.0",
+          "Portable.BouncyCastle": "1.9.0",
           "System.Linq": "4.3.0",
           "X.PagedList.Mvc.Core": "7.9.1",
           "Microsoft.AspNetCore.Antiforgery.Reference": "5.0.0.0",
@@ -331,6 +333,17 @@
         },
         "compile": {
           "Fashion_shop.dll": {}
+        }
+      },
+      "BCrypt.Net/0.1.0": {
+        "runtime": {
+          "lib/net35/BCrypt.Net.dll": {
+            "assemblyVersion": "0.1.4141.31969",
+            "fileVersion": "0.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net35/BCrypt.Net.dll": {}
         }
       },
       "EntityFramework/6.4.0": {
@@ -1533,6 +1546,17 @@
         },
         "compile": {
           "lib/netstandard1.3/Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.9.0": {
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.1"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -4357,6 +4381,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BCrypt.Net/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sST2w361Dxt9GGMfpOTiK50wXGV64Ybb1hiX3xjEWnhVYZNF43NuySGwADJa7X1R+bA53NsFR+tuDxcYiJeIOA==",
+      "path": "bcrypt.net/0.1.0",
+      "hashPath": "bcrypt.net.0.1.0.nupkg.sha512"
+    },
     "EntityFramework/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -5014,6 +5045,13 @@
       "sha512": "sha512-+taA6t8sRI0JTbyCZH0GobEtJYvU4aAGBf5/2/CutWHiYpO2nLfJ8SQSyWYMKakrwn1/NDM9VV85mGEAzBZ7LQ==",
       "path": "npgsql.entityframeworkcore.postgresql.design/1.1.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
+      "path": "portable.bouncycastle/1.9.0",
+      "hashPath": "portable.bouncycastle.1.9.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

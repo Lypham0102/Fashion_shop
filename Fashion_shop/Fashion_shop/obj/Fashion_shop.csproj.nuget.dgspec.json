@@ -41,6 +41,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Bcrypt.Net": {
+              "target": "Package",
+              "version": "[0.1.0, )"
+            },
             "EntityFramework6.Npgsql": {
               "target": "Package",
               "version": "[6.4.3, )"
@@ -80,6 +84,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
             },
             "System.Linq": {
               "target": "Package",
