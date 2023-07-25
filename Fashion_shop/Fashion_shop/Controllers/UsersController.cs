@@ -121,13 +121,16 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,Name,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
+        public async Task<IActionResult> Create([Bind("id,Name,Gender,Username,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
         {
             if (ModelState.IsValid)
             {
+                _context.User.FirstOrDefaultAsync(u => u.Username == user.Username);
                 user.Password = Bcrypt.HashPassword(user.Password);
-                _context.Add(user);
                 
+                
+
+                _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
