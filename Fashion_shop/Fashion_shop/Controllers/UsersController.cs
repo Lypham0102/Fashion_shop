@@ -125,17 +125,23 @@ namespace Fashion_shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.User.FirstOrDefaultAsync(u => u.Username == user.Username);
-                user.Password = Bcrypt.HashPassword(user.Password);
-                
-                
+                var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Username == user.Username);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Username", "The username is already in use.");
+                    return View(user);
+                }
 
+                user.Password = Bcrypt.HashPassword(user.Password);
+                user.Status = 1;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(user);
         }
+
 
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -212,7 +218,13 @@ namespace Fashion_shop.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var user = await _context.User.FindAsync(id);
-            _context.User.Remove(user);
+            if (user == null)
+    {
+        // Handle the situation where the user with the given id is not found
+        return NotFound();
+    }
+            user.Status = 0;
+            //_context.User.Update(user);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

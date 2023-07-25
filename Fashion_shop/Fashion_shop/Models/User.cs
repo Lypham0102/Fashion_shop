@@ -24,5 +24,6 @@ namespace Fashion_shop.Models
         public string Username { get; set; }
         public DateTime Date_of_birth { get; set;}
         public Role Role_id { get; set; }
+        public int Status { get; set; }
     }
 }
