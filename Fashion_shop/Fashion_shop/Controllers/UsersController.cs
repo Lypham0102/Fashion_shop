@@ -12,7 +12,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
-
+using Org.BouncyCastle.Crypto.Generators;
+using Bcrypt = BCrypt.Net.BCrypt;
 namespace Fashion_shop.Controllers
 {
 
@@ -38,8 +39,10 @@ namespace Fashion_shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username && u.Password == User.Password);
-                if(user != null)
+
+                var confirm = Bcrypt.Verify(User.Password, Bcrypt.HashPassword(User.Password));
+                var user = await _context.User.FirstOrDefaultAsync(u => u.Username == User.Username /*&& u.Password == User.Password*/);
+                if(user != null && confirm)
                 {
                     Response.Cookies.Append("User_Id",user.id.ToString());
                     Response.Cookies.Append("UserName", user.Name.ToString());
@@ -107,7 +110,7 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Users/Create
-        [Authorize(Policy = "AdminOnly")]
+        //[Authorize(Policy = "AdminOnly")]
         public IActionResult Create()
         {
             return View();
@@ -118,17 +121,40 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,Name,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
+        public async Task<IActionResult> Create([Bind("id,Name,Gender,Username,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
         {
             if (ModelState.IsValid)
             {
+                var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Username == user.Username /*|| u.Email == user.Email*/);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Username", "The username or email is already in use.");
+                    return View(user);
+                }
+                /*var existingUser1 = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Email", "The email is already in use.");
+                    return View(user);
+                }*/
+
+                DateTime userbd = user.Date_of_birth;
+                TimeSpan t = DateTime.Now.Subtract(userbd)  ;
+                if (  t.TotalDays < (16*360))
+                {
+                    ModelState.AddModelError("Date_of_birth", "Read our policy for more information about age restriction");
+                    return View(user);
+                }
+                user.Password = Bcrypt.HashPassword(user.Password);
+                user.Status = 1;
                 _context.Add(user);
-                
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(user);
         }
+
 
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -205,7 +231,13 @@ namespace Fashion_shop.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var user = await _context.User.FindAsync(id);
-            _context.User.Remove(user);
+            if (user == null)
+    {
+        // Handle the situation where the user with the given id is not found
+        return NotFound();
+    }
+            user.Status = 0;
+            //_context.User.Update(user);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

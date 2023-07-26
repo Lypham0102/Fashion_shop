@@ -15,6 +15,7 @@ namespace Fashion_shop.Models
         public int id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+        public string Gender { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set;}
@@ -23,5 +24,6 @@ namespace Fashion_shop.Models
         public string Username { get; set; }
         public DateTime Date_of_birth { get; set;}
         public Role Role_id { get; set; }
+        public int Status { get; set; }
     }
 }
