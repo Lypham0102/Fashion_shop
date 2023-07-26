@@ -125,13 +125,26 @@ namespace Fashion_shop.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Username == user.Username);
+                var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Username == user.Username /*|| u.Email == user.Email*/);
                 if (existingUser != null)
                 {
-                    ModelState.AddModelError("Username", "The username is already in use.");
+                    ModelState.AddModelError("Username", "The username or email is already in use.");
                     return View(user);
                 }
+                /*var existingUser1 = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Email", "The email is already in use.");
+                    return View(user);
+                }*/
 
+                DateTime userbd = user.Date_of_birth;
+                TimeSpan t = DateTime.Now.Subtract(userbd)  ;
+                if (  t.TotalDays < (16*360))
+                {
+                    ModelState.AddModelError("Date_of_birth", "Read our policy for more information about age restriction");
+                    return View(user);
+                }
                 user.Password = Bcrypt.HashPassword(user.Password);
                 user.Status = 1;
                 _context.Add(user);
