@@ -1,0 +1,134 @@
+﻿@model IEnumerable<Fashion_shop.Models.Item>
+@{
+    ViewData["Title"] = "Item";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    body {
+        background-image: none;
+        background-color: #EEEEEE;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /*        border: 1px solid #ccc;*/
+        border-radius: 10px; /* Thêm border-radius để bo góc bảng */
+        transition: box-shadow 0.3s ease;
+    }
+
+        table:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng khi di chuột vào */
+        }
+
+    th {
+        background-color: #f8f8f8;
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #e0e0e0;
+    }
+
+    .custom-button {
+        background-color: grey;
+        color: black;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        margin-right: 10px;
+    }
+
+    .confirm-msg {
+        color: red;
+    }
+
+    .highlight {
+        border: none;
+        background-color: grey;
+        color: white;
+        padding: 2px 4px;
+        border-radius: 5px;
+        /*        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);*/
+    }
+
+    .btn-custom {
+        background-color: #FF9999;
+        border: 1px solid #ccc;
+        /* Viền màu xám */
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        /* Bóng */
+    }
+</style>
+<h1>Thông tin sản phẩm</h1>
+
+<button class="custom-button">
+    <a asp-action="Create" style="text-decoration: none; color: white;">Thêm sản phẩm</a>
+</button>
+<div style="height: 10px;"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:160px"> Name</th>
+            <th style="width:160px"> Brand </th>
+            <th style="width:160px"> Count </th>
+            <th style="width:160px"> Price </th>
+            <th style="width:160px"> Gender </th>
+            <th style="width:160px"> Country </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td style="width:160px">
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td style="width:160px">
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { Name = item.id })'">Edit</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { Name = item.id })'">Details</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

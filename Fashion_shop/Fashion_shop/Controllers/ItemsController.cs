@@ -33,8 +33,11 @@ namespace Fashion_shop.Controllers
             var a = _context.Item.OrderByDescending(a => a.id).Take(count).ToList();
             return a;
         }
-
-        // GET: Items
+        [Authorize(Policy = "AdminOnly")]
+        public async Task<IActionResult> IndexAd()
+        {
+            return View(await _context.Item.ToListAsync());
+        }
         public ActionResult Index(int ? page)
         {
             const int pageSize = 40; // Số mục trên mỗi trang
@@ -187,5 +190,7 @@ namespace Fashion_shop.Controllers
         {
             return _context.Item.Any(e => e.id == id);
         }
+
+
     }
 }
