@@ -3,17 +3,18 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Items/Details.cshtml">
     <Files>
-      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="383" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="271" Column="21" />
       <File FileName="Fashion_shop/Controllers/ItemsController.cs" />
       <File FileName="Fashion_shop/Controllers/MaterialsController.cs" />
       <File FileName="Fashion_shop/Models/Item.cs" />
       <File FileName="Fashion_shop/Models/Materials.cs" />
       <File FileName="Fashion_shop/Controllers/User_ItemController.cs" />
       <File FileName="Fashion_shop/Data/AppDBContext.cs" />
-      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="203" Column="3" />
+      <File FileName="Fashion_shop/Views/Items/Index.cshtml" />
       <File FileName="Fashion_shop/Controllers/Product_TypeController.cs" />
       <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
       <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.EolTargetFrameworks.targets" />
@@ -28,7 +29,7 @@
       <File FileName="Fashion_shop/Models/User_Item.cs" />
       <File FileName="Fashion_shop/Models/Office.cs" />
       <File FileName="Fashion_shop/Startup.cs" />
-      <File FileName="Fashion_shop/appsettings.json" />
+      <File FileName="Fashion_shop/appsettings.json" Line="1" Column="1" />
       <File FileName="Fashion_shop/Models/Bill.cs" />
       <File FileName="Fashion_shop/Models/Item_Details.cs" />
       <File FileName="Fashion_shop/Models/ErrorViewModel.cs" />
@@ -56,19 +57,38 @@
       <File FileName="Fashion_shop/Views/Bills/Delete.cshtml" />
       <File FileName="Fashion_shop/Views/Bills/Details.cshtml" />
       <File FileName="Fashion_shop/Views/Users/Details.cshtml" />
-      <File FileName="Fashion_shop/Models/Bill_Details.cs" />
+      <File FileName="Fashion_shop/Models/Bill_Details.cs" Line="15" Column="1" />
       <File FileName="Fashion_shop/Controllers/Bill_DetailsController.cs" />
       <File FileName="Fashion_shop/Controllers/CartController.cs" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="Fashion_shop/wwwroot/assets/css/cart.css" />
+      <File FileName="Fashion_shop/Models/Item_list.cs" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" />
+      <File FileName="Fashion_shop/wwwroot/index.html" />
+      <File FileName="Fashion_shop/Views/Users/Create.cshtml" />
+      <File FileName="Fashion_shop/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Fashion_shop/wwwroot/pages/dashboard.html" />
+      <File FileName="Fashion_shop/wwwroot/pages/profile.html" />
+      <File FileName="Fashion_shop/wwwroot/pages/virtual-reality.html" />
+      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" />
+      <File FileName="Fashion_shop/wwwroot/css/PageLogin.css" />
+      <File FileName="Fashion_shop/wwwroot/js/PageLogin.js" />
+      <File FileName="Fashion_shop/wwwroot/css/bootstrap.min.css" />
+      <File FileName="../../../../Downloads/login-form-20/css/style.css" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Fashion_shop">
-            <Node name="Fashion_shop" expanded="True">
+            <Node name="Fashion_shop">
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Items" expanded="True" />
-                <Node name="Users" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="img" expanded="True" />
+                <Node name="scss" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -76,6 +96,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
 </Properties>

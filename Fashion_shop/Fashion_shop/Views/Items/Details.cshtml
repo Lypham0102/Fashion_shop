@@ -268,7 +268,7 @@
                             <label for="size-@size">@size.Name</label>
                         </div>
                     }
-                    </br>
+                    
                     <label for="color">Color:</label>
                     @foreach (var color in Model.colors)
                     {
@@ -384,19 +384,5 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-    @*<script>function addToCart() {
-            var selectedColor = document.querySelector('input[name="selectedColor"]:checked');
-            var selectedSize = document.querySelector('input[name="size"]:checked');
-
-            if (!selectedColor || !selectedSize) {
-                alert("Vui lòng chọn size và màu sắc trước khi thêm vào giỏ hàng.");
-            } else {
-                // Thêm sản phẩm vào giỏ hàng nếu đã chọn đủ size và color
-                // Your code to add the item to the cart goes here
-                alert("Sản phẩm đã được thêm vào giỏ hàng!");
-            }
-        }
-        document.getElementById("addToCartBtn").addEventListener("click", addToCart);</script>*@
-    <!-- End Script -->
 </body>
 </html>

@@ -45,7 +45,7 @@ namespace Fashion_shop.Controllers
                 if(user != null && confirm)
                 {
                     Response.Cookies.Append("User_Id",user.id.ToString());
-                    Response.Cookies.Append("UserName", user.id.ToString());
+                    Response.Cookies.Append("UserName", user.Name.ToString());
 
                     var claims = new List<Claim>
                     {
@@ -64,7 +64,7 @@ namespace Fashion_shop.Controllers
                     }
                     if (user.Role_id.ToString() == Role.Admin.ToString())
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index", "Users");
 
                     }
                     else
