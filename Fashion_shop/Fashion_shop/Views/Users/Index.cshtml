@@ -91,16 +91,12 @@
 <table class="table">
     <thead>
         <tr>
-            <th style="width:160px"> Tên</th>
-            <th style="width:160px"> Email </th>
-            <th style="width:160px"> UserName </th>
-            <th style="width:160px"> PhoneNumber </th>
-            <th style="width:160px"> Address </th>
-            <th style="width:160px"> Bank </th>
-            <th style="width:160px"> CardNumber </th>
-            <th style="width:160px"> Date </th>
-            <th style="width:160px"> Role </th>
-            <th style="width:160px"> Custom </th>
+            <th> Tên</th>
+            <th> Email </th>
+            <th> Date </th>
+            <th> PhoneNumber </th>
+            <th> Address </th>
+            <th> Custom </th>
             <th></th>
         </tr>
     </thead>
@@ -108,32 +104,20 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Username)
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date_of_birth.Date)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Bank)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.CardNumber)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Date_of_birth)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Role_id)
                 </td>
                 <td style="width:160px">
                     <button class="highlight" onclick="location.href='@Url.Action("Edit", new { Name = item.id })'">Edit</button>
