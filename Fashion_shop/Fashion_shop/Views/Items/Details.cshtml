@@ -259,33 +259,35 @@
                         </dd>
                     </dl>
                 </div>
-                <form asp-action="AddtoCart">
+                <form asp-action="AddToCart">
+                    <input name="itemId" hidden value="@Model.item.id" type="hidden">
                     <label for="size">Size:</label>
                     @foreach (var size in Model.sizes)
                     {
                         <div class="size-option">
-                            <input style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size.id">
-                            <label for="size-@size">@size.Name</label>
+                            <input class="form-check-input" style="background-color: grey;" type="radio" id="size-@size" name="size" value="@size.id">
+                            <label class="form-check-label" for="size-@size">@size.Name</label>
                         </div>
                     }
-                    
+                    <br/>
                     <label for="color">Color:</label>
                     @foreach (var color in Model.colors)
                     {
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="selectedColor" id="color-@color" value="@color.id">
+                            <input class="form-check-input" type="radio" name="color" id="color-@color" value="@color.id">
                             <label class="form-check-label" for="color-@color">@color.Name</label>
                         </div>
                     }
+                    <div style="height: 50px;"></div>
+                    @*Button Add Cart*@
+                    <button type="submit" style="background-color: black; color: white; width: 450px; text-align: center; padding: 10px; cursor: pointer; display: inline-block; margin-left: 200px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: color 0.3s ease;"
+                         onmouseover="this.style.backgroundColor='black'; this.style.color='gray';"
+                         onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
+                         id="addToCartBtn">
+                        Thêm vào giỏ hàng
+                    </button>
                 </form>
-                <div style="height: 50px;"></div>
-                @*Button Add Cart*@
-                <div style="background-color: black; color: white; width: 450px; text-align: center; padding: 10px; cursor: pointer; display: inline-block; margin-left: 200px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: color 0.3s ease;"
-                     onmouseover="this.style.backgroundColor='black'; this.style.color='gray';"
-                     onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
-                     id="addToCartBtn">
-                    Thêm vào giỏ hàng
-                </div>
+                
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
+using Org.BouncyCastle.Bcpg;
 
 namespace Fashion_shop.Controllers
 {
@@ -33,11 +34,13 @@ namespace Fashion_shop.Controllers
             var a = _context.Item.OrderByDescending(a => a.id).Take(count).ToList();
             return a;
         }
+
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> IndexAd()
         {
             return View(await _context.Item.ToListAsync());
         }
+
         public ActionResult Index(int ? page)
         {
             const int pageSize = 40; // Số mục trên mỗi trang
@@ -46,6 +49,7 @@ namespace Fashion_shop.Controllers
             var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
             return View(select);
         }
+
         public async Task<IActionResult> Details(int? id)
         {
             ctMaterials = new MaterialsController(_context);
@@ -84,6 +88,7 @@ namespace Fashion_shop.Controllers
 
             return View("Details", il); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
+
         // GET: Items/Create
         public IActionResult Create()
         {
@@ -191,6 +196,56 @@ namespace Fashion_shop.Controllers
             return _context.Item.Any(e => e.id == id);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddToCart()
+        {
+            var itemId = Request.Form["itemId"];
+            var colorId = Request.Form["colorId"];
+            var sizeId = Request.Form["sizeId"];
+
+            if (Request.Cookies["UserId"] != null)
+            {              
+                var userId = Int32.Parse(Request.Cookies["UserId"]);
+                var bill = await _context.Bill.FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
+                if (bill == null)
+                {
+                    bill = new Bill();
+                    bill.Total = 0;
+                    bill.Voucher_id = 0;
+                    bill.User_id = userId;
+                    bill.Date = DateTime.Now;
+                    bill.Status = 0;
+                    _context.Add(bill);
+                    await _context.SaveChangesAsync();
+                }
+                var itemDetail = await _context.Item_Details.FirstOrDefaultAsync(b => b.Item_id == itemId && b.Color_id == colorId && b.Size_id == sizeId);
+                var billDetails = await _context.Bill_Details.FirstOrDefaultAsync(b => b.Bill_id == bill.id && b.id_details_item == itemDetail.id_details_item);
+                if(billDetails == null)
+                {
+                    billDetails = new Bill_Details();
+                    billDetails.Total = 0;
+                    billDetails.id_details_item = itemDetail.id_details_item;
+                    billDetails.Count = 1;
+                    _context.Add( billDetails);
+                }
+                else
+                {
+                    billDetails.Count++;
+                }
+                await _context.SaveChangesAsync();
+            }            
+            /*if (ModelState.IsValid)
+            {
+                var itemId = Request.Form["itemId"];
+                var colorId = Request.Form["colorId"];
+                var sizeId = Request.Form["sizeId"];
+                _context.Add(billDetails);
+                await _context.SaveChangesAsync();
+                return ;
+            }*/
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
