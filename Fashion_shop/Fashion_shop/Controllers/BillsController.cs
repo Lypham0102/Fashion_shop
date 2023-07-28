@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Fashion_shop.Data;
 using Fashion_shop.Models;
+using Microsoft.AspNetCore.Session;
+using Microsoft.AspNetCore.Http;
 
 namespace Fashion_shop.Controllers
 {
@@ -49,6 +51,19 @@ namespace Fashion_shop.Controllers
             return View();
         }
 
+        /*public async Task<int> Bill_Gen(Bill bill)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(bill);
+                int Bill_id = bill.id;
+                await _context.SaveChangesAsync();
+                //HttpContext.Session.SetInt32("Bill_id", Bill);
+                Response.Cookies.Append("Bill_id", Bill_id.ToString());
+                return Bill_id;
+            }
+            return -1;
+        }*/
         // POST: Bills/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
