@@ -204,9 +204,9 @@ namespace Fashion_shop.Controllers
             var colorId = Request.Form["colorId"];
             var sizeId = Request.Form["sizeId"];
 
-            if (Request.Cookies["UserId"] != null)
+            if (Request.Cookies["User_Id"] != null)
             {              
-                var userId = Int32.Parse(Request.Cookies["UserId"]);
+                var userId = Int32.Parse(Request.Cookies["User_Id"]);
                 var bill = await _context.Bill.FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
                 if (bill == null)
                 {
@@ -227,14 +227,14 @@ namespace Fashion_shop.Controllers
                     billDetails.Total = 0;
                     billDetails.id_details_item = itemDetail.id_details_item;
                     billDetails.Count = 1;
-                    _context.Add( billDetails);
+                    _context.Add(billDetails);
                 }
                 else
                 {
                     billDetails.Count++;
                 }
                 await _context.SaveChangesAsync();
-            }            
+            }
             /*if (ModelState.IsValid)
             {
                 var itemId = Request.Form["itemId"];

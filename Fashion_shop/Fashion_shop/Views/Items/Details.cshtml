@@ -259,7 +259,7 @@
                         </dd>
                     </dl>
                 </div>
-                <form asp-action="AddToCart">
+                <form asp-action="AddToCart" >
                     <input name="itemId" hidden value="@Model.item.id" type="hidden">
                     <label for="size">Size:</label>
                     @foreach (var size in Model.sizes)
