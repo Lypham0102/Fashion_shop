@@ -12,7 +12,10 @@ using X.PagedList;
 using Microsoft.AspNetCore.Authorization;
 using System.Data;
 using Org.BouncyCastle.Bcpg;
-
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Http;
 namespace Fashion_shop.Controllers
 {
     public class ItemsController : Controller
@@ -22,10 +25,11 @@ namespace Fashion_shop.Controllers
         private User_ItemController ctUserItems;
         private Product_TypeController ctProductTypes;
         private Item_DetailsController ctItem_Details;
-
-        public ItemsController(AppDbContext context)
+        private readonly ILogger<ItemsController> _logger;
+        public ItemsController(AppDbContext context, ILogger<ItemsController> logger)
         {
             _context = context;
+            _logger = logger;
 
         }
 
@@ -198,12 +202,16 @@ namespace Fashion_shop.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddToCart()
+        public async Task<IActionResult> AddToCart(int? itemId,int? colorId,int? sizeId)
         {
-            var itemId = Request.Form["itemId"];
-            var colorId = Request.Form["colorId"];
-            var sizeId = Request.Form["sizeId"];
 
+            //var itemId = int.Parse(Request.Form["itemId"]);
+            //var colorId = int.Parse(Request.Form["colorId"]);
+            //var sizeId = int.Parse(Request.Form["sizeId"]);
+            //_logger.LogInformation($"itemId: {itemId}, colorId: {colorId}, sizeId: {sizeId}");
+
+            //var sizeId = 12;
+            var itemDetail = await _context.Item_Details.FirstOrDefaultAsync(b => b.Item_id == itemId && b.Color_id == colorId && b.Size_id == sizeId);
             if (Request.Cookies["User_Id"] != null)
             {              
                 var userId = Int32.Parse(Request.Cookies["User_Id"]);
@@ -219,7 +227,6 @@ namespace Fashion_shop.Controllers
                     _context.Add(bill);
                     await _context.SaveChangesAsync();
                 }
-                var itemDetail = await _context.Item_Details.FirstOrDefaultAsync(b => b.Item_id == itemId && b.Color_id == colorId && b.Size_id == sizeId);
                 var billDetails = await _context.Bill_Details.FirstOrDefaultAsync(b => b.Bill_id == bill.id && b.id_details_item == itemDetail.id_details_item);
                 if(billDetails == null)
                 {
@@ -234,6 +241,14 @@ namespace Fashion_shop.Controllers
                     billDetails.Count++;
                 }
                 await _context.SaveChangesAsync();
+            }
+            else
+            {
+                var Cart = HttpContext.Session.Get("Cart");            
+                if (Cart != null)
+                {
+                    var CartJson = Encoding.UTF
+                }
             }
             /*if (ModelState.IsValid)
             {

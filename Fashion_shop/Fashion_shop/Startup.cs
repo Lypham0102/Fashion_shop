@@ -50,7 +50,8 @@ namespace Fashion_shop
                 options.AddPolicy("UserOnly", policy => policy.RequireRole(Role.User.ToString()));
                
             });
-
+            services.AddLogging();
+            services.AddHttpContextAccessor();
 
         }
 

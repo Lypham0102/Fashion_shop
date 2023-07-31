@@ -1,6 +1,7 @@
 ﻿using Fashion_shop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace Fashion_shop.Data
 {
@@ -19,6 +20,7 @@ namespace Fashion_shop.Data
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+            options.EnableSensitiveDataLogging();
         }
 
 
