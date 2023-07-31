@@ -1,87 +1,9 @@
 ﻿@model IEnumerable<Fashion_shop.Models.User>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Xin chào";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<style>
-    body {
-        background-image: none;
-        background-color: #EEEEEE;
-        font-family: Arial, sans-serif;
-    }
-
-    h1 {
-        text-align: center;
-        margin-top: 20px;
-        color: #333;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /*        border: 1px solid #ccc;*/
-        border-radius: 10px; /* Thêm border-radius để bo góc bảng */
-        transition: box-shadow 0.3s ease;
-    }
-
-        table:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng khi di chuột vào */
-        }
-
-    th {
-        background-color: #f8f8f8;
-        color: #333;
-        font-weight: bold;
-        padding: 10px;
-        text-align: left;
-    }
-
-    td {
-        padding: 10px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover {
-        background-color: #e0e0e0;
-    }
-
-    .custom-button {
-        background-color: grey;
-        color: black;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        padding: 8px 16px;
-        margin-right: 10px;
-    }
-
-    .confirm-msg {
-        color: red;
-    }
-
-    .highlight {
-        border: none;
-        background-color: grey;
-        color: white;
-        padding: 2px 4px;
-        border-radius: 5px;
-/*        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);*/
-    }
-
-    .btn-custom {
-        background-color: #FF9999;
-        border: 1px solid #ccc;
-        /* Viền màu xám */
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        /* Bóng */
-    }
-</style>
+<link rel="stylesheet" href="css/View/Users/Index.css">
 <h1>Thông tin khách hàng</h1>
 
 <button class="custom-button">
@@ -111,7 +33,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Date_of_birth.Date)
+                    @Html.DisplayFor(modelItem => item.Date_of_birth)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.PhoneNumber)
@@ -120,8 +42,8 @@
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
                 <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { Name = item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { Name = item.id })'">Details</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
                 </td>
             </tr>
         }
