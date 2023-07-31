@@ -46,6 +46,7 @@ namespace Fashion_shop.Controllers
             var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
             return View(select);
         }
+
         public async Task<IActionResult> Details(int? id)
         {
             ctMaterials = new MaterialsController(_context);

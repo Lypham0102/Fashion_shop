@@ -7,6 +7,7 @@ namespace Fashion_shop.Data
     public class AppDbContext : DbContext
     {
         protected readonly IConfiguration Configuration;
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure the composite primary key
@@ -20,6 +21,7 @@ namespace Fashion_shop.Data
         {
             options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
         }
+
 
 
         public DbSet<User> User { get; set; }

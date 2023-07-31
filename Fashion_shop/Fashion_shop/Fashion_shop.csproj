@@ -43,6 +43,19 @@
     <Folder Include="wwwroot\scss\bootstrap\mixins\" />
     <Folder Include="wwwroot\scss\bootstrap\utilities\" />
     <Folder Include="wwwroot\scss\bootstrap\vendor\" />
+    <Folder Include="Views\Bills\" />
+    <Folder Include="Views\Bill_Details\" />
+    <Folder Include="Views\Cart\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Items\" />
+    <Folder Include="Views\Offices\" />
+    <Folder Include="Views\Product_Type\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Views\Users\" />
+    <Folder Include="wwwroot\css\View\" />
+    <Folder Include="wwwroot\css\View\Home\" />
+    <Folder Include="wwwroot\css\View\Items\" />
+    <Folder Include="wwwroot\css\View\Users\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
@@ -157,6 +170,21 @@
     <Content Remove="wwwroot\scss\bootstrap\mixins\" />
     <Content Remove="wwwroot\scss\bootstrap\utilities\" />
     <Content Remove="wwwroot\scss\bootstrap\vendor\" />
+    <Content Remove="wwwroot\css\View\" />
+    <Content Remove="wwwroot\css\View\Home\" />
+    <Content Remove="wwwroot\css\View\Items\" />
+    <Content Remove="wwwroot\css\View\Users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Bills\" />
+    <None Remove="Views\Bill_Details\" />
+    <None Remove="Views\Cart\" />
+    <None Remove="Views\Home\" />
+    <None Remove="Views\Items\" />
+    <None Remove="Views\Offices\" />
+    <None Remove="Views\Product_Type\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Views\Users\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\css\bootstrap.min.css" />

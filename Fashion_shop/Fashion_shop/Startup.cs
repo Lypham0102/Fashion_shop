@@ -50,6 +50,7 @@ namespace Fashion_shop
                 options.AddPolicy("UserOnly", policy => policy.RequireRole(Role.User.ToString()));
                
             });
+            services.AddHttpContextAccessor();
 
 
         }
@@ -72,6 +73,7 @@ namespace Fashion_shop
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>

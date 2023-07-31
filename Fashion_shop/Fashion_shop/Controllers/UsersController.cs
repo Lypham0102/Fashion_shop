@@ -14,6 +14,8 @@ using System.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Org.BouncyCastle.Crypto.Generators;
 using Bcrypt = BCrypt.Net.BCrypt;
+using Microsoft.AspNetCore.Http;
+
 namespace Fashion_shop.Controllers
 {
 
@@ -46,6 +48,7 @@ namespace Fashion_shop.Controllers
                 {
                     Response.Cookies.Append("User_Id",user.id.ToString());
                     Response.Cookies.Append("UserName", user.Name.ToString());
+                    //HttpContext.Session.SetString("UserName", user.Name.ToString());
 
                     var claims = new List<Claim>
                     {
@@ -82,15 +85,12 @@ namespace Fashion_shop.Controllers
             }
             return View(User);
         }
-
-
         // GET: Users
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.User.ToListAsync());
         }
-
         // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -232,10 +232,10 @@ namespace Fashion_shop.Controllers
         {
             var user = await _context.User.FindAsync(id);
             if (user == null)
-    {
-        // Handle the situation where the user with the given id is not found
-        return NotFound();
-    }
+        {
+            // Handle the situation where the user with the given id is not found
+            return NotFound();
+        }
             user.Status = 0;
             //_context.User.Update(user);
             await _context.SaveChangesAsync();
