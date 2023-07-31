@@ -82,8 +82,8 @@
                         </dd>
                     </dl>
                 </div>
-                <form asp-action="AddToCart" >
-                    <input name="itemId" hidden value="@Model.item.id" type="hidden">
+                <form asp-action="AddToCart" method="post">
+                    <input type="hidden" id="itemId" name="itemId" value="@Model.item.id" />
                     <label for="size">Size:</label>
                     @foreach (var size in Model.sizes)
                     {
@@ -92,25 +92,50 @@
                             <label for="size-@size">@size.Name</label>
                         </div>
                     }
+<<<<<<< HEAD
                     <br/>
+=======
+                    <div style="height: 10px;"></div>
+=======
+                        <div class="size-option">
+                            <input class="form-check-input" style="background-color: grey;" type="radio" id="sizeId_@size.id" name="sizeId" value="@size.id" required>
+                            <label class="form-check-label" for="sizeId_@size.id">@size.Name</label>
+                        </div>
+                    }
+<<<<<<< HEAD
+                    <br />
+=======
+                    <br/>
+>>>>>>> c5bde84a032ad2c4d6891752cd7ff14ca878ad53
+>>>>>>> b93bc23d432a50c38c94b4402a6e4189ef6bbb74
+>>>>>>> 94c27378d90476ec1420f41dbd1b9e41ff46444b
                     <label for="color">Color:</label>
                     @foreach (var color in Model.colors)
                     {
                         <div class="form-check form-check-inline">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            <input class="form-check-input" type="radio" id="colorId_@color.id" name="colorId" value="@color.id" required>
+                            <label class="form-check-label" for="colorId_@color.id">@color.Name</label>
+=======
+<<<<<<< HEAD
+>>>>>>> 94c27378d90476ec1420f41dbd1b9e41ff46444b
                             <input class="form-check-input" style="background-color: grey;" type="radio" name="selectedColor" id="color-@color" value="@color.id">
                             <label class="form-check-label" for="color-@color">@color.Name</label>
+>>>>>>> b93bc23d432a50c38c94b4402a6e4189ef6bbb74
                         </div>
                     }
                     <div style="height: 50px;"></div>
                     @*Button Add Cart*@
                     <button type="submit" style="background-color: black; color: white; width: 450px; text-align: center; padding: 10px; cursor: pointer; display: inline-block; margin-left: 200px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; transition: color 0.3s ease;"
-                         onmouseover="this.style.backgroundColor='black'; this.style.color='gray';"
-                         onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
-                         id="addToCartBtn">
+                            onmouseover="this.style.backgroundColor='black'; this.style.color='gray';"
+                            onmouseout="this.style.backgroundColor='black'; this.style.color='white';"
+                            id="AddToCart">
                         Thêm vào giỏ hàng
                     </button>
                 </form>
-                
+               
             </div>
         </div>
     </div>
