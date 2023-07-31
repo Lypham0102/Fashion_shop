@@ -4,53 +4,6 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 <style>
-    body {
-        background-image: none;
-        background-color: #EEEEEE;
-        font-family: Arial, sans-serif;
-    }
-
-    h1 {
-        text-align: center;
-        margin-top: 20px;
-        color: #333;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        /*        border: 1px solid #ccc;*/
-        border-radius: 10px; /* Thêm border-radius để bo góc bảng */
-        transition: box-shadow 0.3s ease;
-    }
-
-        table:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng khi di chuột vào */
-        }
-
-    th {
-        background-color: #f8f8f8;
-        color: #333;
-        font-weight: bold;
-        padding: 10px;
-        text-align: left;
-    }
-
-    td {
-        padding: 10px;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    tr:hover {
-        background-color: #e0e0e0;
-    }
-
     .custom-button {
         background-color: grey;
         color: black;
@@ -82,8 +35,8 @@
         /* Bóng */
     }
 </style>
+<link rel="stylesheet" href="css/View/Items/IndexAd.css">
 <h1>Thông tin sản phẩm</h1>
-
 <button class="custom-button">
     <a asp-action="Create" style="text-decoration: none; color: white;">Thêm sản phẩm</a>
 </button>
@@ -124,8 +77,8 @@
                     @Html.DisplayFor(modelItem => item.Country)
                 </td>
                 <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { Name = item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { Name = item.id })'">Details</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
                 </td>
             </tr>
         }
