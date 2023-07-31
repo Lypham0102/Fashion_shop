@@ -245,10 +245,10 @@ namespace Fashion_shop.Controllers
             else
             {
                 var Cart = HttpContext.Session.Get("Cart");            
-                if (Cart != null)
-                {
-                    var CartJson = Encoding.UTF
-                }
+                //if (Cart != null)
+                //{
+                //    var CartJson = Encoding.UTF;
+                //}
             }
             /*if (ModelState.IsValid)
             {
