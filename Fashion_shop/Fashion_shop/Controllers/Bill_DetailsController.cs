@@ -66,50 +66,7 @@ namespace Fashion_shop.Controllers
             return View(bill_Details);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddToCart([Bind("id_details_item,Total,Count")] Bill_Details bill_Details)
-        {
-            //BillsController bc = new BillsController(_context);
-            int Bill_id = 0;
-            if (Request.Cookies["Bill_id"] != null)
-            {
-                 Bill_id = Int32.Parse(Request.Cookies["Bill_id"]);
-            }           
-            var bill = await _context.Bill.FirstOrDefaultAsync(b => b.id == Bill_id && b.Status == "0");
-            if(bill == null)
-            {
-                //User u = new User();
-                Bill b = new Bill();
-                //Bill_id = bc.Bill_Gen(b);
-                //Them cac du lieu cho Bill vao
-                //Them cac du lieu cho Bill vao
-                //Them cac du lieu cho Bill vao
-                //Them cac du lieu cho Bill vao
-                //Them cac du lieu cho Bill vao
-                _context.Add(b);
-                await _context.SaveChangesAsync();
-                Bill_id = b.id;
-            }
-
-            /*int? Bill_id = HttpContext.Session.GetInt32("Bill_id");
-            if (Bill_id.HasValue)
-            {
-                bill_Details.Bill_id = Bill_id.Value;
-            }
-            else
-            {
-
-            }*/   
-            bill_Details.Bill_id = Bill_id;
-            if (ModelState.IsValid)
-            {
-                _context.Add(bill_Details);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(bill_Details);
-        }
+       
         // GET: Bill_Details/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
