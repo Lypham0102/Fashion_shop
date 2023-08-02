@@ -68,6 +68,35 @@ namespace Fashion_shop.Controllers
                             ItemId = itemDetails.Item_id
                         }
                     )
+                    .Join(_context.Color,
+                    itemColor => itemColor.ColorId,
+                    color => color.id,
+                     (itemColor, color) => new
+                     {
+                         Id_Details_Item = itemColor.Id_Details_Item,
+                         Date = itemColor.Date,
+                         Total = itemColor.Total,
+                         Count = itemColor.Count,
+                         ColorId = itemColor.ColorId,
+                         SizeId = itemColor.SizeId,
+                         ItemId = itemColor.ItemId,
+                         ColorName = color.Name
+                     })
+                    .Join(_context.Size,
+                    itemSize => itemSize.SizeId,
+                    size => size.id,
+                     (itemSize, size) => new
+                     {
+                         Id_Details_Item = itemSize.Id_Details_Item,
+                         Date = itemSize.Date,
+                         Total = itemSize.Total,
+                         Count = itemSize.Count,
+                         ColorId = itemSize.ColorId,
+                         SizeId = itemSize.SizeId,
+                         ItemId = itemSize.ItemId,
+                         ColorName = itemSize.ColorName,
+                         SizeName = size.Name
+                     })
                     .Join(
                         _context.Item,
                         itemDetail => itemDetail.ItemId,

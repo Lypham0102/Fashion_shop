@@ -9,7 +9,9 @@ namespace Fashion_shop.Models
         public float Total { get; set; }
         public int Id_Details_Item { get; set; }
         public int ColorId { get; set; }
+        public string ColorName { get; set; }
         public int SizeId { get; set; }
+        public string SizeName { get; set; }
         public int ItemId { get; set; }
         public string ItemName { get; set; }
         public string Image { get; set; }
