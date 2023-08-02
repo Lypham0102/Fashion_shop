@@ -51,15 +51,7 @@ namespace Fashion_shop
                
             });
             services.AddLogging();
-<<<<<<< HEAD
-
             services.AddHttpContextAccessor();
-
-
-=======
-            services.AddHttpContextAccessor();
->>>>>>> dbb4c30fb50935a87c8da367ff7b0a7bdbd83656
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
