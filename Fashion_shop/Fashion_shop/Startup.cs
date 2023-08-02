@@ -10,7 +10,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Fashion_shop.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Fashion_shop.Models;
 
 namespace Fashion_shop
 {

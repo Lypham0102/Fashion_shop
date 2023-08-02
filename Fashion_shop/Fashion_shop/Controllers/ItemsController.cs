@@ -15,7 +15,6 @@ using Org.BouncyCastle.Bcpg;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-using Microsoft.AspNetCore.Http;
 using System.Text;
 
 namespace Fashion_shop.Controllers
