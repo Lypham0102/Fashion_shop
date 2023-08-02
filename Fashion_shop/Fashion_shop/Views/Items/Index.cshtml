@@ -19,7 +19,7 @@
             <div class="col-sm-3 col-lg-3 col-md-3">
                 <div class="thumbnail" style="margin-left: 20px;">
                     <a style="text-decoration-line: none;" href="@Url.Action("Details", "Items", new { id = item.id })">
-                        <img alt="@item.id" src="./img_items/@item.Image" width="250" />
+                        <img alt="@item.id" src="~/img_items/@item.Image" width="250" />
                         <div class="item-info">
                             <h5 style="color: black; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; margin-bottom: 5px;">@item.Name</h5>
                             <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@item.Price đ</h6>
@@ -30,7 +30,7 @@
         }
     </div>
     <!-- Hiển thị phân trang -->
-    <div style="font-family: Arial">
+    <div type="hidden" style="font-family: Arial">
         @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
     </div>
     <div class="pagination">
