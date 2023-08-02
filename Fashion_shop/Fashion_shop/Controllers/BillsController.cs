@@ -169,5 +169,10 @@ namespace Fashion_shop.Controllers
         {
             return _context.Bill.Any(e => e.id == id);
         }
+
+        public IActionResult Cart()
+        {
+            return View();
+        }
     }
 }

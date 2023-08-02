@@ -203,7 +203,7 @@ namespace Fashion_shop.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddToCart(int? itemId, int? colorId, int? sizeId)
+        public async Task<IActionResult> AddToCart(int itemId, int colorId, int sizeId)
         {
             // Check if all required parameters are provided
             /*            if (itemId == null || colorId == null || sizeId == null)
@@ -217,7 +217,14 @@ namespace Fashion_shop.Controllers
 
             if (itemDetail == null)
             {
-                return NotFound("Item not found.");
+                itemDetail = new Item_Details
+                {
+                    Color_id = colorId,
+                    Item_id = itemId,
+                    Size_id = sizeId
+                };
+                _context.Add(itemDetail);
+                await _context.SaveChangesAsync();
             }
 
             // Check if the user is logged in using the "User_Id" cookie
