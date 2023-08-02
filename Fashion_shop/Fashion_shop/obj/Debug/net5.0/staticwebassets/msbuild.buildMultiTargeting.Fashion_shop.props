@@ -1,3 +1,7 @@
 ﻿<Project>
+<<<<<<< HEAD
   <Import Project="../build/Fashion_shop.props" />
+=======
+  <Import Project="..\build\Fashion_shop.props" />
+>>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
 </Project>

@@ -36,7 +36,6 @@ namespace Fashion_shop.Controllers
             if (Request.Cookies["User_Id"] != null)
             {
                 var userId = int.Parse(Request.Cookies["User_Id"]);
-
                 // Fetch cart details and associated item details using multiple joins
                 List<Cart_Details> cartDetails = await _context.Bill
                     .Where(b => b.Status == 0 && b.User_id == userId)
@@ -48,7 +47,7 @@ namespace Fashion_shop.Controllers
                         {
                             Id = bill.id,
                             Date = bill.Date,
-                            Total = bill.Total,
+                            Total = bill_details.Total* bill_details.Count,
                             Count = bill_details.Count,
                             Id_Details_Item = bill_details.id_details_item
                         }
@@ -59,6 +58,7 @@ namespace Fashion_shop.Controllers
                         itemDetails => itemDetails.id_details_item,
                         (billDetails, itemDetails) => new
                         {
+                            Id = billDetails.Id,
                             Id_Details_Item = billDetails.Id_Details_Item,
                             Date = billDetails.Date,
                             Total = billDetails.Total,
@@ -73,6 +73,7 @@ namespace Fashion_shop.Controllers
                     color => color.id,
                      (itemColor, color) => new
                      {
+                         Id = itemColor.Id,
                          Id_Details_Item = itemColor.Id_Details_Item,
                          Date = itemColor.Date,
                          Total = itemColor.Total,
@@ -87,6 +88,7 @@ namespace Fashion_shop.Controllers
                     size => size.id,
                      (itemSize, size) => new
                      {
+                         Id = itemSize.Id,
                          Id_Details_Item = itemSize.Id_Details_Item,
                          Date = itemSize.Date,
                          Total = itemSize.Total,
@@ -103,7 +105,7 @@ namespace Fashion_shop.Controllers
                         item => item.id,
                         (itemDetail, item) => new Cart_Details
                         {
-                            Id = itemDetail.ItemId,
+                            Id = itemDetail.Id,
                             Id_Details_Item = itemDetail.Id_Details_Item,
                             Date = itemDetail.Date,
                             Total = item.Price*itemDetail.Count,
@@ -116,6 +118,10 @@ namespace Fashion_shop.Controllers
                         }
                     )
                     .ToListAsync();
+                if(cartDetails == null)
+                {
+
+                }
                 // Fetch and return other relevant data to the view
                 return View(cartDetails);
             }
