@@ -96,10 +96,10 @@ namespace Fashion_shop.Controllers
 
 
 
-        public IActionResult IndexCus()
-        {
-            return View();
-        }
+        //public IActionResult IndexCus()
+        //{
+        //    return View();
+        //}
 
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
