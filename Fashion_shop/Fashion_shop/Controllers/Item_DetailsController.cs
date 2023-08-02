@@ -32,9 +32,10 @@ namespace Fashion_shop.Controllers
             }
 
             var itemDetails = await _context.Item_Details
-                .Where(details => details.Item_id == id)
-                .Select(details => details.Color_id)
-                .ToListAsync();
+            .Where(details => details.Item_id == id)
+            .Select(details => details.Color_id)
+            .Distinct()
+            .ToListAsync();
 
             var colorNames = new List<Models.Color>();
             foreach (var colorId in itemDetails)
@@ -59,6 +60,7 @@ namespace Fashion_shop.Controllers
             var itemDetails = await _context.Item_Details
                 .Where(details => details.Item_id == id)
                 .Select(details => details.Size_id)
+                .Distinct()
                 .ToListAsync();
 
             var sizeNames = new List<Models.Size>();
