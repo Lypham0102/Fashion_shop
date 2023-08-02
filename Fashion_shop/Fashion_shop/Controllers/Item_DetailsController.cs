@@ -15,7 +15,7 @@ namespace Fashion_shop.Controllers
     public class Item_DetailsController : Controller
     {
         private readonly AppDbContext _context;
-        private ColorController _ctColor;
+        //private ColorController _ctColor;
         private SizeController _ctSize;
 
         public Item_DetailsController(AppDbContext context)
