@@ -9,6 +9,8 @@ using Fashion_shop.Data;
 using Fashion_shop.Models;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
+using Org.BouncyCastle.Bcpg;
+using System.Drawing;
 
 namespace Fashion_shop.Controllers
 {
@@ -26,6 +28,71 @@ namespace Fashion_shop.Controllers
         {
             return View(await _context.Bill.ToListAsync());
         }
+
+        // GET: Bills
+        public async Task<IActionResult> Cart()
+        {
+            if (Request.Cookies["User_Id"] != null)
+            {
+                var userId = int.Parse(Request.Cookies["User_Id"]);
+
+                // Fetch cart details and associated item details using multiple joins
+                List<Cart_Details> cartDetails = await _context.Bill
+                    .Where(b => b.Status == 0 && b.User_id == userId)
+                    .Join(
+                        _context.Bill_Details,
+                        bill => bill.id,
+                        bill_details => bill_details.Bill_id,
+                        (bill, bill_details) => new
+                        {
+                            Id = bill.id,
+                            Date = bill.Date,
+                            Total = bill.Total,
+                            Count = bill_details.Count,
+                            Id_Details_Item = bill_details.id_details_item
+                        }
+                    )
+                    .Join(
+                        _context.Item_Details,
+                        billDetails => billDetails.Id_Details_Item,
+                        itemDetails => itemDetails.id_details_item,
+                        (billDetails, itemDetails) => new
+                        {
+                            Id_Details_Item = billDetails.Id_Details_Item,
+                            Date = billDetails.Date,
+                            Total = billDetails.Total,
+                            Count = billDetails.Count,
+                            ColorId = itemDetails.Color_id,
+                            SizeId = itemDetails.Size_id,
+                            ItemId = itemDetails.Item_id
+                        }
+                    )
+                    .Join(
+                        _context.Item,
+                        itemDetail => itemDetail.ItemId,
+                        item => item.id,
+                        (itemDetail, item) => new Cart_Details
+                        {
+                            Id = itemDetail.ItemId,
+                            Id_Details_Item = itemDetail.Id_Details_Item,
+                            Date = itemDetail.Date,
+                            Total = item.Price*itemDetail.Count,
+                            ColorId = itemDetail.ColorId,
+                            SizeId = itemDetail.SizeId,
+                            ItemId = itemDetail.ItemId,
+                            ItemName = item.Name,
+                            Image = item.Image,
+                            Price = item.Price
+                        }
+                    )
+                    .ToListAsync();
+                // Fetch and return other relevant data to the view
+                return View(cartDetails);
+            }
+            // If the user is not authenticated, return an empty view
+            return View();
+        }
+
 
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -163,11 +230,6 @@ namespace Fashion_shop.Controllers
         private bool BillExists(int id)
         {
             return _context.Bill.Any(e => e.id == id);
-        }
-
-        public IActionResult Cart()
-        {
-            return View();
         }
     }
 }
