@@ -273,6 +273,7 @@ namespace Fashion_shop.Controllers
             }
             else
             {
+<<<<<<< HEAD
                 // Handle the case when the user is not logged in (session-based cart handling)
                 var cart = HttpContext.Session.Get("Cart");
                 if (cart != null)
@@ -304,6 +305,13 @@ namespace Fashion_shop.Controllers
                 }
 
                 // Add code here to handle when the user is not logged in and there is no cart data in the session
+=======
+                var Cart = HttpContext.Session.Get("Cart");            
+                //if (Cart != null)
+                //{
+                //    var CartJson = Encoding.UTF;
+                //}
+>>>>>>> dbb4c30fb50935a87c8da367ff7b0a7bdbd83656
             }
 
             return RedirectToAction(nameof(Index));

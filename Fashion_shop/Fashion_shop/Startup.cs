@@ -51,10 +51,14 @@ namespace Fashion_shop
                
             });
             services.AddLogging();
+<<<<<<< HEAD
 
             services.AddHttpContextAccessor();
 
 
+=======
+            services.AddHttpContextAccessor();
+>>>>>>> dbb4c30fb50935a87c8da367ff7b0a7bdbd83656
 
         }
 
