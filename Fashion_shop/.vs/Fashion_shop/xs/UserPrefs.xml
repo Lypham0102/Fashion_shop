@@ -1,60 +1,82 @@
 ﻿<Properties StartupConfiguration="{C61217ED-C83B-4C8C-9F29-A4015B92DD23}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Items/Details.cshtml">
+  <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="113" Column="24" />
+      <File FileName="Fashion_shop/Views/Items/Details.cshtml" />
       <File FileName="Fashion_shop/Views/Shared/_LayoutMain.cshtml" />
       <File FileName="Fashion_shop/Views/Home/Contact.cshtml" />
       <File FileName="Fashion_shop/wwwroot/css/View/Home/Contact.css" />
-      <File FileName="Fashion_shop/Views/Users/Index.cshtml" Line="6" Column="1" />
+      <File FileName="Fashion_shop/Views/Users/Index.cshtml" />
       <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
       <File FileName="Fashion_shop/Views/Shared/_Layout.cshtml" />
-      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" Line="102" Column="46" />
-      <File FileName="Fashion_shop/Views/Shared/_LayoutLogin.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" Line="41" Column="24" />
-      <File FileName="Fashion_shop/Controllers/ItemsController.cs" Line="241" Column="41" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutLogin.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" />
+      <File FileName="Fashion_shop/Controllers/ItemsController.cs" />
       <File FileName="Fashion_shop/Controllers/MaterialsController.cs" />
-      <File FileName="Fashion_shop/Data/AppDBContext.cs" Line="15" Column="31" />
-      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" Line="18" Column="33" />
-      <File FileName="Fashion_shop/Controllers/UsersController.cs" Line="108" Column="1" />
-      <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="9" Column="64" />
-      <File FileName="Fashion_shop/wwwroot/css/View/Users/Index.css" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Users/Login.cshtml" Line="13" Column="28" />
-      <File FileName="Fashion_shop/Views/Users/Edit.cshtml" Line="20" Column="68" />
-      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="15" Column="1" />
-      <File FileName="Fashion_shop/Views/Items/Edit.cshtml" Line="9" Column="62" />
-      <File FileName="Fashion_shop/Views/Users/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Data/AppDBContext.cs" />
+      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" />
+      <File FileName="Fashion_shop/Controllers/UsersController.cs" />
+      <File FileName="Fashion_shop/Views/Users/Details.cshtml" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Users/Index.css" />
+      <File FileName="Fashion_shop/Views/Users/Login.cshtml" />
+      <File FileName="Fashion_shop/Views/Users/Edit.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/Index.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/Edit.cshtml" />
+      <File FileName="Fashion_shop/Views/Users/Delete.cshtml" />
       <File FileName="Fashion_shop/Views/Shared/_ValidationScriptsPartial.cshtml" />
-      <File FileName="Fashion_shop/Views/_ViewStart.cshtml" Line="5" Column="1" />
-      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" Line="7" Column="1" />
-      <File FileName="Fashion_shop/Views/Bills/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Users/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/appsettings.json" Line="11" Column="100" />
-      <File FileName="Fashion_shop/wwwroot/css/View/Users/IndexAd.css" Line="48" Column="1" />
-      <File FileName="Fashion_shop/wwwroot/css/View/Home/Index.css" Line="1" Column="1" />
-      <File FileName="Fashion_shop/wwwroot/css/View/Items/Index.css" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Items/Create.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Startup.cs" Line="53" Column="35" />
+      <File FileName="Fashion_shop/Views/_ViewStart.cshtml" />
+      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" />
+      <File FileName="Fashion_shop/Views/Users/Create.cshtml" />
+      <File FileName="Fashion_shop/appsettings.json" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Home/Index.css" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Items/Index.css" />
+      <File FileName="Fashion_shop/Views/Items/Create.cshtml" />
+      <File FileName="Fashion_shop/Startup.cs" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Bill/Index.css" />
+      <File FileName="Fashion_shop/wwwroot/assets/css/cart.css" />
+      <File FileName="Fashion_shop/Controllers/BillsController.cs" />
+      <File FileName="Fashion_shop/Views/Bills/Create.cshtml" />
+      <File FileName="Fashion_shop/Views/Bills/IndexCus.cshtml" />
+      <File FileName="Fashion_shop/Views/Bills/Index.cshtml" />
+      <File FileName="Fashion_shop/Views/Bills/Edit.cshtml" />
+      <File FileName="Fashion_shop/Models/Bill.cs" />
+      <File FileName="Fashion_shop/Controllers/HomeController.cs" Line="24" Column="52" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Bill/IndexCus.css" />
+      <File FileName="Fashion_shop/wwwroot/css/bootstrap.min.css" />
+      <File FileName="Fashion_shop/Controllers/Bill_DetailsController.cs" />
+      <File FileName="Fashion_shop/Views/Bills/Cart.cshtml" />
+      <File FileName="Fashion_shop/Models/Bill_Details.cs" />
+      <File FileName="Fashion_shop/Models/Item_Details.cs" />
+      <File FileName="Fashion_shop/Models/Item.cs" />
+      <File FileName="Fashion_shop/Models/Cart_Details.cs" />
+      <File FileName="Fashion_shop/Views/Home/SearchResult.cshtml" />
+      <File FileName="Fashion_shop/Views/Home/Privacy.cshtml" />
+      <File FileName="Fashion_shop/Views/Home/Details_item.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Fashion_shop" expanded="True">
             <Node name="Fashion_shop" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
               <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Bills" expanded="True" />
                 <Node name="Items" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="Users" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True">
+                  <Node name="bootstrap" expanded="True" />
                   <Node name="View" expanded="True">
+                    <Node name="Bill" expanded="True" />
                     <Node name="Home" expanded="True" />
                     <Node name="Items" expanded="True" />
                     <Node name="Users" expanded="True" />
@@ -69,6 +91,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
 </Properties>

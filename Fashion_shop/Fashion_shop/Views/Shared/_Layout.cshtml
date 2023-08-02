@@ -1,6 +1,4 @@
-﻿@*@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor*@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -62,7 +60,6 @@
                         <li class="nav-item">
                         </li>
                     </ul>
-
                 </div>
                 <div class="navbar align-self-center d-flex">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
@@ -73,12 +70,19 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
+                    <!-- Thêm form để tìm kiếm -->
+                    <form id="searchForm" method="post" action="@Url.Action("Search", "Home")">
+                        <!-- Thay method="get" thành method="post" -->
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
+                            <div class="input-group-text" onclick="performSearch()">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </form>
                     <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
@@ -86,7 +90,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </nav>
     <div class="container">
@@ -314,6 +317,27 @@
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+    <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
+    <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
+    <script>
+        function performSearch() {
+            var keyword = document.getElementById("inputMobileSearch").value;
+
+            // Sử dụng AJAX để gửi yêu cầu tìm kiếm tới action "Search" trong controller "HomeController"
+            $.ajax({
+                url: "/Home/Search", // Đường dẫn tới action "Search"
+                type: "post", // Thay đổi method thành POST
+                data: { keyword: keyword }, // Gửi dữ liệu từ khóa tìm kiếm lên server
+                success: function (result) {
+                    // Khi nhận được kết quả từ server, chuyển hướng tới action "SearchResult" để hiển thị danh sách sản phẩm tìm kiếm
+                    window.location.href = "/Home/Search?keyword=" + keyword;
+                },
+                error: function (error) {
+                    console.log("Error: " + error);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
