@@ -270,7 +270,6 @@ namespace Fashion_shop.Controllers
                         id_details_item = itemDetail.id_details_item,
                         Count = 1 // Start with count as 1
                     };
-
                     _context.Add(billDetails);
                 }
                 // If the item is already in the cart, increment the count by 1
@@ -320,11 +319,11 @@ namespace Fashion_shop.Controllers
         [Authorize(Policy = "UserOnly")]
         public async Task<IActionResult> PayMent()
         {
-          
-                var userId = int.Parse(Request.Cookies["User_Id"]);
-                /*var userJson = HttpContext.Session.Get("User_Id");
-                var user = Encoding.UTF8.GetString(userJson);
-                var userId = JsonConvert.DeserializeObject<int>(user);*/
+
+            var userId = int.Parse(Request.Cookies["User_Id"]);
+            /*var userJson = HttpContext.Session.Get("User_Id");
+            var user = Encoding.UTF8.GetString(userJson);
+            var userId = JsonConvert.DeserializeObject<int>(user);*/
             var bill = await _context.Bill
                     .FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
             if (bill != null)
@@ -353,7 +352,7 @@ namespace Fashion_shop.Controllers
                 {
                     var cartJson = Encoding.UTF8.GetString(cart);
                     var cartDetails = JsonConvert.DeserializeObject<List<Bill_Details>>(cartJson);
-                    foreach(var  billDetails in cartDetails)
+                    foreach (var billDetails in cartDetails)
                     {
                         billDetails.Bill_id = bill.id;
                         _context.Add(billDetails);
@@ -365,7 +364,7 @@ namespace Fashion_shop.Controllers
                 {
                     return NotFound();
                 }
-                
+
             }
             return RedirectToAction(nameof(Index));
         }
