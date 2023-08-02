@@ -1,0 +1,17 @@
+﻿body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand {
+    font-family: 'Futura', sans-serif;
+}

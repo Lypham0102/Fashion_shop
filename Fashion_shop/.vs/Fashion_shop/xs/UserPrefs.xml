@@ -3,44 +3,54 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Users/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Items/Details.cshtml">
     <Files>
-      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/Details.cshtml" Line="113" Column="24" />
       <File FileName="Fashion_shop/Views/Shared/_LayoutMain.cshtml" />
       <File FileName="Fashion_shop/Views/Home/Contact.cshtml" />
       <File FileName="Fashion_shop/wwwroot/css/View/Home/Contact.css" />
-      <File FileName="Fashion_shop/Views/Users/Index.cshtml" Line="14" Column="12" />
+      <File FileName="Fashion_shop/Views/Users/Index.cshtml" Line="6" Column="1" />
       <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
-      <File FileName="Fashion_shop/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" Line="1" Column="1" />
-      <File FileName="Fashion_shop/Views/Shared/_LayoutLogin.cshtml" />
-      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" />
-      <File FileName="Fashion_shop/Controllers/ItemsController.cs" />
+      <File FileName="Fashion_shop/Views/Shared/_Layout.cshtml" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" Line="102" Column="46" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutLogin.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" Line="41" Column="24" />
+      <File FileName="Fashion_shop/Controllers/ItemsController.cs" Line="241" Column="41" />
       <File FileName="Fashion_shop/Controllers/MaterialsController.cs" />
-      <File FileName="Fashion_shop/Data/AppDBContext.cs" />
-      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" />
-      <File FileName="Fashion_shop/Controllers/UsersController.cs" Line="109" Column="69" />
-      <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="7" Column="56" />
-      <File FileName="Fashion_shop/wwwroot/css/View/Users/Index.css" />
-      <File FileName="Fashion_shop/Views/Users/Login.cshtml" Line="9" Column="28" />
+      <File FileName="Fashion_shop/Data/AppDBContext.cs" Line="15" Column="31" />
+      <File FileName="Fashion_shop/Controllers/Item_DetailsController.cs" Line="18" Column="33" />
+      <File FileName="Fashion_shop/Controllers/UsersController.cs" Line="108" Column="1" />
+      <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="9" Column="64" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Users/Index.css" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Users/Login.cshtml" Line="13" Column="28" />
       <File FileName="Fashion_shop/Views/Users/Edit.cshtml" Line="20" Column="68" />
-      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="8" Column="1" />
-      <File FileName="Fashion_shop/Views/Items/Edit.cshtml" Line="29" Column="25" />
-      <File FileName="Fashion_shop/Views/Users/Delete.cshtml" Line="16" Column="54" />
-      <File FileName="Fashion_shop/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="15" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/Edit.cshtml" Line="9" Column="62" />
+      <File FileName="Fashion_shop/Views/Users/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Fashion_shop/Views/_ViewStart.cshtml" Line="5" Column="1" />
+      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" Line="7" Column="1" />
+      <File FileName="Fashion_shop/Views/Bills/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Users/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/appsettings.json" Line="11" Column="100" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Users/IndexAd.css" Line="48" Column="1" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Home/Index.css" Line="1" Column="1" />
+      <File FileName="Fashion_shop/wwwroot/css/View/Items/Index.css" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Items/Create.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Startup.cs" Line="53" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Fashion_shop" expanded="True">
-            <Node name="Fashion_shop">
+            <Node name="Fashion_shop" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Bills" expanded="True" />
                 <Node name="Items" expanded="True" />
                 <Node name="Shared" expanded="True" />
-                <Node name="Users" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
-                </Node>
+                <Node name="Users" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
                 <Node name="css" expanded="True">
