@@ -36,7 +36,6 @@ namespace Fashion_shop.Controllers
             if (Request.Cookies["User_Id"] != null)
             {
                 var userId = int.Parse(Request.Cookies["User_Id"]);
-
                 // Fetch cart details and associated item details using multiple joins
                 List<Cart_Details> cartDetails = await _context.Bill
                     .Where(b => b.Status == 0 && b.User_id == userId)
@@ -119,6 +118,10 @@ namespace Fashion_shop.Controllers
                         }
                     )
                     .ToListAsync();
+                if(cartDetails == null)
+                {
+
+                }
                 // Fetch and return other relevant data to the view
                 return View(cartDetails);
             }
