@@ -11544,7 +11544,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Bcrypt.Net >= 0.1.0",
+      "BCrypt.Net >= 0.1.0",
       "EntityFramework6.Npgsql >= 6.4.3",
       "FluentAssertions >= 6.11.0",
       "Microsoft.AspNetCore.Session >= 2.2.0",
@@ -11561,25 +11561,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "/Users/phamcongly/.nuget/packages/": {}
-=======
     "C:\\Users\\leong\\.nuget\\packages\\": {}
->>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj",
-      "projectName": "Fashion_shop",
-      "projectPath": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/Fashion_shop.csproj",
-      "packagesPath": "/Users/phamcongly/.nuget/packages/",
-      "outputPath": "/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/Users/phamcongly/.nuget/NuGet/NuGet.Config"
-=======
       "projectUniqueName": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj",
       "projectName": "Fashion_shop",
       "projectPath": "D:\\ASP-PROJECT\\Fashion_shop\\Fashion_shop\\Fashion_shop\\Fashion_shop.csproj",
@@ -11589,19 +11575,13 @@
       "configFilePaths": [
         "C:\\Users\\leong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
->>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-<<<<<<< HEAD
-        "/usr/local/share/dotnet/library-packs": {},
-        "/usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
-=======
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
->>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11620,7 +11600,7 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Bcrypt.Net": {
+          "BCrypt.Net": {
             "target": "Package",
             "version": "[0.1.0, )"
           },
@@ -11692,23 +11672,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-<<<<<<< HEAD
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[5.0.17, 5.0.17]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
-=======
->>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11717,11 +11680,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
->>>>>>> fdf569f58b76b3dbe656343d27792ce773e77f50
       }
     }
   },

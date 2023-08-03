@@ -10,7 +10,7 @@ namespace Fashion_shop.Models
         public DateTime Date { get; set; }
         //[AllowNull]
         //public DateTime Time { get; set; }
-        public float Total { get; set; }
+        public int Total { get; set; }
 
         [AllowNull]
         public int Voucher_id { get; set; }
