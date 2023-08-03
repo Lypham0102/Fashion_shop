@@ -43,28 +43,51 @@
                         <div class="col align-self-center text-right text-muted">1 items</div>
                     </div>
                 </div>
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center" style="margin-left: 10px;">
-                        <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>
-                        <div class="col">
-                            <div class="row text-muted">Shirt</div>
-                            <div class="row">Cotton T-shirt</div>
+                
+                @foreach( var item in Model)
+                {
+                    var uniqueId = "item_" + item.Id_Details_Item; // Create a unique identifier
+                    <!--  1 ITEM      -->
+                   
+                    <div class="row border-top border-bottom">
+                        <div class="row main align-items-center" style="margin-left: 10px;">
+                            <div class="col-2"><img class="img-fluid" src="~/img_items/@item.Image"></div>
+                            <div class="col">
+                                <div class="row text-muted">@item.ItemName </div>
+                                <div class="row"> Color: @item.ColorName - Size: @item.SizeName</div><!-- NAME   -->
+                            </div>
+                            <div class="col">
+                                    <!-- Thay method="get" thành method="post" -->
+                                <form id="form_@uniqueId" asp-action="UpdateCount" method="post">
+                                    <button type="button" onclick="decrease('@uniqueId')" style="color: black;">-</button>
+                                    <input id="count_@uniqueId" name="count" type="hidden" value="@item.Count" />
+                                    <input id="bill_id" name="bill_id" type="hidden" value="@item.Id" />
+                                    <input id="item_details_id" name="item_details_id" type="hidden" value="@item.Id_Details_Item" />
+                                    <a href="#" class="border">@item.Count</a>
+                                    <button type="button" onclick="increase('@uniqueId')" style="color: black;">+</button>
+                                </form>
+                            </div>
+                            <div class="col">@item.Total vnd <span class="close">&#10005;</span></div><!-- PRICE   -->
                         </div>
-                        <div class="col">
-                            <a href="#" style="color: black;">-</a><a href="#" class="border">1</a><a href="#" style="color: black;">+</a>
-                        </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
                     </div>
-                </div>
+                    <!--  END OF 1 ITEM  -->
+                }
+                
                 <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
             </div>
             <div class="col-md-4 summary">
-                <div><h5><b>Summary</b></h5></div>
+                @*<div><h5><b>Summary</b></h5></div>
                 <hr>
-                <div class="row">
-                    <div class="col" style="padding-left:10px;">ITEMS 1</div>
-                    <div class="col text-right">&euro; 132.00</div>
-                </div>
+                @foreach( var item in Model)
+                {
+                    <!-- Sumary of 1 item  -->
+                    <div class="row">
+                        <div class="col" style="padding-left:10px;">@item.ItemName</div>
+                        <div class="col text-right">@item.Total vnd</div>
+                    </div>
+                    <!-- End of sumary of 1 item  -->
+                }*@
+                
                 <form>
                     <p>SHIPPING</p>
                     <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
@@ -73,7 +96,7 @@
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; 137.00</div>
+                    <div class="col text-right">@ViewBag.Total vnd</div>
                 </div>
                 <button class="btn">CHECKOUT</button>
             </div>
@@ -84,5 +107,66 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
+  @*  <script>
+        function decrease(uniqueId) {
+            var countInput = document.getElementById("count_" + uniqueId);
+            var currentCount = parseInt(countInput.value);
+            currentCount = Math.max(0, currentCount - 1);
+            countInput.value = currentCount;
+
+            sendUpdateToServer(uniqueId, currentCount);
+        }
+
+        function increase(uniqueId) {
+            var countInput = document.getElementById("count_" + uniqueId);
+            var currentCount = parseInt(countInput.value);
+            currentCount = currentCount + 1;
+            countInput.value = currentCount;
+
+            sendUpdateToServer(uniqueId, currentCount);
+        }
+
+        function sendUpdateToServer(uniqueId, newCount) {
+            var formData = new FormData();
+            formData.append("count", newCount);
+            formData.append("bill_id", uniqueId);
+            formData.append("item_details_id", uniqueId);
+
+            fetch("/Bills/UpdateCount", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => handleUpdateResponse(data))
+                .catch(error => handleError(error));
+        }
+
+        function handleUpdateResponse(data) {
+            if (data.success) {
+                updateCartContent();
+            } else {
+                showError(data.message);
+            }
+        }
+
+        function updateCartContent() {
+            // Define this function to update the cart content on the page
+            // You can use AJAX to fetch the updated cart data or manipulate the DOM directly
+        }
+
+        function showError(message) {
+            // Define this function to show an error message to the user
+            // You can use an alert, a modal, or update an error message element on the page
+        }
+
+        function handleError(error) {
+            // Define this function to handle errors that occur during the AJAX request
+            // You can log the error or show a generic error message
+        }
+    </script>*@
+
+
+
 </body>
+
 </html>

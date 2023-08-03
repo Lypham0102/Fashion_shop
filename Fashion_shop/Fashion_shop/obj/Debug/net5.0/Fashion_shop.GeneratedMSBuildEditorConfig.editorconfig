@@ -16,4 +16,8 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Fashion_shop
+<<<<<<< HEAD
 build_property.ProjectDir = /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/
+=======
+build_property.ProjectDir = D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\
+>>>>>>> e179b482d50126c5c0e40f2fe8002892439973e9

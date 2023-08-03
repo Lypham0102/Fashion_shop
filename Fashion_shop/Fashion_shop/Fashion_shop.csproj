@@ -45,7 +45,6 @@
     <Folder Include="wwwroot\scss\bootstrap\vendor\" />
     <Folder Include="Views\Bills\" />
     <Folder Include="Views\Bill_Details\" />
-    <Folder Include="Views\Cart\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Items\" />
     <Folder Include="Views\Offices\" />
@@ -264,7 +263,7 @@
     <None Include="wwwroot\assets\webfonts\slick.woff" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Bcrypt.Net" Version="0.1.0" />
+    <PackageReference Include="BCrypt.Net" Version="0.1.0" />
     <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.3" />
     <PackageReference Include="FluentAssertions" Version="6.11.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />

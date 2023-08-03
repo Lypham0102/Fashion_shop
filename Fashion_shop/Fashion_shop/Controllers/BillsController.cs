@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
+using AspNetCore;
 
 namespace Fashion_shop.Controllers
 {
@@ -110,18 +111,23 @@ namespace Fashion_shop.Controllers
                             Date = itemDetail.Date,
                             Total = item.Price*itemDetail.Count,
                             ColorId = itemDetail.ColorId,
+                            ColorName = itemDetail.ColorName,
                             SizeId = itemDetail.SizeId,
+                            SizeName = itemDetail.SizeName,
                             ItemId = itemDetail.ItemId,
                             ItemName = item.Name,
                             Image = item.Image,
-                            Price = item.Price
+                            Price = item.Price,
+                            Count = itemDetail.Count
                         }
                     )
+                    .OrderBy( m => m.Id_Details_Item)
                     .ToListAsync();
                 if(cartDetails == null)
                 {
 
                 }
+                ViewBag.Total = cartDetails.Sum( t => t.Total );
                 // Fetch and return other relevant data to the view
                 return View(cartDetails);
             }
@@ -129,12 +135,29 @@ namespace Fashion_shop.Controllers
             return View();
         }
 
+       /* [HttpPost]
+        public async Task<JsonResult> UpdateCount(int count, int bill_id, int item_details_id)
+        {
+            try
+            {
+                var billDetail = await _context.Bill_Details.FirstOrDefaultAsync(m => m.Bill_id == bill_id && m.id_details_item == item_details_id);
+                if (billDetail != null)
+                {
+                    billDetail.Count = count;
+                    await _context.SaveChangesAsync();
 
-
-        //public IActionResult IndexCus()
-        //{
-        //    return View();
-        //}
+                    return Json(new { success = true, message = "Count updated successfully." });
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Item not found." });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "An error occurred: " + ex.Message });
+            }
+        }*/
 
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
