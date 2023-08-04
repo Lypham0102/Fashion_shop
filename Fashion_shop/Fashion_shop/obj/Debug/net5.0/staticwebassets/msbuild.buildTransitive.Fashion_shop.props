@@ -1,7 +1,3 @@
 ﻿<Project>
-<<<<<<< HEAD
   <Import Project="..\buildMultiTargeting\Fashion_shop.props" />
-=======
-  <Import Project="../buildMultiTargeting/Fashion_shop.props" />
->>>>>>> add282dc8601cc364e64583fcd80db2db3377f90
 </Project>
