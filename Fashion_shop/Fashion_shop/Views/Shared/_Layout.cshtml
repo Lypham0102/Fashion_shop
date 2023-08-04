@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <!-- Thêm form để tìm kiếm -->
-                    <form id="searchForm" method="post" action="@Url.Action("Search", "Home")">
+                    <form method="post" action="@Url.Action("Search", "Home")">
                         <!-- Thay method="get" thành method="post" -->
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
@@ -334,8 +334,14 @@
     <!-- End Script -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
+<<<<<<< HEAD
     <script>function performSearch() {
             var keyword = document.getElementById("inputMobileSearch").value;
+=======
+    <script>
+        function performSearch() {
+            var keyword = document.getElementByName("keyword").value;
+>>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
 
             // Sử dụng AJAX để gửi yêu cầu tìm kiếm tới action "Search" trong controller "HomeController"
             $.ajax({
