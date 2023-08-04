@@ -30,6 +30,95 @@ namespace Fashion_shop.Controllers
             return View(await _context.Bill.ToListAsync());
         }
 
+        public async Task<List<Cart_Details>> Cart_Details(int userId)
+        {
+            List<Cart_Details> cartDetails = await _context.Bill
+                  .Where(b => b.Status == 0 && b.User_id == userId)
+                  .Join(
+                      _context.Bill_Details,
+                      bill => bill.id,
+                      bill_details => bill_details.Bill_id,
+                      (bill, bill_details) => new
+                      {
+                          Id = bill.id,
+                          Date = bill.Date,
+                          Total = bill_details.Total * bill_details.Count,
+                          Count = bill_details.Count,
+                          Id_Details_Item = bill_details.id_details_item
+                      }
+                  )
+                  .Join(
+                      _context.Item_Details,
+                      billDetails => billDetails.Id_Details_Item,
+                      itemDetails => itemDetails.id_details_item,
+                      (billDetails, itemDetails) => new
+                      {
+                          Id = billDetails.Id,
+                          Id_Details_Item = billDetails.Id_Details_Item,
+                          Date = billDetails.Date,
+                          Total = billDetails.Total,
+                          Count = billDetails.Count,
+                          ColorId = itemDetails.Color_id,
+                          SizeId = itemDetails.Size_id,
+                          ItemId = itemDetails.Item_id
+                      }
+                  )
+                  .Join(_context.Color,
+                  itemColor => itemColor.ColorId,
+                  color => color.id,
+                   (itemColor, color) => new
+                   {
+                       Id = itemColor.Id,
+                       Id_Details_Item = itemColor.Id_Details_Item,
+                       Date = itemColor.Date,
+                       Total = itemColor.Total,
+                       Count = itemColor.Count,
+                       ColorId = itemColor.ColorId,
+                       SizeId = itemColor.SizeId,
+                       ItemId = itemColor.ItemId,
+                       ColorName = color.Name
+                   })
+                  .Join(_context.Size,
+                  itemSize => itemSize.SizeId,
+                  size => size.id,
+                   (itemSize, size) => new
+                   {
+                       Id = itemSize.Id,
+                       Id_Details_Item = itemSize.Id_Details_Item,
+                       Date = itemSize.Date,
+                       Total = itemSize.Total,
+                       Count = itemSize.Count,
+                       ColorId = itemSize.ColorId,
+                       SizeId = itemSize.SizeId,
+                       ItemId = itemSize.ItemId,
+                       ColorName = itemSize.ColorName,
+                       SizeName = size.Name
+                   })
+                  .Join(
+                      _context.Item,
+                      itemDetail => itemDetail.ItemId,
+                      item => item.id,
+                      (itemDetail, item) => new Cart_Details
+                      {
+                          Id = itemDetail.Id,
+                          Id_Details_Item = itemDetail.Id_Details_Item,
+                          Date = itemDetail.Date,
+                          Total = item.Price * itemDetail.Count,
+                          ColorId = itemDetail.ColorId,
+                          ColorName = itemDetail.ColorName,
+                          SizeId = itemDetail.SizeId,
+                          SizeName = itemDetail.SizeName,
+                          ItemId = itemDetail.ItemId,
+                          ItemName = item.Name,
+                          Image = item.Image,
+                          Price = item.Price,
+                          Count = itemDetail.Count
+                      }
+                  )
+                  .OrderBy(m => m.Id_Details_Item)
+                  .ToListAsync();
+            return cartDetails;
+        }
 
         // GET: Bills
         public async Task<IActionResult> Cart()
@@ -38,92 +127,8 @@ namespace Fashion_shop.Controllers
             {
                 var userId = int.Parse(Request.Cookies["User_Id"]);
                 // Fetch cart details and associated item details using multiple joins
-                List<Cart_Details> cartDetails = await _context.Bill
-                    .Where(b => b.Status == 0 && b.User_id == userId)
-                    .Join(
-                        _context.Bill_Details,
-                        bill => bill.id,
-                        bill_details => bill_details.Bill_id,
-                        (bill, bill_details) => new
-                        {
-                            Id = bill.id,
-                            Date = bill.Date,
-                            Total = bill_details.Total* bill_details.Count,
-                            Count = bill_details.Count,
-                            Id_Details_Item = bill_details.id_details_item
-                        }
-                    )
-                    .Join(
-                        _context.Item_Details,
-                        billDetails => billDetails.Id_Details_Item,
-                        itemDetails => itemDetails.id_details_item,
-                        (billDetails, itemDetails) => new
-                        {
-                            Id = billDetails.Id,
-                            Id_Details_Item = billDetails.Id_Details_Item,
-                            Date = billDetails.Date,
-                            Total = billDetails.Total,
-                            Count = billDetails.Count,
-                            ColorId = itemDetails.Color_id,
-                            SizeId = itemDetails.Size_id,
-                            ItemId = itemDetails.Item_id
-                        }
-                    )
-                    .Join(_context.Color,
-                    itemColor => itemColor.ColorId,
-                    color => color.id,
-                     (itemColor, color) => new
-                     {
-                         Id = itemColor.Id,
-                         Id_Details_Item = itemColor.Id_Details_Item,
-                         Date = itemColor.Date,
-                         Total = itemColor.Total,
-                         Count = itemColor.Count,
-                         ColorId = itemColor.ColorId,
-                         SizeId = itemColor.SizeId,
-                         ItemId = itemColor.ItemId,
-                         ColorName = color.Name
-                     })
-                    .Join(_context.Size,
-                    itemSize => itemSize.SizeId,
-                    size => size.id,
-                     (itemSize, size) => new
-                     {
-                         Id = itemSize.Id,
-                         Id_Details_Item = itemSize.Id_Details_Item,
-                         Date = itemSize.Date,
-                         Total = itemSize.Total,
-                         Count = itemSize.Count,
-                         ColorId = itemSize.ColorId,
-                         SizeId = itemSize.SizeId,
-                         ItemId = itemSize.ItemId,
-                         ColorName = itemSize.ColorName,
-                         SizeName = size.Name
-                     })
-                    .Join(
-                        _context.Item,
-                        itemDetail => itemDetail.ItemId,
-                        item => item.id,
-                        (itemDetail, item) => new Cart_Details
-                        {
-                            Id = itemDetail.Id,
-                            Id_Details_Item = itemDetail.Id_Details_Item,
-                            Date = itemDetail.Date,
-                            Total = item.Price*itemDetail.Count,
-                            ColorId = itemDetail.ColorId,
-                            ColorName = itemDetail.ColorName,
-                            SizeId = itemDetail.SizeId,
-                            SizeName = itemDetail.SizeName,
-                            ItemId = itemDetail.ItemId,
-                            ItemName = item.Name,
-                            Image = item.Image,
-                            Price = item.Price,
-                            Count = itemDetail.Count
-                        }
-                    )
-                    .OrderBy( m => m.Id_Details_Item)
-                    .ToListAsync();
-                if(cartDetails == null)
+                List<Cart_Details> cartDetails = await Cart_Details(userId);
+                if (cartDetails == null)
                 {
 
                 }
@@ -135,28 +140,27 @@ namespace Fashion_shop.Controllers
             return View();
         }
 
-       [HttpPost]
-        public async Task<JsonResult> UpdateCount(int count, int bill_id, int item_details_id)
+        
+        [HttpPost]
+        public async Task<ActionResult> UpdateCount(int count, int bill_id, int item_details_id)
         {
-            try
-            {
-                var billDetail = await _context.Bill_Details.FirstOrDefaultAsync(m => m.Bill_id == bill_id && m.id_details_item == item_details_id);
-                if (billDetail != null)
-                {
-                    billDetail.Count = count;
-                    await _context.SaveChangesAsync();
+            var billDetail = await _context.Bill_Details.FirstOrDefaultAsync(m => m.Bill_id == bill_id && m.id_details_item == item_details_id);
 
-                    return Json(new { success = true, message = "Count updated successfully." });
-                }
-                else
-                {
-                    return Json(new { success = false, message = "Item not found." });
-                }
-            }
-            catch (Exception ex)
+            if (billDetail != null)
             {
-                return Json(new { success = false, message = "An error occurred: " + ex.Message });
+                billDetail.Count = count;
+                await _context.SaveChangesAsync();
+                // Assuming "_context" is your DbContext instance
+                var userId = int.Parse(Request.Cookies["User_Id"]);
+                // Fetch cart details and associated item details using multiple joins
+                List<Cart_Details> cartDetails = await Cart_Details(userId);// Fetch updated cart details
+
+                // Return the updated partial view with the updated model
+                //return RedirectToAction(nameof(Cart),cartDetails);
+                return PartialView("Cart_Detail", cartDetails);
             }
+
+            return View();
         }
 
         // GET: Bills/Details/5

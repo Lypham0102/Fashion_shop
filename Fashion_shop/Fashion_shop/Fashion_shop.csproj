@@ -43,7 +43,6 @@
     <Folder Include="wwwroot\scss\bootstrap\mixins\" />
     <Folder Include="wwwroot\scss\bootstrap\utilities\" />
     <Folder Include="wwwroot\scss\bootstrap\vendor\" />
-    <Folder Include="Views\Bills\" />
     <Folder Include="Views\Bill_Details\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Items\" />
