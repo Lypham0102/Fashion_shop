@@ -135,7 +135,7 @@ namespace Fashion_shop.Controllers
             return View();
         }
 
-       /* [HttpPost]
+       [HttpPost]
         public async Task<JsonResult> UpdateCount(int count, int bill_id, int item_details_id)
         {
             try
@@ -157,7 +157,7 @@ namespace Fashion_shop.Controllers
             {
                 return Json(new { success = false, message = "An error occurred: " + ex.Message });
             }
-        }*/
+        }
 
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
