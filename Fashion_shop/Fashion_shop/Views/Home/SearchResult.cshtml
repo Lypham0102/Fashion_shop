@@ -8,13 +8,13 @@
 <head>
     <title>Seach</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/View/Items/Index.css">
+    <link rel="stylesheet" href="~/css/View/Items/Index.css">
 </head>
 <body>
-    <h3>Từ khóa liên quan đến "@ViewBag.Keyword"</h3>
+    <h3 style="margin-left: 50px;">Từ khóa liên quan đến "@ViewBag.Keyword"</h3>
     @if (Model.Count > 0)
     {
-        <p> Tìm được @Model.Count sản phẩm.</p>
+        <p style="margin-left: 50px;"> Tìm được @Model.Count sản phẩm.</p>
         <div class="row products">
             @foreach (var item in Model)
             {
@@ -38,10 +38,10 @@
     }
     <div style="height: 30px"></div>
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="~/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/templatemo.js"></script>
+    <script src="~/assets/js/custom.js"></script>
 </body>
 </html>

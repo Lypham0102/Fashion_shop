@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="css/View/Home/Index.css">
-    <link rel="stylesheet" href="css/View/Items/Index.css">
+    @*<link rel="stylesheet" href="css/View/Items/Index.css">*@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -21,7 +20,7 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="abc@gmail.com">info@company.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="abc@gmail.com">info@tlshop.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
                 </div>
@@ -38,7 +37,7 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand logo h1 align-self-center" href="@Url.Action("Index", "Home")" style="display: flex; align-items: center; white-space: nowrap; margin-left: 5px;">
+            <a class="navbar-brand logo h1 align-self-center" href="@Url.Action("Index", "Home")" style="display: flex; align-items: center; white-space: nowrap;">
                 TL Shop
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,14 +74,14 @@
                         <!-- Thay method="get" thành method="post" -->
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
-                            <button class="input-group-text" onclick="performSearch()">
+                            <div class="input-group-text" onclick="performSearch()">
                                 <i class="fa fa-fw fa-search"></i>
-                            </button>
+                            </div>
                         </div>
                     </form>
                     <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
@@ -92,6 +91,22 @@
             </div>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -319,8 +334,7 @@
     <!-- End Script -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
-    <script>
-        function performSearch() {
+    <script>function performSearch() {
             var keyword = document.getElementById("inputMobileSearch").value;
 
             // Sử dụng AJAX để gửi yêu cầu tìm kiếm tới action "Search" trong controller "HomeController"
@@ -336,8 +350,6 @@
                     console.log("Error: " + error);
                 }
             });
-        }
-    </script>
+        }</script>
 </body>
-
-</html>
+</html >
