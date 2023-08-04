@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <!-- Thêm form để tìm kiếm -->
-                    <form method="post" action="@Url.Action("Search", "Home")">
+                    <form method="post" asp-action="@Url.Action("Search", "Home")">
                         <!-- Thay method="get" thành method="post" -->
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
