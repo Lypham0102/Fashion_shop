@@ -217,4 +217,10 @@ D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\refint\Fa
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.pdb
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Fashion_shop.genruntimeconfig.cache
 D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\ref\Fashion_shop.dll
-D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\obj\Debug\net5.0\Razor\Views\Bills\Cart_Detail.cshtml.g.cs
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.Mvc.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.Razor.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.Helpers.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\System.Web.WebPages.dll
+D:\ASP-PROJECT\Fashion_shop\Fashion_shop\Fashion_shop\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll

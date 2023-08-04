@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
 using Microsoft.AspNetCore;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace Fashion_shop.Controllers
 {
@@ -30,8 +32,76 @@ namespace Fashion_shop.Controllers
             return View(await _context.Bill.ToListAsync());
         }
 
-        public async Task<List<Cart_Details>> Cart_Details(int userId)
+        public async Task<List<Cart_Details>> Cart_Details_Session()
         {
+            var cart = HttpContext.Session.Get("Cart");
+            List<Cart_Details> listCartDetails = new List<Cart_Details>();
+            if (cart != null)
+            {
+                var cartJson = Encoding.UTF8.GetString(cart);
+                var cartDetails = JsonConvert.DeserializeObject<List<Bill_Details>>(cartJson);
+                
+                foreach (var item in cartDetails)
+                {
+                    Cart_Details temp_item = new Cart_Details();
+                    temp_item.Id_Details_Item = item.id_details_item;
+                    temp_item.Count = item.Count;
+                    //temp_item.Date = DateTime.Now;
+
+                    temp_item.ItemId = _context.Item_Details
+                        .Where(m => m.id_details_item == item.id_details_item)
+                        .Select(m => m.Item_id)
+                        .FirstOrDefault();
+
+                    temp_item.SizeId = _context.Item_Details
+                        .Where(m => m.id_details_item == item.id_details_item)
+                        .Select(m => m.Size_id)
+                        .FirstOrDefault();
+
+                    temp_item.ColorId = _context.Item_Details
+                        .Where(m => m.id_details_item == item.id_details_item)
+                        .Select(m => m.Color_id)
+                        .FirstOrDefault();
+
+                    temp_item.ColorName = _context.Color
+                        .Where(c => c.id == temp_item.ColorId)
+                        .Select(c => c.Name)
+                        .FirstOrDefault();
+
+
+                    temp_item.SizeName = _context.Size
+                        .Where(c => c.id == temp_item.SizeId)
+                        .Select(c => c.Name)
+                        .FirstOrDefault();
+
+                    temp_item.ItemName = _context.Item
+                       .Where(c => c.id == temp_item.ItemId)
+                       .Select(c => c.Name)
+                       .FirstOrDefault();
+
+                    temp_item.Price = _context.Item
+                       .Where(c => c.id == temp_item.ItemId)
+                       .Select(c => c.Price)
+                       .FirstOrDefault();
+
+                    temp_item.Total = temp_item.Count*temp_item.Price;
+
+
+                    temp_item.Image = _context.Item
+                       .Where(c => c.id == temp_item.ItemId)
+                       .Select(c => c.Image)
+                       .FirstOrDefault();
+
+                    listCartDetails.Add(temp_item);
+                }
+                // Add code here to update the session-based cart
+
+                // Serialize the updated cart back to JSON and save it in the session
+            }
+            return listCartDetails;
+        }
+            public async Task<List<Cart_Details>> Cart_Details(int userId)
+            {
             List<Cart_Details> cartDetails = await _context.Bill
                   .Where(b => b.Status == 0 && b.User_id == userId)
                   .Join(
@@ -41,7 +111,7 @@ namespace Fashion_shop.Controllers
                       (bill, bill_details) => new
                       {
                           Id = bill.id,
-                          Date = bill.Date,
+                          //Date = bill.Date,
                           Total = bill_details.Total * bill_details.Count,
                           Count = bill_details.Count,
                           Id_Details_Item = bill_details.id_details_item
@@ -55,7 +125,7 @@ namespace Fashion_shop.Controllers
                       {
                           Id = billDetails.Id,
                           Id_Details_Item = billDetails.Id_Details_Item,
-                          Date = billDetails.Date,
+                          //Date = billDetails.Date,
                           Total = billDetails.Total,
                           Count = billDetails.Count,
                           ColorId = itemDetails.Color_id,
@@ -70,7 +140,7 @@ namespace Fashion_shop.Controllers
                    {
                        Id = itemColor.Id,
                        Id_Details_Item = itemColor.Id_Details_Item,
-                       Date = itemColor.Date,
+                       //Date = itemColor.Date,
                        Total = itemColor.Total,
                        Count = itemColor.Count,
                        ColorId = itemColor.ColorId,
@@ -85,7 +155,7 @@ namespace Fashion_shop.Controllers
                    {
                        Id = itemSize.Id,
                        Id_Details_Item = itemSize.Id_Details_Item,
-                       Date = itemSize.Date,
+                       //Date = itemSize.Date,
                        Total = itemSize.Total,
                        Count = itemSize.Count,
                        ColorId = itemSize.ColorId,
@@ -102,7 +172,7 @@ namespace Fashion_shop.Controllers
                       {
                           Id = itemDetail.Id,
                           Id_Details_Item = itemDetail.Id_Details_Item,
-                          Date = itemDetail.Date,
+                          //Date = itemDetail.Date,
                           Total = item.Price * itemDetail.Count,
                           ColorId = itemDetail.ColorId,
                           ColorName = itemDetail.ColorName,
@@ -130,17 +200,31 @@ namespace Fashion_shop.Controllers
                 List<Cart_Details> cartDetails = await Cart_Details(userId);
                 if (cartDetails == null)
                 {
-
+                    cartDetails = await Cart_Details_Session();
+                    if(cartDetails == null)
+                    {
+                        return View();
+                    }
                 }
                 ViewBag.Total = cartDetails.Sum( t => t.Total );
                 // Fetch and return other relevant data to the view
                 return View(cartDetails);
             }
+            else
+            {
+                List<Cart_Details> cartDetails = await Cart_Details_Session();
+                if (cartDetails == null)
+                {
+                    return View();
+                }
+                ViewBag.Total = cartDetails.Sum(t => t.Total);
+                return View(cartDetails);
+
+            }
             // If the user is not authenticated, return an empty view
-            return View();
         }
 
-        
+
         [HttpPost]
         public async Task<ActionResult> UpdateCount(int count, int bill_id, int item_details_id)
         {
@@ -150,18 +234,11 @@ namespace Fashion_shop.Controllers
             {
                 billDetail.Count = count;
                 await _context.SaveChangesAsync();
-                // Assuming "_context" is your DbContext instance
-                var userId = int.Parse(Request.Cookies["User_Id"]);
-                // Fetch cart details and associated item details using multiple joins
-                List<Cart_Details> cartDetails = await Cart_Details(userId);// Fetch updated cart details
-
-                // Return the updated partial view with the updated model
-                //return RedirectToAction(nameof(Cart),cartDetails);
-                return PartialView("Cart_Detail", cartDetails);
             }
 
-            return View();
+            return new EmptyResult();
         }
+
 
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)

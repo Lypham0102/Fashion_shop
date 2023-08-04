@@ -5,7 +5,7 @@ namespace Fashion_shop.Models
     public class Cart_Details
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
+        //public DateTime Date { get; set; }
         public int Total { get; set; }
         public int Id_Details_Item { get; set; }
         public int ColorId { get; set; }
