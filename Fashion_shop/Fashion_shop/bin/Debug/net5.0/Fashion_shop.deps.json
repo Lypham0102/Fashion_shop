@@ -36,10 +36,7 @@
           "BCrypt.Net": "0.1.0",
           "EntityFramework6.Npgsql": "6.4.3",
           "FluentAssertions": "6.11.0",
-<<<<<<< HEAD
-=======
           "Microsoft.AspNet.Mvc": "5.2.9",
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           "Microsoft.AspNetCore.Session": "2.2.0",
           "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -411,8 +408,6 @@
           }
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.AspNet.Mvc/5.2.9": {
         "dependencies": {
           "Microsoft.AspNet.Razor": "3.2.9",
@@ -469,7 +464,6 @@
           "lib/net45/System.Web.WebPages.dll": {}
         }
       },
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "2.2.0",
@@ -990,11 +984,7 @@
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "2.0.1.0"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           },
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.pdb": {
             "rid": "win-arm",
@@ -1004,11 +994,7 @@
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "2.0.1.0"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           },
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.pdb": {
             "rid": "win-arm64",
@@ -1018,11 +1004,7 @@
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "2.0.1.0"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           },
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.pdb": {
             "rid": "win-x64",
@@ -1032,11 +1014,7 @@
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "2.0.1.0"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           },
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb": {
             "rid": "win-x86",
@@ -1420,20 +1398,12 @@
           "runtimes/win-arm/lib/net5.0/dotnet-aspnet-codegenerator-design.exe": {
             "rid": "win-arm",
             "assetType": "runtime",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "5.0.221.10809"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           },
           "runtimes/win-arm64/lib/net5.0/dotnet-aspnet-codegenerator-design.exe": {
             "rid": "win-arm64",
             "assetType": "runtime",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "5.0.221.10809"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           }
         },
         "compile": {
@@ -1502,8 +1472,6 @@
           "lib/net5.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
-<<<<<<< HEAD
-=======
       "Microsoft.Web.Infrastructure/1.0.0": {
         "runtime": {
           "lib/net40/Microsoft.Web.Infrastructure.dll": {
@@ -1515,7 +1483,6 @@
           "lib/net40/Microsoft.Web.Infrastructure.dll": {}
         }
       },
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1730,11 +1697,7 @@
           "runtimes/win-arm64/native/sni.dll": {
             "rid": "win-arm64",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "4.6.25512.1"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           }
         }
       },
@@ -1743,11 +1706,7 @@
           "runtimes/win-x64/native/sni.dll": {
             "rid": "win-x64",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "4.6.25512.1"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           }
         }
       },
@@ -1756,11 +1715,7 @@
           "runtimes/win-x86/native/sni.dll": {
             "rid": "win-x86",
             "assetType": "native",
-<<<<<<< HEAD
-            "fileVersion": "0.0.0.0"
-=======
             "fileVersion": "4.6.25512.1"
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
           }
         }
       },
@@ -4539,8 +4494,6 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "Microsoft.AspNet.Mvc/5.2.9": {
       "type": "package",
       "serviceable": true,
@@ -4562,7 +4515,6 @@
       "path": "microsoft.aspnet.webpages/3.2.9",
       "hashPath": "microsoft.aspnet.webpages.3.2.9.nupkg.sha512"
     },
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
     "Microsoft.AspNetCore.Antiforgery/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -5137,8 +5089,6 @@
       "path": "microsoft.visualstudio.web.codegenerators.mvc/5.0.2",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512"
     },
-<<<<<<< HEAD
-=======
     "Microsoft.Web.Infrastructure/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -5146,7 +5096,6 @@
       "path": "microsoft.web.infrastructure/1.0.0",
       "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
     },
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,

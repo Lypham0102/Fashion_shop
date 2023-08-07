@@ -12,12 +12,9 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
-<<<<<<< HEAD
-=======
 using Microsoft.AspNetCore;
 using Newtonsoft.Json;
 using System.Text;
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
 
 namespace Fashion_shop.Controllers
 {
@@ -238,6 +235,14 @@ namespace Fashion_shop.Controllers
             {
                 billDetail.Count = count;
                 await _context.SaveChangesAsync();
+            }
+            else
+            {
+                List<Cart_Details> cartDetails = await Cart_Details_Session();
+                cartDetails.Find(m => m.Id_Details_Item == item_details_id).Count = count;
+              
+                var updatedCartJson = JsonConvert.SerializeObject(cartDetails);
+                HttpContext.Session.Set("Cart", Encoding.UTF8.GetBytes(updatedCartJson));
             }
 
             return new EmptyResult();
