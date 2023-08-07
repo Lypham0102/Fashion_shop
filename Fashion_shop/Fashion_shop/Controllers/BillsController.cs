@@ -235,6 +235,7 @@ namespace Fashion_shop.Controllers
             {
                 billDetail.Count = count;
                 await _context.SaveChangesAsync();
+                //ViewBag.Total = _context.Bill_Details.Sum( t => t.Total);
             }
             else
             {
@@ -243,8 +244,8 @@ namespace Fashion_shop.Controllers
               
                 var updatedCartJson = JsonConvert.SerializeObject(cartDetails);
                 HttpContext.Session.Set("Cart", Encoding.UTF8.GetBytes(updatedCartJson));
+                //ViewBag.Total = cartDetails.Sum(m => m.Total);
             }
-
             return new EmptyResult();
         }
 
