@@ -12,6 +12,10 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
+<<<<<<< HEAD
+=======
+using Microsoft.AspNetCore;
+>>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
 using Newtonsoft.Json;
 using System.Text;
 
@@ -234,8 +238,17 @@ namespace Fashion_shop.Controllers
             {
                 billDetail.Count = count;
                 await _context.SaveChangesAsync();
+                //ViewBag.Total = _context.Bill_Details.Sum( t => t.Total);
             }
-
+            else
+            {
+                List<Cart_Details> cartDetails = await Cart_Details_Session();
+                cartDetails.Find(m => m.Id_Details_Item == item_details_id).Count = count;
+              
+                var updatedCartJson = JsonConvert.SerializeObject(cartDetails);
+                HttpContext.Session.Set("Cart", Encoding.UTF8.GetBytes(updatedCartJson));
+                //ViewBag.Total = cartDetails.Sum(m => m.Total);
+            }
             return new EmptyResult();
         }
 
