@@ -12,12 +12,8 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
-<<<<<<< HEAD
-=======
-using Microsoft.AspNetCore;
 using Newtonsoft.Json;
 using System.Text;
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
 
 namespace Fashion_shop.Controllers
 {

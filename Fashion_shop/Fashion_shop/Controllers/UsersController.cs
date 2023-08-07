@@ -85,6 +85,30 @@ namespace Fashion_shop.Controllers
             }
             return View(User);
         }
+
+        // Action để đăng xuất
+        public IActionResult Logout()
+        {
+            // Xóa cookie
+            Response.Cookies.Delete("UserName");
+
+            // Chuyển hướng về trang Login
+            return RedirectToAction("Index", "Home");
+        } 
+
+        public IActionResult DetailsUser()
+        {
+            var userId = Convert.ToInt32(Request.Cookies["User_Id"]);
+            var user = _context.User.FirstOrDefault(u => u.id == userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
         // GET: Users
         [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> Index()

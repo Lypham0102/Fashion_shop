@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var userName = Context.Request.Cookies["UserName"];
+}
+<!DOCTYPE html>
 <html>
 <head>
     <title>@ViewBag.Title</title>
@@ -61,7 +64,30 @@
                         </li>
                     </ul>
                 </div>
-                <div class="navbar align-self-center d-flex">
+                @if (string.IsNullOrEmpty(userName))
+                {
+                    <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Login", "Users")" style="margin-right: 20px;">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" style="margin-right: 20px;"></span>
+                    </a>
+                }
+                else
+                {
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hello, @userName
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Xem thông tin</a>
+                            <a class="dropdown-item" href="@Url.Action("Logout", "Users")">Đăng xuất</a>
+                        </div>
+                    </div>
+                }
+                <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")" style="margin-right: 20px;">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                </a>
+                <div class="navbar align-self-center d-flex" style="margin-right: 20px;">
                     <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
@@ -71,7 +97,7 @@
                         </div>
                     </div>
                     <!-- Thêm form để tìm kiếm -->
-                    <form id="searchForm" method="post" action="@Url.Action("Search", "Home")">
+                    <form id="searchForm" method="post" action="@Url.Action("Search", "Home")" style="margin-right: 20px;">
                         <!-- Thay method="get" thành method="post" -->
                         <div class="input-group">
                             <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
@@ -80,14 +106,6 @@
                             </div>
                         </div>
                     </form>
-                    <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -206,46 +224,35 @@
                         <li><a class="text-decoration-none" href="#">Contact</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="row text-light mb-4">
                 <div class="col-12 mb-3">
                     <div class="w-100 my-3 border-top border-light"></div>
                 </div>
-                <div class="col-auto me-auto">
-                    <ul class="list-inline text-left footer-icons">
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div>
+                <ul class="list-inline text-left footer-icons ms-auto">
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                    </li>
+                    <li class="list-inline-item border border-light rounded-circle text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                    </li>
+                </ul>
+                <div class="col-auto"></div>
             </div>
-        </div>
 
+        </div>
         <div class="w-100 bg-black py-3">
             <div class="container">
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
                             Copyright &copy; 2023 TL Team
-                            | Designed by <a rel="sponsored" href="https://www.facebook.com/profile.php?id=100011091134802" target="_blank">TL</a>
                         </p>
                     </div>
                 </div>
@@ -317,6 +324,7 @@
                 }, 0);
             });
         });</script>
+
 </body>
 </html>
 

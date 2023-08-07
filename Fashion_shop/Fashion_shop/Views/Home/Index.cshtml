@@ -1,6 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Xin chào";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    //Layout = "~/Views/Shared/_Layout.cshtml
+    var itemWidth = 100 / 3;
+}
+@functions {
+    public string FormatPrice(decimal price)
+    {
+        return string.Format("{0:#,##0}", price);
+    }
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -87,6 +94,62 @@
             <i class="fas fa-chevron-right"></i>
         </a>
     </div>
+    <!-- Start Categories of The Month -->
+    <section class="container py-5">
+        <div class="row text-center pt-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Featured products</h1>
+                <p>
+                    Chúng tôi luôn cố gắng mang đến cho bạn những sản phẩm, tốt, đẹp, mới nhất <br />
+                    Với mức giá cạnh tranh nhất thị trường.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="@Url.Action("Index", "Items")"><img src="./img/QuanAo.jpg" class="rounded-circle img-fluid border"></a>
+                <h5 class="text-center mt-3 mb-3">Quần áo</h5>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="@Url.Action("SearchByCategory","Home", new { category = 16 })"><img src="./img/Giay.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Giày</h2>
+            </div>
+            <div class="col-12 col-md-4 p-5 mt-3">
+                <a href="@Url.Action("SearchByCategory","Home", new { category = 17 })"><img src="./img/DayNit.jpg" class="rounded-circle img-fluid border"></a>
+                <h2 class="h5 text-center mt-3 mb-3">Phụ kiện</h2>
+            </div>
+        </div>
+    </section>
+    <!-- End Categories of The Month -->
+    <!-- Start Featured Product -->
+    <section class="bg-light" style="background-color: white">
+        <div class="container py-5 bg-white">
+            <div class="row text-center py-3">
+                <div class="col-lg-6 m-auto">
+                    <h1 class="h1" style="color: white; font-size: 26px; font-weight: bold; background-color: #8B7E66; padding: 15px; border-radius: 10px; ">New Item</h1>
+                </div>
+
+            </div>
+            <div class="row d-flex flex-wrap" style="margin-left: 160px;">
+                @foreach (var item in ViewBag.SeclectItems)
+                {
+                    <div class="col-sm-3 col-lg-3 col-md-3 col-4" style="width: @itemWidth%;">
+                        <div class="thumbnail" style="margin-left: 20px;">
+                            <a style="text-decoration-line: none;" href="@Url.Action("Details", "Items", new { id = item.id })">
+                                <img alt="@item.id" src="~/img_items/@item.Image" width="400" height="500" />
+                                <div class="item-info">
+                                    <h5 style="color: black; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; margin-bottom: 5px;">@item.Name</h5>
+                                    <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@FormatPrice(item.Price)đ</h6>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </section>
+    <!-- End Featured Product -->
     <!-- End Banner Hero -->
     <!-- End Featured Product -->
     <!-- Start Script -->

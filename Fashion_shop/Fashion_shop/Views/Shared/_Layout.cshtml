@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var userName = Context.Request.Cookies["UserName"];
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -60,34 +63,49 @@
                         </li>
                     </ul>
                 </div>
-                <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
+                @if (string.IsNullOrEmpty(userName))
+                {
+                    <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Login", "Users")" style="margin-right: 20px;">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark" style="margin-right: 20px;"></span>
+                    </a>
+                }
+                else
+                {
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Hello, @userName
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="@Url.Action("DetailsUser", "Users")">Xem thông tin</a>
+                            <a class="dropdown-item" href="@Url.Action("Logout", "Users")">Đăng xuất</a>
                         </div>
                     </div>
-                    <!-- Thêm form để tìm kiếm -->
-                    <form method="post" action="@Url.Action("Search", "Home")">
-                        <!-- Thay method="get" thành method="post" -->
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
-                            <div class="input-group-text" onclick="performSearch()">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
+                }
+            <div class="navbar align-self-center d-flex" style="margin-right: 20px;">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
                         </div>
-                    </form>
-                    <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
+                    </div>
                 </div>
+                <a class="nav-icon position-relative text-decoration-none" href="@Url.Action("Cart","Bills")" style="margin-right: 20px;">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                    <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                </a>
+                <!-- Thêm form để tìm kiếm -->
+                <form method="post" action="@Url.Action("Search", "Home")" style="margin-right: 20px;">
+                    <!-- Thay method="get" thành method="post" -->
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" name="keyword" placeholder="Search ...">
+                        <div class="input-group-text" onclick="performSearch()">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
             </div>
         </div>
     </nav>
@@ -112,125 +130,6 @@
             @RenderBody()
         </main>
     </div>
-    <!-- Start Categories of The Month -->
-    <section class="container py-5">
-        <div class="row text-center pt-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">Categories of The Month</h1>
-                <p>
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/QuanAo.jpg" class="rounded-circle img-fluid border"></a>
-                <h5 class="text-center mt-3 mb-3">Quần áo</h5>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/Giay.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Giày</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/DayNit.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Phụ kiện</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
-            </div>
-        </div>
-    </section>
-    <!-- End Categories of The Month -->
-    <!-- Start Featured Product -->
-    <section class="bg-light">
-        <div class="container py-5">
-            <div class="row text-center py-3">
-                <div class="col-lg-6 m-auto">
-                    <h1 class="h1">Featured Product</h1>
-                    <p>
-                        Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./img/Ao.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$240.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Gym Weight</a>
-                            <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.
-                            </p>
-                            <p class="text-muted">Reviews (24)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./img/Quan.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                    <i class="text-muted fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$480.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Cloud Nike Shoes</a>
-                            <p class="card-text">
-                                Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.
-                            </p>
-                            <p class="text-muted">Reviews (48)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="card h-100">
-                        <a href="shop-single.html">
-                            <img src="./img/PhuKien.jpg" class="card-img-top" alt="...">
-                        </a>
-                        <div class="card-body">
-                            <ul class="list-unstyled d-flex justify-content-between">
-                                <li>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                    <i class="text-warning fa fa-star"></i>
-                                </li>
-                                <li class="text-muted text-right">$360.00</li>
-                            </ul>
-                            <a href="shop-single.html" class="h2 text-decoration-none text-dark">Summer Addides Shoes</a>
-                            <p class="card-text">
-                                Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.
-                            </p>
-                            <p class="text-muted">Reviews (74)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Featured Product -->
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -266,7 +165,6 @@
                         <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
@@ -300,13 +198,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-auto">
-                    <label class="sr-only" for="subscribeEmail">Email address</label>
-                    <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -316,13 +207,11 @@
                     <div class="col-12">
                         <p class="text-left text-light">
                             Copyright &copy; 2023 TL Team
-                            | Designed by <a rel="sponsored" href="https://www.facebook.com/profile.php?id=100011091134802" target="_blank">TL</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
     <!-- Start Script -->
@@ -331,18 +220,16 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <!-- End Script -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
     <!-- Thêm đoạn mã JavaScript để gửi yêu cầu tìm kiếm -->
-<<<<<<< HEAD
+    @*<script>function performSearch() {
+        var keyword = document.getElementById("inputMobileSearch").value;*@
     <script>function performSearch() {
-            var keyword = document.getElementById("inputMobileSearch").value;
-=======
-    <script>
-        function performSearch() {
             var keyword = document.getElementByName("keyword").value;
->>>>>>> 731888819820bd56c785c9d6131f5288e33ed854
-
             // Sử dụng AJAX để gửi yêu cầu tìm kiếm tới action "Search" trong controller "HomeController"
             $.ajax({
                 url: "/Home/Search", // Đường dẫn tới action "Search"
@@ -358,4 +245,4 @@
             });
         }</script>
 </body>
-</html >
+</html>

@@ -1,114 +1,87 @@
 ﻿@model List<Fashion_shop.Models.Cart_Details>
 @{
     ViewData["Title"] = "Shopping Cart";
-    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="@Url.Content("~/css/View/Bill/IndexCus.css")">
+    <link rel="stylesheet" href="~/css/View/Bill/IndexCus.css">
+    @*<link rel="stylesheet" href="~/css/View/Items/Index.css">*@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-        <div class="container text-light">
-            <div class="w-100 d-flex justify-content-between">
-                <div>
-                    <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="abc@gmail.com">info@company.com</a>
-                    <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
-                </div>
-                <div>
-                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
     <!-- Close Top Nav -->
-    <div style="height: 100px;"></div>
-    <div class="card">
-        <div class="row">
-            <div class="col-md-8 cart">
-                <div class="title">
-                    <div class="row">
-                        <div class="col" style="text-align: center; margin-top:30px;"><h4><b>Shopping Cart</b></h4></div>
-                        <div class="col align-self-center text-right text-muted">1 items</div>
-                    </div>
-                </div>
-                @foreach (var item in Model)
-                {
-                var uniqueId = "item_" + item.Id_Details_Item; // Create a unique identifier
-                <div class="row border-top border-bottom">
-                    <div class="row main align-items-center" style="margin-left: 10px;">
-                        <div class="col-2"><img class="img-fluid" src="~/img_items/@item.Image"></div>
-                        <div class="col">
-                            <div class="row text-muted">@item.ItemName </div>
-                            <div class="row"> Color: @item.ColorName - Size: @item.SizeName</div><!-- NAME   -->
+        <div class="card" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-md-8 cart">
+                    <div class="title">
+                        <div class="row">
+                            <div class="col" style="text-align: center; margin-top:30px;"><h4><b>Shopping Cart</b></h4></div>
+                            <div class="col align-self-center text-right text-muted">1 items</div>
                         </div>
-                        <div class="col">
-                            <!-- Thay method="get" thành method="post" -->
-                                <form id="form_@uniqueId" method="post">
-                                    <button type="button" onclick="decrease('@uniqueId')" style="color: black;">-</button>
-                                    <input id="count_@uniqueId" name="count" type="hidden" value="@item.Count" />
-                                    <input id="bill_id_@uniqueId" name="bill_id" type="hidden" value="@item.Id" />
-                                    <input id="item_details_id_@uniqueId" name="item_details_id" type="hidden" value="@item.Id_Details_Item" />
-                                    <input id="price_@uniqueId" name="price" type="hidden" value="@item.Price" /> <!-- Add this line -->
-                                    <a href="#" class="border" id="countDisplay_@uniqueId">@item.Count</a>
-                                    <button type="button" onclick="increase('@uniqueId')" style="color: black;">+</button>
-                                </form>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        var uniqueId = "item_" + item.Id_Details_Item; // Create a unique identifier
+                        <div class="row border-top border-bottom">
+                            <div class="row main align-items-center" style="margin-left: 10px;">
+                                <div class="col-2"><img class="img-fluid" src="~/img_items/@item.Image"></div>
+                                <div class="col">
+                                    <div class="row text-muted">@item.ItemName </div>
+                                    <div class="row"> Color: @item.ColorName - Size: @item.SizeName</div><!-- NAME   -->
                                 </div>
-                            <div class="col" id="total_@uniqueId">
-                                @(item.Total.ToString("N0")) vnd
-                                <span class="close">&#10005;</span>
+                                <div class="col">
+                                    <!-- Thay method="get" thành method="post" -->
+                                    <form id="form_@uniqueId" method="post">
+                                        <button type="button" onclick="decrease('@uniqueId')" style="color: black;">-</button>
+                                        <input id="count_@uniqueId" name="count" type="hidden" value="@item.Count" />
+                                        <input id="bill_id_@uniqueId" name="bill_id" type="hidden" value="@item.Id" />
+                                        <input id="item_details_id_@uniqueId" name="item_details_id" type="hidden" value="@item.Id_Details_Item" />
+                                        <input id="price_@uniqueId" name="price" type="hidden" value="@item.Price" /> <!-- Add this line -->
+                                        <a href="#" class="border" id="countDisplay_@uniqueId">@item.Count</a>
+                                        <button type="button" onclick="increase('@uniqueId')" style="color: black;">+</button>
+                                    </form>
+                                </div>
+                                <div class="col" id="total_@uniqueId">
+                                    @(item.Total.ToString("N0")) vnd
+                                    <span class="close">&#10005;</span>
+                                </div>
                             </div>
-                    </div>
+                        </div>
+                    }
+
+                    <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
                 </div>
-                }
-                
-                <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
-            </div>
-            <div class="col-md-4 summary">
-                @*<div><h5><b>Summary</b></h5></div>
-                <hr>
-                @foreach( var item in Model)
-                {
-                    <!-- Sumary of 1 item  -->
-                    <div class="row">
-                        <div class="col" style="padding-left:10px;">@item.ItemName</div>
-                        <div class="col text-right">@item.Total vnd</div>
+                <div class="col-md-4 summary">
+                    <form>
+                        <p>SHIPPING</p>
+                        <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                        <p>GIVE CODE</p>
+                        <input id="code" placeholder="Enter your code">
+                    </form>
+                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                        <div class="col">TOTAL PRICE</div>
+                        <div class="col text-right">@ViewBag.Total vnd</div>
                     </div>
-                    <!-- End of sumary of 1 item  -->
-                }*@
-                
-                <form>
-                    <p>SHIPPING</p>
-                    <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                    <p>GIVE CODE</p>
-                    <input id="code" placeholder="Enter your code">
-                </form>
-                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">@ViewBag.Total vnd</div>
+                    <button class="btn">CHECKOUT</button>
                 </div>
-                <button class="btn">CHECKOUT</button>
             </div>
         </div>
-    </div>
     <!-- End Featured Product -->
     <!-- Start Script -->
+    <!-- Start Script -->
+    <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="~/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/templatemo.js"></script>
+    <script src="~/assets/js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
-    <script>
-        function updateTotalDisplay(uniqueId) {
+    <script>function updateTotalDisplay(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
             var totalDiv = document.getElementById("total_" + uniqueId);
             var priceInput = document.getElementById("price_" + uniqueId);
@@ -146,7 +119,6 @@
                 }
             });
         }
-
         function decrease(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
             var countDisplay = document.getElementById("countDisplay_" + uniqueId);
@@ -159,7 +131,6 @@
                 updateTotalDisplay(uniqueId);
             }
         }
-
         function increase(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
             var countDisplay = document.getElementById("countDisplay_" + uniqueId);
@@ -169,12 +140,7 @@
             countInput.value = currentCount;
             countDisplay.textContent = currentCount;
             updateTotalDisplay(uniqueId);
-        }
-    </script>
-
-
-
-
+        }</script>
 </body>
 
 </html>
