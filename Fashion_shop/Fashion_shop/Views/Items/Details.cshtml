@@ -124,5 +124,31 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+        @*function AddToCartt() {
+            var itemId = document.getElementById("itemId");
+            var colorId = document.querySelector('input[name="colorId"]:checked').value;
+            var sizeId = document.querySelector('input[name="sizeId"]:checked').value;         
+            // Send an AJAX request to update the count in the database
+            $.ajax({
+                type: "POST",
+                url: "/Items/AddToCart", // URL mapped to the action
+                data: {
+                    itemId: itemId,
+                    colorId: colorId,
+                    sizeId: sizeId
+                },
+                success: function (response) {
+                    console.log("Item added to cart:", response);
+                    // Handle success (e.g., show a message, update UI)
+                },
+                error: function (error) {
+                    console.error("Error adding item to cart:", error);
+                    // Handle error (e.g., show an error message)
+                }
+            });
+
+        }*@
+    </script>
 </body>
 </html>

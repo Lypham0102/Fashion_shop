@@ -15,6 +15,7 @@ using System.Drawing;
 using Microsoft.AspNetCore;
 using Newtonsoft.Json;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Fashion_shop.Controllers
 {
@@ -194,18 +195,48 @@ namespace Fashion_shop.Controllers
         // GET: Bills
         public async Task<IActionResult> Cart()
         {
+            ViewBag.Total = 0;
             if (Request.Cookies["User_Id"] != null)
             {
                 var userId = int.Parse(Request.Cookies["User_Id"]);
                 // Fetch cart details and associated item details using multiple joins
+                var bill = await _context.Bill
+                   .FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
                 List<Cart_Details> cartDetails = await Cart_Details(userId);
-                if (cartDetails == null)
+                if (cartDetails.Count == 0 && bill == null)
                 {
-                    cartDetails = await Cart_Details_Session();
-                    if(cartDetails == null)
+                    bill = new Bill
                     {
-                        return View();
+                        Total = 0,
+                        Voucher_id = 0,
+                        User_id = userId,
+                        Date = DateTime.Now,
+                        Status = 0
+                    };
+
+                    _context.Add(bill);
+                    await _context.SaveChangesAsync();
+
+                    cartDetails = await Cart_Details_Session();
+                    if(cartDetails.Count == 0)
+                    {
+                        return View(cartDetails);
+                        
                     }
+
+                    foreach (var billDetails in cartDetails)
+                    {
+                        billDetails.Id = bill.id;
+                        Bill_Details bd = new Bill_Details
+                        {
+                            Bill_id = billDetails.Id,
+                            Total = billDetails.Total,
+                            Count = billDetails.Count,
+                            id_details_item = billDetails.Id_Details_Item
+                        };
+                        _context.Bill_Details.Add(bd);
+                    }
+                    await _context.SaveChangesAsync();
                 }
                 ViewBag.Total = cartDetails.Sum( t => t.Total );
                 // Fetch and return other relevant data to the view
@@ -214,13 +245,12 @@ namespace Fashion_shop.Controllers
             else
             {
                 List<Cart_Details> cartDetails = await Cart_Details_Session();
-                if (cartDetails == null)
+                if (cartDetails.Count == 0)
                 {
-                    return View();
+                    return View(cartDetails);
                 }
                 ViewBag.Total = cartDetails.Sum(t => t.Total);
                 return View(cartDetails);
-
             }
             // If the user is not authenticated, return an empty view
         }
@@ -230,10 +260,18 @@ namespace Fashion_shop.Controllers
         public async Task<ActionResult> UpdateCount(int count, int bill_id, int item_details_id)
         {
             var billDetail = await _context.Bill_Details.FirstOrDefaultAsync(m => m.Bill_id == bill_id && m.id_details_item == item_details_id);
-
+            var itemId = await _context.Item_Details
+                  .Where(item => item.id_details_item == item_details_id)
+                  .Select(item => item.Item_id)
+                  .FirstOrDefaultAsync();
+            var itemPrice = await _context.Item
+                  .Where(item => item.id == itemId)
+                  .Select(item => item.Price)
+                  .FirstOrDefaultAsync();
             if (billDetail != null)
             {
                 billDetail.Count = count;
+                billDetail.Total = count * itemPrice;
                 await _context.SaveChangesAsync();
                 //ViewBag.Total = _context.Bill_Details.Sum( t => t.Total);
             }
@@ -249,7 +287,68 @@ namespace Fashion_shop.Controllers
             return new EmptyResult();
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Policy = "UserOnly")]
+        public async Task<IActionResult> PayMent()
+        {
+            var userId = int.Parse(Request.Cookies["User_Id"]);
+            /*var userJson = HttpContext.Session.Get("User_Id");
+            var user = Encoding.UTF8.GetString(userJson);
+            var userId = JsonConvert.DeserializeObject<int>(user);*/
+            var bill = await _context.Bill
+                    .FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
+            if (bill != null)
+            {
+                var billDetails = await _context.Bill_Details.Where( bd => bd.Bill_id == bill.id).ToListAsync();
+                bill.Total = billDetails.Sum(t => t.Total);
+                bill.Status = 1;
+                bill.Date = DateTime.Now;
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                bill = new Bill
+                {
+                    Total = 0,
+                    Voucher_id = 0,
+                    User_id = userId,
+                    Date = DateTime.Now,
+                    Status = 0
+                };
+                _context.Add(bill);
+                await _context.SaveChangesAsync();
 
+                var cart = HttpContext.Session.Get("Cart");
+                if (cart != null)
+                {
+                    List<Cart_Details> cartDetails = await Cart_Details_Session();
+                    foreach (var billDetails in cartDetails)
+                    {
+                        billDetails.Id = bill.id;
+                        Bill_Details bd = new Bill_Details
+                        {
+                            Bill_id = billDetails.Id,
+                            Total = billDetails.Total,
+                            Count = billDetails.Count,
+                            id_details_item = billDetails.Id_Details_Item
+                        };
+                        _context.Bill_Details.Add(bd);
+                    }
+                    bill.Status = 1;                    
+                    bill.Total = _context.Bill_Details.Where(bd => bd.Bill_id == bill.id).Sum(t => t.Total);
+                    bill.Date = DateTime.Now;
+                    await _context.SaveChangesAsync();
+                    HttpContext.Session.Remove("Cart");
+                }
+                else
+                {
+                    return NotFound();
+                }
+
+            }
+            return RedirectToAction(nameof(Index));
+        }
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
         {

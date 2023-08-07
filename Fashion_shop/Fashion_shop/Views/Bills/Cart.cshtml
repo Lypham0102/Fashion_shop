@@ -96,9 +96,11 @@
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total) vnd </div>
+                    <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
                 </div>
-                <button class="btn">CHECKOUT</button>
+                <form asp-action="PayMent" method="post">
+                <button type="submit" class="btn">Thanh toán</button>
+                </form>
             </div>
         </div>
     </div>
@@ -120,7 +122,26 @@
 
             var summaryTotalElement = document.getElementById("summaryTotal");
             summaryTotalElement.textContent = "Total: " + summaryTotal.toLocaleString() + " vnd";
-        }*@
+        }
+        function PayMent(){
+                $.ajax({
+                    type: "POST",
+                    url: "/Bills/PayMent",
+                    data: {
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            console.log("Bill updated in the database.");
+                            //@ViewBag.Total = updatedSummaryTotal;
+                        } else {
+                            console.error("Error during transaction");
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Error during transaction:", error);
+                    }
+                });
+            }*@      
             function calculateSummaryTotal() {
                 var summaryTotal = 0;
                 var itemTotalElements = document.querySelectorAll("[id^='total_']");
@@ -128,7 +149,7 @@
                 itemTotalElements.forEach(function (itemTotalElement) {
                     var totalText = itemTotalElement.textContent;
                     // Remove " vnd" from the totalText before extracting the numeric value
-                    var numericPart = totalText.replace(" vnd", "");
+                    var numericPart = totalText.replace("vnd", "");
                     var totalValue = parseFloat(numericPart.replace(/,/g, ""));
                     summaryTotal += totalValue;
                 });
@@ -139,7 +160,7 @@
                 var summaryTotalElement = document.getElementById("summaryTotal");
                 var summaryTotal = calculateSummaryTotal();
 
-            summaryTotalElement.textContent = summaryTotal.toLocaleString() + " vnd";
+            summaryTotalElement.textContent = summaryTotal.toLocaleString() + "vnd";
             }
         function updateTotalDisplay(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
