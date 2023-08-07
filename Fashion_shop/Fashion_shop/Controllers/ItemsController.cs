@@ -46,14 +46,33 @@ namespace Fashion_shop.Controllers
             return View(await _context.Item.ToListAsync());
         }
 
-        public ActionResult Index(int? page)
+        public async Task<IActionResult> Index(string sortOrder, int? page)
         {
-            const int pageSize = 40; // Số mục trên mỗi trang
-            int pageNumber = (page ?? 1); // Số trang hiện tại (nếu không có, mặc định là trang 1)
+            // Lấy danh sách sản phẩm từ CSDL
+            var items = _context.Item.AsQueryable();
 
-            var select = SelectItem(1000).ToPagedList(pageNumber, pageSize);
-            return View(select);
+            // Kiểm tra và thực hiện sắp xếp theo giá tăng hoặc giảm dần
+            switch (sortOrder)
+            {
+                case "asc":
+                    items = items.OrderBy(item => item.Price);
+                    break;
+                case "desc":
+                    items = items.OrderByDescending(item => item.Price);
+                    break;
+                default:
+                    items = items.OrderBy(item => item.id); // Sắp xếp mặc định nếu không có sortOrder
+                    break;
+            }
+
+            // Sử dụng PagedList để phân trang
+            int pageSize = 40; // Số lượng sản phẩm trên mỗi trang
+            int pageNumber = (page ?? 1); // Trang hiện tại (mặc định là trang 1)
+            var pagedItems = await items.ToPagedListAsync(pageNumber, pageSize);
+
+            return View(pagedItems);
         }
+
 
         public async Task<IActionResult> Details(int? id)
         {

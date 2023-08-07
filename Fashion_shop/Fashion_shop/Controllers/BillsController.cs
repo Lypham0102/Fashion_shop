@@ -12,7 +12,10 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
+<<<<<<< HEAD
+=======
 using Microsoft.AspNetCore;
+>>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
 using Newtonsoft.Json;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;

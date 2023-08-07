@@ -84,12 +84,26 @@ namespace Fashion_shop.Controllers
 
             return View("Seach", searchResults);
         }
-
+        private List<Item> SelectItem()
+        {
+            var a = _dbContext.Item.OrderByDescending(a => a.id).Take(3).ToList();
+            return a;
+        }
         public IActionResult Index()
         {
+            //var userName = Request.Cookies["UserName"];
+            //var select = SelectItem();
+            //return View(model: userName
             var userName = Request.Cookies["UserName"];
-            return View(model: userName);
+            var select = SelectItem();
+
+            // Sử dụng ViewBag để truyền dữ liệu vào view
+            ViewBag.UserName = userName;
+            ViewBag.SeclectItems = select;
+
+            return View();
         }
+
 
         public IActionResult Store()
         {

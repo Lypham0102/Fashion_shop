@@ -5,6 +5,12 @@
     ViewData["Title"] = "Hello";
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
+@functions {
+    public string FormatPrice(decimal price)
+    {
+        return string.Format("{0:#,##0}", price);
+    }
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +19,36 @@
     <link rel="stylesheet" href="css/View/Items/Index.css">
 </head>
 <body>
+    <div class="dropdown" style="margin-top: 10px; margin-left: 20px;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Sắp xếp theo giá
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "asc" })">Giá tăng dần</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="@Url.Action("Index", new { sortOrder = "desc" })">Giá giảm dần</a>
+            </li>
+        </ul>
+    </div>
     <div class="row products">
         @foreach (var item in Model)
         {
-            <div class="col-sm-3 col-lg-3 col-md-3">
-                <div class="thumbnail" style="margin-left: 20px;">
+            <div class="col-sm-3 col-lg-3 col-md-3" style="margin-bottom: 10px;">
+                <div class="thumbnail" style="margin-left: 20px; padding-bottom: 10px;">
                     <a style="text-decoration-line: none;" href="@Url.Action("Details", "Items", new { id = item.id })">
                         <img alt="@item.id" src="~/img_items/@item.Image" width="250" />
                         <div class="item-info">
                             <h5 style="color: black; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; margin-bottom: 5px;">@item.Name</h5>
-                            <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@item.Price đ</h6>
+                            <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@FormatPrice(item.Price)đ</h6>
                         </div>
                     </a>
                 </div>
             </div>
         }
     </div>
+
     <!-- Hiển thị phân trang -->
     <div type="hidden" style="font-family: Arial">
         @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
