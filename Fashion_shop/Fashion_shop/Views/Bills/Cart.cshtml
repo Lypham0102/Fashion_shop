@@ -20,13 +20,13 @@
                     <div class="title">
                         <div class="row">
                             <div class="col" style="text-align: center; margin-top:30px;"><h4><b>Shopping Cart</b></h4></div>
-                            <div class="col align-self-center text-right text-muted">1 items</div>
+                            <div class="col align-self-center text-right text-muted">@Model.Count Items</div>
                         </div>
                     </div>
                     @foreach (var item in Model)
                     {
                         var uniqueId = "item_" + item.Id_Details_Item; // Create a unique identifier
-                        <div class="row border-top border-bottom">
+                        <div id="@uniqueId" class="row border-top border-bottom">
                             <div class="row main align-items-center" style="margin-left: 10px;">
                                 <div class="col-2"><img class="img-fluid" src="~/img_items/@item.Image"></div>
                                 <div class="col">
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="col" id="total_@uniqueId">
                                     @(item.Total.ToString("N0")) vnd
-                                    <span class="close">&#10005;</span>
+                                <button onclick="removeCartItem('@item.Id_Details_Item')" class="close">&#10005;</button>
                                 </div>
                             </div>
                         </div>
@@ -55,42 +55,18 @@
 
                     <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
                 </div>
-                <div class="col-md-4 summary">
-                    <form>
-                        <p>SHIPPING</p>
-                        <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                        <p>GIVE CODE</p>
-                        <input id="code" placeholder="Enter your code">
-                    </form>
-                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                        <div class="col">TOTAL PRICE</div>
-                        <div class="col text-right">@ViewBag.Total vnd</div>
-                    </div>
-<<<<<<< HEAD
-                    <button class="btn">CHECKOUT</button>
-=======
-                    <!-- End of sumary of 1 item  -->
-                }*@
-                
-                <form>
+                <div class="col-md-4 summary">                            
+                <form asp-action="PayMent" method="post">
                     <p>SHIPPING</p>
                     <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
                     <p>GIVE CODE</p>
-                    <input id="code" placeholder="Enter your code">
-                </form>
+                    <input asp-asp-for="code" id="code" name="code" placeholder="Enter your code">
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-<<<<<<< HEAD
                     <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
-                </div>
-                <form asp-action="PayMent" method="post">
+                </div>               
                 <button type="submit" class="btn">Thanh toán</button>
                 </form>
-=======
-                    <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total) vnd </div>
->>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
-                </div>
->>>>>>> bd70c725681a154ac3180a8f7c844072ce177a10
             </div>
         </div>
     <!-- End Featured Product -->
@@ -104,137 +80,138 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
-<<<<<<< HEAD
-    <script>function updateTotalDisplay(uniqueId) {
-=======
-    <script>
-        @*function updateSummaryTotal() {
-            var itemTotalElements = document.querySelectorAll("[id^='total_']");
-            var summaryTotal = 0;
-
-            itemTotalElements.forEach(function (itemTotalElement) {
-                var totalText = itemTotalElement.textContent;
-                var totalValue = parseFloat(totalText.split(" ")[0].replace(/,/g, ""));
-                summaryTotal += totalValue;
-            });
-
-            var summaryTotalElement = document.getElementById("summaryTotal");
-            summaryTotalElement.textContent = "Total: " + summaryTotal.toLocaleString() + " vnd";
-        }
-        function PayMent(){
+        <script>
+            function removeCartItem(item_details_id) {
                 $.ajax({
                     type: "POST",
-                    url: "/Bills/PayMent",
+                    url: "/Bills/DeleteFromCart",
                     data: {
+                        item_details_id: item_details_id
                     },
                     success: function (response) {
                         if (response.success) {
-                            console.log("Bill updated in the database.");
+                            console.log("Removed.");
+                            $('#item_' + item_details_id).remove();
                             //@ViewBag.Total = updatedSummaryTotal;
+                            updateSummaryTotalDisplay();
                         } else {
-                            console.error("Error during transaction");
+                            console.error("Couldn't remove.");
                         }
                     },
                     error: function (error) {
-                        console.error("Error during transaction:", error);
+                        console.error("Error trying to remove item:", error);
                     }
                 });
-            }*@      
-            function calculateSummaryTotal() {
-                var summaryTotal = 0;
-                var itemTotalElements = document.querySelectorAll("[id^='total_']");
-
-                itemTotalElements.forEach(function (itemTotalElement) {
-                    var totalText = itemTotalElement.textContent;
-                    // Remove " vnd" from the totalText before extracting the numeric value
-                    var numericPart = totalText.replace("vnd", "");
-                    var totalValue = parseFloat(numericPart.replace(/,/g, ""));
-                    summaryTotal += totalValue;
+                
+            }
+            function checkVoucher() {
+                var vi = document.getElementById("code");
+                var voucherId = parseInt(vi.value);
+                $.ajax({
+                    type: "POST",
+                    url: "/Bills/CheckVoucher",
+                    data: {
+                        voucher_id: voucherId
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            console.log("Voucher available.");
+                            //@ViewBag.Total = updatedSummaryTotal;
+                        } else {
+                            console.error("Already been used.");
+                        }
+                    },
+                    error: function (error) {
+                        console.error("Error trying to find voucher:", error);
+                    }
                 });
 
-                return summaryTotal;
             }
+                function calculateSummaryTotal() {
+                    var summaryTotal = 0;
+                    var itemTotalElements = document.querySelectorAll("[id^='total_']");
+
+                    itemTotalElements.forEach(function (itemTotalElement) {
+                        var totalText = itemTotalElement.textContent;
+                        // Remove " vnd" from the totalText before extracting the numeric value
+                        var numericPart = totalText.replace("vnd", "");
+                        var totalValue = parseFloat(numericPart.replace(/,/g, ""));
+                        summaryTotal += totalValue;
+                    });
+                console.log("Calculated summaryTotal:", summaryTotal);
+                    return summaryTotal;
+                }
             function updateSummaryTotalDisplay() {
                 var summaryTotalElement = document.getElementById("summaryTotal");
                 var summaryTotal = calculateSummaryTotal();
-
-            summaryTotalElement.textContent = summaryTotal.toLocaleString() + "vnd";
+                console.log("Updated summaryTotal:", summaryTotal); 
+                summaryTotalElement.textContent = summaryTotal.toLocaleString() + "vnd";
             }
-        function updateTotalDisplay(uniqueId) {
->>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
-            var countInput = document.getElementById("count_" + uniqueId);
-            var totalDiv = document.getElementById("total_" + uniqueId);
-            var priceInput = document.getElementById("price_" + uniqueId);
+            function updateTotalDisplay(uniqueId) {
+                var countInput = document.getElementById("count_" + uniqueId);
+                var totalDiv = document.getElementById("total_" + uniqueId);
+                var priceInput = document.getElementById("price_" + uniqueId);
 
-            var currentCount = parseInt(countInput.value);
-            var itemPrice = parseInt(priceInput.value);
-            var total = currentCount * itemPrice;
+                var currentCount = parseInt(countInput.value);
+                var itemPrice = parseInt(priceInput.value);
+                var total = currentCount * itemPrice;
 
-            // Preserve the content of the span element
-            var closeSymbol = totalDiv.querySelector(".close").outerHTML;
+                // Preserve the content of the span element
+                var closeSymbol = totalDiv.querySelector(".close").outerHTML;
+                totalDiv.innerHTML = total.toLocaleString() + " vnd " + closeSymbol;
 
-            totalDiv.innerHTML = total.toLocaleString() + " vnd " + closeSymbol;
+                var billId = parseInt(document.getElementById("bill_id_" + uniqueId).value);
+                var itemDetailsId = parseInt(document.getElementById("item_details_id_" + uniqueId).value);
+                updateSummaryTotalDisplay();          
 
-            var billId = parseInt(document.getElementById("bill_id_" + uniqueId).value);
-            var itemDetailsId = parseInt(document.getElementById("item_details_id_" + uniqueId).value);
-                updateSummaryTotalDisplay();
-            @*var summaryTotal = document.getElementById("summaryTotal");
-            @{
-                var total = 0;
-                foreach (var item in Model)
-                {
-                    total += item.Total;
+                    // Send an AJAX request to update the count in the database
+                    $.ajax({
+                        type: "POST",
+                        url: "/Bills/UpdateCount",
+                        data: {
+                            count: currentCount,
+                            bill_id: billId,
+                            item_details_id: itemDetailsId
+                        },
+                        success: function (response) {
+                            if (response.success) {
+                                console.log("Count updated in the database.");
+                                //@ViewBag.Total = updatedSummaryTotal;
+                            } else {
+                                console.error("Error updating count.");
+                            }
+                        },
+                        error: function (error) {
+                            console.error("Error updating count:", error);
+                        }
+                    });
+
+            }
+
+            function decrease(uniqueId) {
+                var countInput = document.getElementById("count_" + uniqueId);
+                var countDisplay = document.getElementById("countDisplay_" + uniqueId);
+
+                var currentCount = parseInt(countInput.value);
+                if (currentCount > 1) {
+                    currentCount--;
+                    countInput.value = currentCount;
+                    countDisplay.textContent = currentCount;
+                    updateTotalDisplay(uniqueId);
                 }
             }
-                    totalValueSpan.textContent = @total.ToString("N0");*@
-            //updateSummaryTotal();
-            //var updatedSummaryTotal = parseFloat(document.getElementById("summaryTotal").textContent.split(" ")[1].replace(/,/g, ""));
 
-            // Send an AJAX request to update the count in the database
-            $.ajax({
-                type: "POST",
-                url: "/Bills/UpdateCount",
-                data: {
-                    count: currentCount,
-                    bill_id: billId,
-                    item_details_id: itemDetailsId
-                },
-                success: function (response) {
-                    if (response.success) {
-                        console.log("Count updated in the database.");
-                        //@ViewBag.Total = updatedSummaryTotal;
-                    } else {
-                        console.error("Error updating count.");
-                    }
-                },
-                error: function (error) {
-                    console.error("Error updating count:", error);
-                }
-            });
-           
-        }
-        function decrease(uniqueId) {
-            var countInput = document.getElementById("count_" + uniqueId);
-            var countDisplay = document.getElementById("countDisplay_" + uniqueId);
+            function increase(uniqueId) {
+                var countInput = document.getElementById("count_" + uniqueId);
+                var countDisplay = document.getElementById("countDisplay_" + uniqueId);
 
-            var currentCount = parseInt(countInput.value);
-            if (currentCount > 1) {
-                currentCount--;
+                var currentCount = parseInt(countInput.value);
+                currentCount++;
                 countInput.value = currentCount;
                 countDisplay.textContent = currentCount;
                 updateTotalDisplay(uniqueId);
             }
-        }
-        function increase(uniqueId) {
-            var countInput = document.getElementById("count_" + uniqueId);
-            var countDisplay = document.getElementById("countDisplay_" + uniqueId);
-
-            var currentCount = parseInt(countInput.value);
-            currentCount++;
-            countInput.value = currentCount;
-            countDisplay.textContent = currentCount;
-            updateTotalDisplay(uniqueId);
-        }</script>
+        </script>
 </body>
 
 </html>
