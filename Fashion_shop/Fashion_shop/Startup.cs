@@ -45,7 +45,7 @@ namespace Fashion_shop
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AdminOnly", policy => policy.RequireRole(Role.Admin.ToString()));
-
+                //options.AddPolicy("Admin&User", policy => policy.RequireRole(Role.AdminUser.ToString()));
                 options.AddPolicy("UserOnly", policy => policy.RequireRole(Role.User.ToString()));
                
             });

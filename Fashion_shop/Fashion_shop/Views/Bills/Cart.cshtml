@@ -60,15 +60,21 @@
                     <p>SHIPPING</p>
                     <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
                     <p>GIVE CODE</p>
-                    <input asp-asp-for="code" id="code" name="code" placeholder="Enter your code">
-                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+
+                    <input asp-asp-for="voucherId" id="voucherId" name="voucherId" placeholder="Enter your code">
+                    <button type="button" onclick="checkVoucher()" class="btn">Check</button>
+                    <div id="message"></div>
+
+                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
                     <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
                 </div>               
                 <button type="submit" class="btn">Thanh toán</button>
                 </form>
+                
             </div>
         </div>
+    </div>
     <!-- End Featured Product -->
     <!-- Start Script -->
     <!-- Start Script -->
@@ -104,21 +110,25 @@
                 });
                 
             }
+
             function checkVoucher() {
-                var vi = document.getElementById("code");
+                var vi = document.getElementById("voucherId");
+                var mess = document.getElementById("message");
                 var voucherId = parseInt(vi.value);
                 $.ajax({
                     type: "POST",
                     url: "/Bills/CheckVoucher",
                     data: {
-                        voucher_id: voucherId
+                    voucherId: voucherId
                     },
                     success: function (response) {
                         if (response.success) {
-                            console.log("Voucher available.");
+                            console.log(response.message);
+                            mess.textContent = response.message.toLocaleString();
                             //@ViewBag.Total = updatedSummaryTotal;
                         } else {
-                            console.error("Already been used.");
+                            console.error(response.message);
+                            mess.textContent = response.message.toLocaleString();
                         }
                     },
                     error: function (error) {

@@ -220,7 +220,7 @@ namespace Fashion_shop.Controllers
         }
 
             // GET: Bills
-            public async Task<IActionResult> Cart()
+        public async Task<IActionResult> Cart()
         {
             ViewBag.Total = 0;
             if (Request.Cookies["User_Id"] != null)
@@ -317,10 +317,43 @@ namespace Fashion_shop.Controllers
         }
 
         [HttpPost]
+        public async Task<IActionResult> CheckVoucher(int? voucherId)
+        {
+            if (voucherId == null)
+            {
+                voucherId = 0;
+            }
+            var voucher_Id = int.Parse(voucherId.ToString());
+            var voucher = await _context.Voucher.FirstOrDefaultAsync(v => v.id == voucher_Id && v.Count > 0 && v.End_dates >= DateTime.Now && v.Start <= DateTime.Now);
+
+            if (voucher != null)
+            {
+                return Json(new { success = true, message = "Found it" });
+            }           
+
+            return Json(new { success = false,message = "Found my ass" });
+        }
+
+        [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Policy = "UserOnly")]
-        public async Task<IActionResult> PayMent()
+        public async Task<IActionResult> PayMent(int? voucherId)
         {
+            if(voucherId == null)
+            {
+                voucherId = 0;
+            }
+            var voucher_Id = int.Parse(voucherId.ToString());
+            var voucher = await _context.Voucher.FirstOrDefaultAsync(v => v.id == voucher_Id && v.Count > 0 && v.End_dates >= DateTime.Now && v.Start <= DateTime.Now);
+            if(voucher == null)
+            {
+                voucher_Id = 0;
+            }
+            else
+            {
+                voucher.Count--;
+            }
+            await _context.SaveChangesAsync();
             var userId = int.Parse(Request.Cookies["User_Id"]);
             /*var userJson = HttpContext.Session.Get("User_Id");
             var user = Encoding.UTF8.GetString(userJson);
@@ -331,6 +364,7 @@ namespace Fashion_shop.Controllers
             {
                 var billDetails = await _context.Bill_Details.Where( bd => bd.Bill_id == bill.id).ToListAsync();
                 bill.Total = billDetails.Sum(t => t.Total);
+                bill.Voucher_id = voucher_Id;
                 bill.Status = 1;
                 bill.Date = DateTime.Now;
                 await _context.SaveChangesAsync();
@@ -340,7 +374,7 @@ namespace Fashion_shop.Controllers
                 bill = new Bill
                 {
                     Total = 0,
-                    Voucher_id = 0,
+                    Voucher_id = voucher_Id,
                     User_id = userId,
                     Date = DateTime.Now,
                     Status = 0
