@@ -56,22 +56,6 @@
                     <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
                 </div>
                 <div class="col-md-4 summary">
-                    <form>
-                        <p>SHIPPING</p>
-                        <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-                        <p>GIVE CODE</p>
-                        <input id="code" placeholder="Enter your code">
-                    </form>
-                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                        <div class="col">TOTAL PRICE</div>
-                        <div class="col text-right">@ViewBag.Total vnd</div>
-                    </div>
-<<<<<<< HEAD
-                    <button class="btn">CHECKOUT</button>
-=======
-                    <!-- End of sumary of 1 item  -->
-                }*@
-                
                 <form>
                     <p>SHIPPING</p>
                     <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
@@ -81,7 +65,6 @@
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
                     <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total) vnd </div>
->>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
                 </div>
             </div>
         </div>
@@ -96,23 +79,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
-<<<<<<< HEAD
-    <script>function updateTotalDisplay(uniqueId) {
-=======
     <script>
-        @*function updateSummaryTotal() {
-            var itemTotalElements = document.querySelectorAll("[id^='total_']");
-            var summaryTotal = 0;
-
-            itemTotalElements.forEach(function (itemTotalElement) {
-                var totalText = itemTotalElement.textContent;
-                var totalValue = parseFloat(totalText.split(" ")[0].replace(/,/g, ""));
-                summaryTotal += totalValue;
-            });
-
-            var summaryTotalElement = document.getElementById("summaryTotal");
-            summaryTotalElement.textContent = "Total: " + summaryTotal.toLocaleString() + " vnd";
-        }*@
             function calculateSummaryTotal() {
                 var summaryTotal = 0;
                 var itemTotalElements = document.querySelectorAll("[id^='total_']");
@@ -120,7 +87,7 @@
                 itemTotalElements.forEach(function (itemTotalElement) {
                     var totalText = itemTotalElement.textContent;
                     // Remove " vnd" from the totalText before extracting the numeric value
-                    var numericPart = totalText.replace(" vnd", "");
+                    var numericPart = totalText.replace("vnd", "");
                     var totalValue = parseFloat(numericPart.replace(/,/g, ""));
                     summaryTotal += totalValue;
                 });
@@ -131,10 +98,10 @@
                 var summaryTotalElement = document.getElementById("summaryTotal");
                 var summaryTotal = calculateSummaryTotal();
 
-            summaryTotalElement.textContent = summaryTotal.toLocaleString() + " vnd";
+            summaryTotalElement.textContent = summaryTotal.toLocaleString() + "vnd";
             }
+
         function updateTotalDisplay(uniqueId) {
->>>>>>> 5280eb26cae9453cf2394d2dc67cda5e406e2541
             var countInput = document.getElementById("count_" + uniqueId);
             var totalDiv = document.getElementById("total_" + uniqueId);
             var priceInput = document.getElementById("price_" + uniqueId);
@@ -145,8 +112,7 @@
 
             // Preserve the content of the span element
             var closeSymbol = totalDiv.querySelector(".close").outerHTML;
-
-            totalDiv.innerHTML = total.toLocaleString() + " vnd " + closeSymbol;
+totalDiv.innerHTML = total.toLocaleString() + " vnd " + closeSymbol;
 
             var billId = parseInt(document.getElementById("bill_id_" + uniqueId).value);
             var itemDetailsId = parseInt(document.getElementById("item_details_id_" + uniqueId).value);
@@ -184,8 +150,9 @@
                     console.error("Error updating count:", error);
                 }
             });
-           
+
         }
+
         function decrease(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
             var countDisplay = document.getElementById("countDisplay_" + uniqueId);
@@ -198,6 +165,7 @@
                 updateTotalDisplay(uniqueId);
             }
         }
+
         function increase(uniqueId) {
             var countInput = document.getElementById("count_" + uniqueId);
             var countDisplay = document.getElementById("countDisplay_" + uniqueId);
@@ -207,7 +175,8 @@
             countInput.value = currentCount;
             countDisplay.textContent = currentCount;
             updateTotalDisplay(uniqueId);
-        }</script>
+        }
+    </script>
 </body>
 
 </html>
