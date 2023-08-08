@@ -48,5 +48,7 @@ namespace Fashion_shop.Data
 
         public DbSet<Fashion_shop.Models.Bill_Details> Bill_Details { get; set; }
 
+        public DbSet<Fashion_shop.Models.Voucher> Voucher { get; set; }
+
     }
 }

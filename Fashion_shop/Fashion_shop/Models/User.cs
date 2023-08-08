@@ -6,7 +6,7 @@ namespace Fashion_shop.Models
     {
         Admin = 1,
         User = 0,
-        
+        //AdminUser = Admin || User,
         Unauthorized = 2
     }
     public class User
