@@ -1,5 +1,64 @@
 ﻿@model IEnumerable<Fashion_shop.Models.Bill>
 @{
     ViewData["Title"] = "Hello";
-    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<link rel="stylesheet" href="css/View/Users/Index.css">
+<h1>Thông tin đơn hàng</h1>
+<div style="height: 10px;"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th> Date </th>
+            <th> Total </th>
+            <th> Custom </th>
+            <th> Status </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @{
+                        switch (item.Status)
+                        {
+                            case 1:
+                                <text>Chờ xác nhận</text>
+                                break;
+                            case 2:
+                                <text>Đã xác nhận</text>
+                                break;
+                            case 3:
+                                <text>Đã giao hàng</text>
+                                break;
+                            default:
+                                <text>Trạng thái không xác định</text>
+                                break;
+                        }
+                    }
+                </td>
+                <td style="width:160px">
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
+                </td>
+                <td>
+                    <form method="post" action='@Url.Action("UpdateStatus", "Bills")'>
+                        @Html.Hidden("id", item.id)
+                        <button type="submit" class="highlight">Accept</button>
+                    </form>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Fashion_shop.Models.Voucher>
+@{
+    ViewData["Title"] = "Item";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="css/View/Users/Index.css">
+<h1>Thông tin voucher</h1>
+
+<button class="custom-button">
+    <a asp-action="Create" style="text-decoration: none; color: white;">Thêm voucher</a>
+</button>
+<div style="height: 10px;"></div>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Tên</th>
+            <th> Start </th>
+            <th> End_dates </th>
+            <th> Count </th>
+            <th> Discount </th>
+            <th> Custom </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Start)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.End_dates)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td style="width:160px">
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

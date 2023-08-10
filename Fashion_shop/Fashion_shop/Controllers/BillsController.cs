@@ -12,17 +12,12 @@ using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Org.BouncyCastle.Bcpg;
 using System.Drawing;
-<<<<<<< HEAD
 using Microsoft.AspNetCore;
-=======
-
-using Microsoft.AspNetCore;
-
->>>>>>> c2a375c5d5ecfb8dbc086809aac6b8e371afe215
 using Newtonsoft.Json;
 using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using System.Web.Helpers;
+using System.Net.NetworkInformation;
 
 namespace Fashion_shop.Controllers
 {
@@ -419,23 +414,99 @@ namespace Fashion_shop.Controllers
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var bill = await _context.Bill
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (bill == null)
-            {
-                return NotFound();
-            }
-
-            return View(bill);
+            var userId = int.Parse(id.ToString());
+            List<Cart_Details> cartDetails = await _context.Bill
+                  .Where(b => b.id == userId)
+                  .Join(
+                      _context.Bill_Details,
+                      bill => bill.id,
+                      bill_details => bill_details.Bill_id,
+                      (bill, bill_details) => new
+                      {
+                          Id = bill.id,
+                          //Date = bill.Date,
+                          Total = bill_details.Total * bill_details.Count,
+                          Count = bill_details.Count,
+                          Id_Details_Item = bill_details.id_details_item
+                      }
+                  )
+                  .Join(
+                      _context.Item_Details,
+                      billDetails => billDetails.Id_Details_Item,
+                      itemDetails => itemDetails.id_details_item,
+                      (billDetails, itemDetails) => new
+                      {
+                          Id = billDetails.Id,
+                          Id_Details_Item = billDetails.Id_Details_Item,
+                          //Date = billDetails.Date,
+                          Total = billDetails.Total,
+                          Count = billDetails.Count,
+                          ColorId = itemDetails.Color_id,
+                          SizeId = itemDetails.Size_id,
+                          ItemId = itemDetails.Item_id
+                      }
+                  )
+                  .Join(_context.Color,
+                  itemColor => itemColor.ColorId,
+                  color => color.id,
+                   (itemColor, color) => new
+                   {
+                       Id = itemColor.Id,
+                       Id_Details_Item = itemColor.Id_Details_Item,
+                       //Date = itemColor.Date,
+                       Total = itemColor.Total,
+                       Count = itemColor.Count,
+                       ColorId = itemColor.ColorId,
+                       SizeId = itemColor.SizeId,
+                       ItemId = itemColor.ItemId,
+                       ColorName = color.Name
+                   })
+                  .Join(_context.Size,
+                  itemSize => itemSize.SizeId,
+                  size => size.id,
+                   (itemSize, size) => new
+                   {
+                       Id = itemSize.Id,
+                       Id_Details_Item = itemSize.Id_Details_Item,
+                       //Date = itemSize.Date,
+                       Total = itemSize.Total,
+                       Count = itemSize.Count,
+                       ColorId = itemSize.ColorId,
+                       SizeId = itemSize.SizeId,
+                       ItemId = itemSize.ItemId,
+                       ColorName = itemSize.ColorName,
+                       SizeName = size.Name
+                   })
+                  .Join(
+                      _context.Item,
+                      itemDetail => itemDetail.ItemId,
+item => item.id,
+                      (itemDetail, item) => new Cart_Details
+                      {
+                          Id = itemDetail.Id,
+                          Id_Details_Item = itemDetail.Id_Details_Item,
+                          //Date = itemDetail.Date,
+                          Total = item.Price * itemDetail.Count,
+                          ColorId = itemDetail.ColorId,
+                          ColorName = itemDetail.ColorName,
+                          SizeId = itemDetail.SizeId,
+                          SizeName = itemDetail.SizeName,
+                          ItemId = itemDetail.ItemId,
+                          ItemName = item.Name,
+                          Image = item.Image,
+                          Price = item.Price,
+                          Count = itemDetail.Count
+                      }
+                  )
+                  .OrderBy(m => m.Id_Details_Item)
+                  .ToListAsync();
+            ViewBag.Total = cartDetails.Sum(t => t.Total);
+            return View(cartDetails);
         }
 
-        // GET: Bills/Create
-        public IActionResult Create()
+            // GET: Bills/Create
+            public IActionResult Create()
         {
             return View();
         }
@@ -490,7 +561,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Date_Time,Total,Staff_id,Customer_id,Voucher_id")] Bill bill)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Date_Time,Total,Staff_id,User_id,Voucher_id,Status")] Bill bill)
         {
             if (id != bill.id)
             {
@@ -499,6 +570,10 @@ namespace Fashion_shop.Controllers
 
             if (ModelState.IsValid)
             {
+                if (bill.User_id == 0)
+                {
+                    bill.User_id = await _context.Bill.Where(i => i.id == id).Select(i => i.User_id).FirstOrDefaultAsync();
+                }
                 try
                 {
                     _context.Update(bill);
@@ -553,5 +628,18 @@ namespace Fashion_shop.Controllers
         {
             return _context.Bill.Any(e => e.id == id);
         }
+        [HttpPost]
+        public async Task<IActionResult> UpdateStatus(int id)
+        {
+            var bill = await _context.Bill.FirstOrDefaultAsync(b => b.id == id);
+            if (bill != null)
+            {
+                bill.Status = 2; // Cập nhật trạng thái thành 2 (Đã xác nhận)
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index"); // Chuyển hướng lại trang danh sách đơn hàng
+            }
+            return NotFound();
+        }
+
     }
 }

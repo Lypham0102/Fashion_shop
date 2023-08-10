@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h4 class="card-title">Thông tin khách hàng</h4>
                     <hr />
-                    <form asp-action="EditPost">
+                    <form asp-action="Edit">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                         <div class="form-group">
@@ -27,28 +27,17 @@
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Date_of_birth" class="control-label">Date</label>
-                            <input asp-for="Date_of_birth" class="form-control" />
-                            <span asp-validation-for="Date_of_birth" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Address" class="control-label">Address</label>
-                            <input asp-for="Address" class="form-control" />
-                            <span asp-validation-for="Date_of_birth" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Bank" class="control-label">Bank</label>
-                            <input asp-for="Bank" class="form-control" />
-                            <span asp-validation-for="Bank" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CardNumber" class="control-label">Card Number</label>
-                            <input asp-for="CardNumber" class="form-control" />
-                            <span asp-validation-for="CardNumber" class="text-danger"></span>
+                            <label asp-for="Email" class="control-label">Email</label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Gender" class="control-label">Gender</label>
-                            <input asp-for="Gender" class="form-control" />
+                            <select asp-for="Gender" class="form-control">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
                             <span asp-validation-for="Gender" class="text-danger"></span>
                         </div>
                         <div class="form-group">
@@ -65,6 +54,27 @@
                             <label asp-for="PhoneNumber" class="control-label">PhoneNumber</label>
                             <input asp-for="PhoneNumber" class="form-control" />
                             <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address" class="control-label">Address</label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Date_of_birth" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Bank" class="control-label">Bank</label>
+                            <input asp-for="Bank" class="form-control" />
+                            <span asp-validation-for="Bank" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="CardNumber" class="control-label">Card Number</label>
+                            <input asp-for="CardNumber" class="form-control" />
+                            <span asp-validation-for="CardNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Date_of_birth" class="control-label">Date</label>
+                            <input asp-for="Date_of_birth" class="form-control" />
+                            <span asp-validation-for="Date_of_birth" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Lưu" class="btn btn-primary" />

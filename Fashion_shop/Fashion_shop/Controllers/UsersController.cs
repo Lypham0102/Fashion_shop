@@ -145,7 +145,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,Name,Gender,Username,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
+        public async Task<IActionResult> Create([Bind("Name,Email,Gender,Username,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -155,13 +155,6 @@ namespace Fashion_shop.Controllers
                     ModelState.AddModelError("Username", "The username or email is already in use.");
                     return View(user);
                 }
-                /*var existingUser1 = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email);
-                if (existingUser != null)
-                {
-                    ModelState.AddModelError("Email", "The email is already in use.");
-                    return View(user);
-                }*/
-
                 DateTime userbd = user.Date_of_birth;
                 TimeSpan t = DateTime.Now.Subtract(userbd)  ;
                 if (  t.TotalDays < (16*360))
@@ -178,8 +171,6 @@ namespace Fashion_shop.Controllers
 
             return View(user);
         }
-
-
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -201,7 +192,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Email,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Email,Gender,Username,Password,PhoneNumber,Address,Bank,CardNumber,Date_of_birth")] User user)
         {
             if (id != user.id)
             {

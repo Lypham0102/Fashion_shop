@@ -55,6 +55,7 @@
     <Folder Include="wwwroot\css\View\Items\" />
     <Folder Include="wwwroot\css\View\Users\" />
     <Folder Include="wwwroot\css\View\Bill\" />
+    <Folder Include="Views\Voucher\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
@@ -185,6 +186,7 @@
     <None Remove="Views\Product_Type\" />
     <None Remove="Views\Shared\" />
     <None Remove="Views\Users\" />
+    <None Remove="Views\Voucher\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\assets\css\bootstrap.min.css" />

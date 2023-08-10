@@ -1,0 +1,87 @@
+﻿@model Fashion_shop.Models.Item_list
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TL Store - Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <link rel="stylesheet" href="css/View/Users/Index.css">
+    <div class="container">
+        <h1 class="text-center mt-5 mb-4">Thông tin sản phẩm</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h4 class="card-title" style=" text-align: center;">Chi tiết sản phẩm </h4>
+                        <hr />
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <img src="~/img_items/@Model.item.Image" alt="Product Image" class="img-fluid">
+                            </div>
+                        </div>
+                        <dl class="row">
+                            <dt class="col-sm-4">
+                                @Html.DisplayNameFor(model => model.item.Brand)
+                            </dt>
+                            <dd class="col-sm-8">
+                                @Html.DisplayFor(model => model.item.Brand)
+                            </dd>
+                            <dt class="col-sm-4">
+                                @Html.DisplayNameFor(model => model.item.Gender)
+                            </dt>
+                            <dd class="col-sm-8">
+                                @Html.DisplayFor(model => model.item.Gender)
+                            </dd>
+                            <dt class="col-sm-4">
+                                @Html.DisplayNameFor(model => model.item.Count)
+                            </dt>
+                            <dd class="col-sm-8">
+                                @Html.DisplayFor(model => model.item.Count)
+                            </dd>
+                            <dt class="col-sm-4">
+                                @Html.DisplayNameFor(model => model.item.Country)
+                            </dt>
+                            <dd class="col-sm-8">
+                                @Html.DisplayFor(model => model.item.Country)
+                            </dd>
+                            <dt class="col-sm-4">
+                                Materials
+                            </dt>
+                            <dd class="col-sm-8">
+                                @ViewBag.A
+                            </dd>
+                            <dt class="col-sm-4">
+                                User Item
+                            </dt>
+                            <dd class="col-sm-8">
+                                @ViewBag.B
+                            </dd>
+                            <dt class="col-sm-4">
+                                Product Type
+                            </dt>
+                            <dd class="col-sm-8">
+                                @ViewBag.C
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <!-- End Footer -->
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

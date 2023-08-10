@@ -113,6 +113,45 @@ namespace Fashion_shop.Controllers
             return View("Details", il); // Truyền giá trị của item và ViewBag.A vào view "Details"
         }
 
+        public async Task<IActionResult> DetailsAd(int? id)
+        {
+            ctMaterials = new MaterialsController(_context);
+            ctUserItems = new User_ItemController(_context);
+            ctProductTypes = new Product_TypeController(_context);
+            ctItem_Details = new Item_DetailsController(_context);
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var item = await _context.Item.FirstOrDefaultAsync(m => m.id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            var a = await ctMaterials.Details(item.Materials_id);
+            ViewBag.A = a;
+
+            var b = await ctUserItems.Details(item.User_Item_id);
+            ViewBag.B = b;
+
+            var c = await ctProductTypes.Details(item.Product_Type_id);
+            ViewBag.C = c;
+
+            // Gọi phương thức GetColors trên đối tượng ctItem_Details và lưu kết quả vào biến colors
+            var d = await ctItem_Details.GetColors(item.id);
+            //ViewBag.D = d.Select(color => color.Name).ToList();
+
+            // Gọi phương thức GetSizes trên đối tượng ctItem_Details và lưu kết quả vào biến sizes
+            var e = await ctItem_Details.GetSizes(item.id);
+            //ViewBag.E = e.Select(size => size.Name).ToList();
+            Item_list il;
+            il = new Item_list(item, d, e);
+
+            return View("DetailsAd", il); // Truyền giá trị của item và ViewBag.A vào view "Details"
+        }
+
         // GET: Items/Create
         public IActionResult Create()
         {
@@ -124,7 +163,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,Name,Brand,Color,Price,Gender,Count,Size,Country,Image,Materials_id,User_Item_Id,Product_Type_Id")] Item item)
+        public async Task<IActionResult> Create([Bind("id,Name,Brand,Color,Price,Gender,Count,Size,Country,Image,Materials_id,User_Item_id,Product_Type_id")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -156,7 +195,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Brand,Color,Price,Gender,Count,Size,Country,Image,Materials_id,User_Item_Id,Product_Type_Id")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Name,Brand,Color,Price,Gender,Count,Size,Country,Image,Materials_id,User_Item_id,Product_Type_id")] Item item)
         {
             if (id != item.id)
             {
@@ -165,6 +204,10 @@ namespace Fashion_shop.Controllers
 
             if (ModelState.IsValid)
             {
+                if(item.Image == null)
+                {
+                    item.Image = await _context.Item.Where(i => i.id == id).Select(i => i.Image).FirstOrDefaultAsync();
+                }
                 try
                 {
                     _context.Update(item);
