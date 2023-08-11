@@ -1,0 +1,53 @@
+﻿@model Fashion_shop.Models.Voucher
+
+@{
+    ViewData["Title"] = "Thông tin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="css/View/Users/Index.css">
+<div class="container">
+    <h1 class="text-center mt-5 mb-4">Thông tin voucher</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h4 class="card-title" style=" text-align: center;">Chi tiết voucher </h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-3">
+                            Name:
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt class="col-sm-3">
+                            Start:
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Start)
+                        </dd>
+                        <dt class="col-sm-3">
+                            End Date
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.End_dates)
+                        </dd>
+                        <dt class="col-sm-3">
+                            Count:
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Count)
+                        </dd>
+                        <dt class="col-sm-3">
+                            Discount:
+                        </dt>
+                        <dd class="col-sm-9">
+                            @Html.DisplayFor(model => model.Discount)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="height: 50px;"></div>

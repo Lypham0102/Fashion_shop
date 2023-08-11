@@ -79,7 +79,8 @@
                             Hello, @userName
                         </a>
                         <div class="dropdown-menu" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#">Xem thông tin</a>
+                            <a class="dropdown-item" href="@Url.Action("DetailsUser", "Users")">Xem thông tin</a>
+                            <a class="dropdown-item" href="@Url.Action("#", "#")">Lịch sử đơn hàng</a>
                             <a class="dropdown-item" href="@Url.Action("Logout", "Users")">Đăng xuất</a>
                         </div>
                     </div>

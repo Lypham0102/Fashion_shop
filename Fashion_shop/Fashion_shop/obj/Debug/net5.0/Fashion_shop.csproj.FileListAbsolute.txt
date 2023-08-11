@@ -228,3 +228,6 @@
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.pdb
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.genruntimeconfig.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/ref/Fashion_shop.dll
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Edit.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Details.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Success.cshtml.g.cs

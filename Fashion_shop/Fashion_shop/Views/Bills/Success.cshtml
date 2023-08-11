@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Hello";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order Successful</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .success-container {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-icon {
+            font-size: 50px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .success-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .continue-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="css/View/Items/Index.css">
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">&#10004;</div>
+        <div class="success-message">Đặt hàng thành công!</div>
+        <button class="continue-button" onclick="location.href='@Url.Action("Index", "Items")'">Tiếp tục mua sắm</button>
+    </div>
+    <div style="height: 30px"></div>
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+</html>

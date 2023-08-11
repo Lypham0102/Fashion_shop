@@ -56,6 +56,8 @@
     <Folder Include="wwwroot\css\View\Users\" />
     <Folder Include="wwwroot\css\View\Bill\" />
     <Folder Include="Views\Voucher\" />
+    <Folder Include="wwwroot\assets\js\View\" />
+    <Folder Include="wwwroot\assets\js\View\LayoutAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
@@ -175,6 +177,8 @@
     <Content Remove="wwwroot\css\View\Items\" />
     <Content Remove="wwwroot\css\View\Users\" />
     <Content Remove="wwwroot\css\View\Bill\" />
+    <Content Remove="wwwroot\assets\js\View\" />
+    <Content Remove="wwwroot\assets\js\View\LayoutAdmin\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Bills\" />

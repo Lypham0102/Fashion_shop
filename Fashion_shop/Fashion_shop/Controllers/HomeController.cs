@@ -9,6 +9,7 @@ using Fashion_shop.Models;
 using Fashion_shop.Data;
 using System.Globalization;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace Fashion_shop.Controllers
@@ -132,6 +133,23 @@ namespace Fashion_shop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        [HttpGet]
+        public async Task<IActionResult> GetCounts()
+        {
+            int itemCount = await _dbContext.Item.CountAsync();
+            int orderCount = await _dbContext.Bill.CountAsync();
+            int voucherCount = await _dbContext.Voucher.CountAsync();
+
+            var counts = new
+            {
+                ItemCount = itemCount,
+                OrderCount = orderCount,
+                VoucherCount = voucherCount
+            };
+
+            return Json(counts);
+        }
+
     }
 }
 

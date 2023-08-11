@@ -1,7 +1,7 @@
 ﻿@model List<Fashion_shop.Models.Cart_Details>
 @{
     ViewData["Title"] = "Shopping Cart";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +58,7 @@
                 <div class="col-md-4 summary">                            
                 <form asp-action="PayMent" method="post">
                     <p>SHIPPING</p>
-                    <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                    <select><option class="text-muted">store staff - FREE</option></select>
                     <p>GIVE CODE</p>
                     <input asp-asp-for="voucherId" id="voucherId" name="voucherId" placeholder="Enter your code">
                     <button type="button" onclick="checkVoucher()" class="btn">Check</button>
@@ -67,7 +67,7 @@
                     <div class="col">TOTAL PRICE</div>
                     <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
                 </div>               
-                <button type="submit" class="btn">Thanh toán</button>
+                <button type="submit" class="btn">Đặt hàng</button>
                 </form>
             </div>
         </div>

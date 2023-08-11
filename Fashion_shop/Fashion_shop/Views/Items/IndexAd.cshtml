@@ -3,44 +3,12 @@
     ViewData["Title"] = "Item";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-<style>
-    .custom-button {
-        background-color: grey;
-        color: black;
-        text-decoration: none;
-        border: none;
-        border-radius: 5px;
-        padding: 8px 16px;
-        margin-right: 10px;
-    }
-
-    .confirm-msg {
-        color: red;
-    }
-
-    .highlight {
-        border: none;
-        background-color: grey;
-        color: white;
-        padding: 2px 4px;
-        border-radius: 5px;
-        /*        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);*/
-    }
-
-    .btn-custom {
-        background-color: #FF9999;
-        border: 1px solid #ccc;
-        /* Viền màu xám */
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        /* Bóng */
-    }
-</style>
-<link rel="stylesheet" href="css/View/Items/IndexAd.css">
+<link rel="stylesheet" href="~/css/View/Items/IndexAd.css">
 <h1>Thông tin sản phẩm</h1>
-<button class="custom-button">
-    <a asp-action="Create" style="text-decoration: none; color: white;">Thêm sản phẩm</a>
+<button class="create-button">
+    <a asp-action="Create">Thêm sản phẩm</a>
 </button>
-<div style="height: 10px;"></div>
+<div style="height: 5px;"></div>
 <table class="table">
     <thead>
         <tr>
@@ -48,33 +16,24 @@
             <th style="width:160px"> Brand </th>
             <th style="width:160px"> Count </th>
             <th style="width:160px"> Price </th>
-            <th style="width:160px"> Gender </th>
-            <th style="width:160px"> Country </th>
             <th style="width:160px"> Custom </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Brand)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Count)
                 </td>
-                <td style="width:160px">
+                <td>
                     @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Gender)
-                </td>
-                <td style="width:160px">
-                    @Html.DisplayFor(modelItem => item.Country)
                 </td>
                 <td style="width:160px">
                     <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>

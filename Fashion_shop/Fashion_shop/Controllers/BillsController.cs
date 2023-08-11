@@ -354,9 +354,6 @@ namespace Fashion_shop.Controllers
             }
             await _context.SaveChangesAsync();
             var userId = int.Parse(Request.Cookies["User_Id"]);
-            /*var userJson = HttpContext.Session.Get("User_Id");
-            var user = Encoding.UTF8.GetString(userJson);
-            var userId = JsonConvert.DeserializeObject<int>(user);*/
             var bill = await _context.Bill
                     .FirstOrDefaultAsync(b => b.User_id == userId && b.Status == 0);
             if (bill != null)
@@ -409,15 +406,13 @@ namespace Fashion_shop.Controllers
                 }
 
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Success));
         }
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-
             var userId = int.Parse(id.ToString());
-            List<Cart_Details> cartDetails = await _context.Bill
-                  .Where(b => b.id == userId)
+            List<Cart_Details> cartDetails = await _context.Bill.Where(b => b.id == userId)
                   .Join(
                       _context.Bill_Details,
                       bill => bill.id,
@@ -480,8 +475,7 @@ namespace Fashion_shop.Controllers
                    })
                   .Join(
                       _context.Item,
-                      itemDetail => itemDetail.ItemId,
-item => item.id,
+                      itemDetail => itemDetail.ItemId,item => item.id,
                       (itemDetail, item) => new Cart_Details
                       {
                           Id = itemDetail.Id,
@@ -506,27 +500,10 @@ item => item.id,
         }
 
             // GET: Bills/Create
-            public IActionResult Create()
+        public IActionResult Create()
         {
             return View();
         }
-
-        /*public async Task<int> Bill_Gen(Bill bill)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(bill);
-                int Bill_id = bill.id;
-                await _context.SaveChangesAsync();
-                //HttpContext.Session.SetInt32("Bill_id", Bill);
-                Response.Cookies.Append("Bill_id", Bill_id.ToString());
-                return Bill_id;
-            }
-            return -1;
-        }*/
-        // POST: Bills/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("id,Date_Time,Total,Staff_id,Customer_id,Voucher_id")] Bill bill)
@@ -640,6 +617,12 @@ item => item.id,
             }
             return NotFound();
         }
+
+        public IActionResult Success()
+        {
+            return View();
+        }
+
 
     }
 }

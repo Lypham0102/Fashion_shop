@@ -6,27 +6,28 @@
 <link rel="stylesheet" href="css/View/Users/Index.css">
 <h1>Thông tin đơn hàng</h1>
 <div style="height: 10px;"></div>
+<button id="filterButton" class="create-button">Đơn hàng chờ xác nhận</button>
 <table class="table">
     <thead>
         <tr>
             <th> ID</th>
             <th> Date </th>
-            <th> Total </th>
-            <th> Custom </th>
             <th> Status </th>
+            <th> Custom </th>
+            <th> Confirm </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr class="order-row">
                 <td>
                     @Html.DisplayFor(modelItem => item.id)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
-                <td>
+                <td class="status-cell">
                     @{
                         switch (item.Status)
                         {
@@ -60,5 +61,28 @@
         }
     </tbody>
 </table>
+<script>document.addEventListener("DOMContentLoaded", function () {
+        const filterButton = document.getElementById("filterButton");
+        const rows = document.querySelectorAll(".order-row");
+        let showOnlyPending = false;
+
+        filterButton.addEventListener("click", function () {
+            showOnlyPending = !showOnlyPending;
+
+            rows.forEach(row => {
+                const statusCell = row.querySelector(".status-cell");
+                if (showOnlyPending) {
+                    if (statusCell.innerText.trim() === "Chờ xác nhận") {
+                        row.style.display = "table-row";
+                    } else {
+                        row.style.display = "none";
+                    }
+                } else {
+                    row.style.display = "table-row";
+                }
+            });
+        });
+    });</script>
+
 
 
