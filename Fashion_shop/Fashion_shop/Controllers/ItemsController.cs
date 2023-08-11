@@ -153,8 +153,18 @@ namespace Fashion_shop.Controllers
         }
 
         // GET: Items/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            List<Product_Type> product_Types = new List<Product_Type>();
+            List<Materials> mats = new List<Materials>();
+            List<User_Item> user_Items = new List<User_Item>();
+
+            product_Types = await _context.Product_Type.OrderBy(c => c.id).ToListAsync();
+            user_Items = await _context.User_Item.OrderBy(c => c.id).ToListAsync();
+            mats = await _context.Materials.OrderBy(c => c.id).ToListAsync();
+            ViewBag.product_Types = product_Types;
+            ViewBag.Mats = mats;
+            ViewBag.user_Items = user_Items;
             return View();
         }
 

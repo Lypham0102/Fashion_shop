@@ -25,44 +25,66 @@
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+                <input asp-for="Price" class="form-control" required />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
+                <input asp-for="Gender" class="form-control" required />
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Count" class="control-label"></label>
-                <input asp-for="Count" class="form-control" />
+                <input asp-for="Count" class="form-control" required />
                 <span asp-validation-for="Count" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Country" class="control-label"></label>
-                <input asp-for="Country" class="form-control" />
+                <input asp-for="Country" class="form-control" required />
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Image" class="control-label">Chọn hình</label>
-                <input asp-for="Image" type="file" class="form-control-file" />
+                <input asp-for="Image" type="file" class="form-control-file" required/>
                 <span asp-validation-for="Image" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Materials_id" class="control-label"></label>
-                <input asp-for="Materials_id" class="form-control" />
+                <label asp-for="Materials_id">Select Material:</label>
+                <select asp-for="Materials_id" class="form-control" required>
+                    <option value="">-- Select Material --</option>
+                    @foreach (var mat in ViewBag.Mats)
+                    {
+                        <option value="@mat.id">@mat.Name</option>
+                    }
+                </select>
                 <span asp-validation-for="Materials_id" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="User_Item_id" class="control-label"></label>
-                <input asp-for="User_Item_id" class="form-control" />
+                <label asp-for="User_Item_id">Select Material:</label>
+                <select asp-for="User_Item_id" class="form-control" required>
+                    <option value="">-- Select Material --</option>
+                    @foreach (var ui in ViewBag.user_Items)
+                    {
+                        <option value="@ui.id">@ui.Name</option>
+                    }
+                </select>
                 <span asp-validation-for="User_Item_id" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Product_Type_id" class="control-label"></label>
-                <input asp-for="Product_Type_id" class="form-control" />
+                <label asp-for="Product_Type_id">Select Material:</label>
+                <select asp-for="Product_Type_id" class="form-control" required>
+                    <option value="">-- Select Material --</option>
+                    @foreach (var pd in ViewBag.product_Types)
+                    {
+                        <option value="@pd.id">@pd.Name</option>
+                    }
+                </select>
                 <span asp-validation-for="Product_Type_id" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -74,6 +96,3 @@
     <a asp-action="IndexAd">Back to List</a>
 </div>
 
-@*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@

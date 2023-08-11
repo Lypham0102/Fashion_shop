@@ -45,7 +45,7 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td style="width:160px; display: flex; align-items: center;">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    @*<button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>*@
                     <button class="highlight" style="margin-left: 5px;" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
                 </td>
 
