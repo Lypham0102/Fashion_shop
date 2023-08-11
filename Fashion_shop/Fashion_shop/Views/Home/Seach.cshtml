@@ -23,7 +23,7 @@
                             <img alt="@item.id" src="~/img_items/@item.Image" width="250" />
                             <div class="item-info">
                                 <h5 style="color: black; text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-weight: lighter; margin-bottom: 5px;">@item.Name</h5>
-                                <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@item.Price đ</h6>
+                                <h6 style="color: black; text-decoration: none; font-weight: bold; margin: 0; margin-left: 5px;">@string.Format("{0:N0}", item.Price)vnd</h6>
                             </div>
                         </a>
                     </div>

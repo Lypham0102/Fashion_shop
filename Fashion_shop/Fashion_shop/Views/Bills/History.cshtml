@@ -1,4 +1,71 @@
-﻿@page
+﻿@model IEnumerable<Fashion_shop.Models.Bill>
 @{
+    ViewData["Title"] = "Hello";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
+<link rel="stylesheet" href="~/css/View/Items/Index.css">
+<link rel="stylesheet" href="~/css/View/Bill/History.css">
+<h1>Lịch sử đơn hàng</h1>
+<div style="height: 10px;"></div>
 
+<div class="table-container">
+    <!-- Thêm class "table-container" vào thẻ div để tùy chỉnh giao diện nếu cần -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Date </th>
+                <th> Status </th>
+                <th> Custom </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @item.Date.ToString("dd/MM/yyyy")
+                    </td>
+                    <td>
+                        @{
+                            switch (item.Status)
+                            {
+                                case 1:
+                                    <text>Chờ xác nhận</text>
+                                    break;
+                                case 2:
+                                    <text>Đã xác nhận</text>
+                                    break;
+                                case 3:
+                                    <text>Đã giao hàng</text>
+                                    break;
+                                case -1:
+                                    <text>Đã hủy</text>
+                                    break;
+                                default:
+                                    <text>Trạng thái không xác định</text>
+                                    break;
+                            }
+                        }
+                    </td>
+                    <td>
+                        <button class="highlight" onclick="location.href='@Url.Action("DetailsCus", new { id = item.id })'">Details</button>
+                        @if (item.Status == 1)
+                        {
+                            <form method="post" asp-action="CancelBill" style="display: inline;">
+                                <input type="hidden" name="billId" value="@item.id" />
+                                <button type="button" class="highlight" style="margin-left: 10px;" onclick="showConfirmPopup(this)">Hủy</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>function showConfirmPopup(button) {
+        var result = confirm("Bạn có chắc chắn muốn hủy đơn hàng này?");
+        if (result) {
+            // Nếu người dùng đồng ý, thực hiện submit form
+            button.form.submit();
+        }
+    }</script>

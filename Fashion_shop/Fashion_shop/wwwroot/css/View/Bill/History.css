@@ -1,0 +1,83 @@
+﻿/*body {
+    background-image: none;
+    background-color: #EEEEEE;
+    font-family: Arial, sans-serif;
+}*/
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+.table-container {
+    display: flex;
+    justify-content: center; /* Để căn giữa theo chiều ngang */
+    align-items: center; /* Để căn giữa theo chiều dọc */
+}
+
+.table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*        border: 1px solid #ccc;*/
+    border-radius: 10px; /* Thêm border-radius để bo góc bảng */
+    transition: box-shadow 0.3s ease;
+}
+
+    table:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng khi di chuột vào */
+    }
+
+th {
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+.create-button {
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.confirm-msg {
+    color: red;
+}
+
+.highlight {
+    border: none;
+    background-color: grey;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 5px;
+    /*        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);*/
+}
+
+.btn-custom {
+    background-color: #FF9999;
+    border: 1px solid #ccc;
+    /* Viền màu xám */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Bóng */
+}

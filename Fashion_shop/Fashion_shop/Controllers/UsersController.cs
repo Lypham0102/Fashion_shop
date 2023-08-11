@@ -261,5 +261,6 @@ namespace Fashion_shop.Controllers
         {
             return _context.User.Any(e => e.id == id);
         }
+
     }
 }

@@ -1,0 +1,51 @@
+﻿@model Fashion_shop.Models.Voucher
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<link rel="stylesheet" href="css/View/Users/Index.css">
+<h1 style="margin-top: 20px;"></h1>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Voucher</h4>
+    <hr />
+    <dl class="row justify-content-center">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Start)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Start)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.End_dates)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.End_dates)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Count)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Count)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

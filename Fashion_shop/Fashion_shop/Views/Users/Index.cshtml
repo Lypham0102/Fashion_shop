@@ -17,8 +17,9 @@
             <th> Date </th>
             <th> PhoneNumber </th>
             <th> Address </th>
+            <th> Status </th>
             <th> Custom </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
@@ -40,10 +41,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
-                <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
                 </td>
+                <td style="width:160px; display: flex; align-items: center;">
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    <button class="highlight" style="margin-left: 5px;" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
+                </td>
+
             </tr>
         }
     </tbody>

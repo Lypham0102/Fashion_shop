@@ -336,7 +336,7 @@ namespace Fashion_shop.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Policy = "UserOnly")]
-        public async Task<IActionResult> PayMent(int? voucherId)
+        public async Task<IActionResult> PayMent(string? Address  ,int? voucherId)
         {
             if(voucherId == null)
             {
@@ -363,6 +363,7 @@ namespace Fashion_shop.Controllers
                 bill.Voucher_id = voucher_Id;
                 bill.Status = 1;
                 bill.Date = DateTime.Now;
+                bill.Address = Address.ToString();
                 await _context.SaveChangesAsync();
             }
             else
@@ -373,6 +374,7 @@ namespace Fashion_shop.Controllers
                     Voucher_id = voucher_Id,
                     User_id = userId,
                     Date = DateTime.Now,
+                    Address = Address.ToString(),
                     Status = 0
                 };
                 _context.Add(bill);
@@ -411,8 +413,13 @@ namespace Fashion_shop.Controllers
         // GET: Bills/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            var userId = int.Parse(id.ToString());
-            List<Cart_Details> cartDetails = await _context.Bill.Where(b => b.id == userId)
+            var billId = int.Parse(id.ToString());
+            Bill bill = await _context.Bill.Where(b => b.id == billId).FirstOrDefaultAsync();
+            User user = await _context.User.FirstOrDefaultAsync(u => u.id == bill.User_id);
+            ViewBag.Address = bill.Address;
+            ViewBag.UserName = user.Username;
+            ViewBag.SDT = user.PhoneNumber;
+            List<Cart_Details> cartDetails = await _context.Bill.Where(b => b.id == billId)
                   .Join(
                       _context.Bill_Details,
                       bill => bill.id,
@@ -538,7 +545,7 @@ namespace Fashion_shop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,Date_Time,Total,Staff_id,User_id,Voucher_id,Status")] Bill bill)
+        public async Task<IActionResult> Edit(int id, [Bind("id,Date_Time,Total,Staff_id,User_id,Voucher_id,Status, Address")] Bill bill)
         {
             if (id != bill.id)
             {
@@ -622,7 +629,144 @@ namespace Fashion_shop.Controllers
         {
             return View();
         }
+        [Authorize(Policy = "UserOnly")]
+        public async Task<IActionResult> History()
+        {
+            var userId = int.Parse(Request.Cookies["User_Id"]);
+            List<Bill> bills = await _context.Bill.Where(b => b.User_id == userId).ToListAsync();
+            return View(bills);
+        }
+        public async Task<IActionResult> DetailsCus(int? id)
+        {
+            var billId = int.Parse(id.ToString());
+            Bill bill = await _context.Bill.Where(b => b.id == billId).FirstOrDefaultAsync();
+            User user = await _context.User.FirstOrDefaultAsync(u => u.id == bill.User_id);
+            ViewBag.Address = bill.Address;
+            ViewBag.UserName = user.Name;
+            ViewBag.SDT = user.PhoneNumber;
+            List<Cart_Details> cartDetails = await _context.Bill.Where(b => b.id == billId)
+                  .Join(
+                      _context.Bill_Details,
+                      bill => bill.id,
+                      bill_details => bill_details.Bill_id,
+                      (bill, bill_details) => new
+                      {
+                          Id = bill.id,
+                          //Date = bill.Date,
+                          Total = bill_details.Total * bill_details.Count,
+                          Count = bill_details.Count,
+                          Id_Details_Item = bill_details.id_details_item
+                      }
+                  )
+                  .Join(
+                      _context.Item_Details,
+                      billDetails => billDetails.Id_Details_Item,
+                      itemDetails => itemDetails.id_details_item,
+                      (billDetails, itemDetails) => new
+                      {
+                          Id = billDetails.Id,
+                          Id_Details_Item = billDetails.Id_Details_Item,
+                          //Date = billDetails.Date,
+                          Total = billDetails.Total,
+                          Count = billDetails.Count,
+                          ColorId = itemDetails.Color_id,
+                          SizeId = itemDetails.Size_id,
+                          ItemId = itemDetails.Item_id
+                      }
+                  )
+                  .Join(_context.Color,
+                  itemColor => itemColor.ColorId,
+                  color => color.id,
+                   (itemColor, color) => new
+                   {
+                       Id = itemColor.Id,
+                       Id_Details_Item = itemColor.Id_Details_Item,
+                       //Date = itemColor.Date,
+                       Total = itemColor.Total,
+                       Count = itemColor.Count,
+                       ColorId = itemColor.ColorId,
+                       SizeId = itemColor.SizeId,
+                       ItemId = itemColor.ItemId,
+                       ColorName = color.Name
+                   })
+                  .Join(_context.Size,
+                  itemSize => itemSize.SizeId,
+                  size => size.id,
+                   (itemSize, size) => new
+                   {
+                       Id = itemSize.Id,
+                       Id_Details_Item = itemSize.Id_Details_Item,
+                       //Date = itemSize.Date,
+                       Total = itemSize.Total,
+                       Count = itemSize.Count,
+                       ColorId = itemSize.ColorId,
+                       SizeId = itemSize.SizeId,
+                       ItemId = itemSize.ItemId,
+                       ColorName = itemSize.ColorName,
+                       SizeName = size.Name
+                   })
+                  .Join(
+                      _context.Item,
+                      itemDetail => itemDetail.ItemId, item => item.id,
+                      (itemDetail, item) => new Cart_Details
+                      {
+                          Id = itemDetail.Id,
+                          Id_Details_Item = itemDetail.Id_Details_Item,
+                          //Date = itemDetail.Date,
+                          Total = item.Price * itemDetail.Count,
+                          ColorId = itemDetail.ColorId,
+                          ColorName = itemDetail.ColorName,
+                          SizeId = itemDetail.SizeId,
+                          SizeName = itemDetail.SizeName,
+                          ItemId = itemDetail.ItemId,
+                          ItemName = item.Name,
+                          Image = item.Image,
+                          Price = item.Price,
+                          Count = itemDetail.Count
+                      }
+                  )
+                  .OrderBy(m => m.Id_Details_Item)
+                  .ToListAsync();
+            ViewBag.Total = cartDetails.Sum(t => t.Total);
+            return View(cartDetails);
+        }
+        [HttpPost]
+        public IActionResult CancelBill(int billId)
+        {
+            // Tìm đơn hàng theo ID
+            var bill = _context.Bill.Find(billId);
 
+            if (bill == null)
+            {
+                // Nếu không tìm thấy đơn hàng, trả về một kết quả không tìm thấy
+                return NotFound();
+            }
 
+            // Cập nhật trạng thái của đơn hàng thành -1 (Đã hủy)
+            bill.Status = -1;
+            _context.SaveChanges();
+
+            // Chuyển hướng người dùng về trang Lịch sử đơn hàng sau khi hủy
+            return RedirectToAction("History", "Bills");
+        }
+        [HttpPost]
+        public IActionResult CancelBillAd(int billId)
+        {
+            // Tìm đơn hàng theo ID
+            var bill = _context.Bill.Find(billId);
+
+            if (bill == null)
+            {
+                // Nếu không tìm thấy đơn hàng, trả về một kết quả không tìm thấy
+                return NotFound();
+            }
+
+            // Cập nhật trạng thái của đơn hàng thành -1 (Đã hủy)
+            bill.Status = -1;
+            _context.SaveChanges();
+
+            // Chuyển hướng người dùng về trang Lịch sử đơn hàng sau khi hủy
+            return RedirectToAction("Index", "Bills");
+        }
     }
 }

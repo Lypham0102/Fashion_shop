@@ -56,20 +56,23 @@
                     <div class="back-to-shop"><a href="@Url.Action("Index","Items")" style="color: black;">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
                 </div>
                 <div class="col-md-4 summary">                            
-                <form asp-action="PayMent" method="post">
-                    <p>SHIPPING</p>
-                    <select><option class="text-muted">store staff - FREE</option></select>
-                    <p>GIVE CODE</p>
-                    <input asp-asp-for="voucherId" id="voucherId" name="voucherId" placeholder="Enter your code">
-                    <button type="button" onclick="checkVoucher()" class="btn">Check</button>
-                    <div id="message"></div>
-                    <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
-                </div>               
-                <button type="submit" class="btn">Đặt hàng</button>
-                </form>
-            </div>
+                    <form asp-action="PayMent" method="post">
+                        <p>SHIPPING</p>
+                        <select><option class="text-muted">Store Staff - FREE</option></select>
+                        <!-- Thêm ô nhập địa chỉ -->
+                        <p>ADDRESS</p>
+                        <input id="Address" name="Address" placeholder="Enter your Address">
+                        <p>GIVE CODE</p>
+                        <input asp-asp-for="voucherId" id="voucherId" name="voucherId" placeholder="Enter your code">
+                        <button type="button" onclick="checkVoucher()" class="btn">Check</button>
+                        <div id="message"></div>
+                        <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                            <div class="col">TOTAL PRICE</div>
+                            <div class="col text-right" id="summaryTotal">@string.Format("{0:N0}", ViewBag.Total)vnd </div>
+                        </div>
+                        <button type="submit" class="btn">Đặt hàng</button>
+                    </form>
+            </div> 
         </div>
     </div>
     <!-- End Featured Product -->
@@ -149,7 +152,7 @@
                     return summaryTotal;
                 }
             function updateSummaryTotalDisplay() {
-var summaryTotalElement = document.getElementById("summaryTotal");
+                var summaryTotalElement = document.getElementById("summaryTotal");
                 var summaryTotal = calculateSummaryTotal();
                 console.log("Updated summaryTotal:", summaryTotal);
                 summaryTotalElement.textContent = summaryTotal.toLocaleString() + "vnd";

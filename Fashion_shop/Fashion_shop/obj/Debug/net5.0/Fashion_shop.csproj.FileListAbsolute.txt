@@ -169,10 +169,13 @@
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Create.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Delete.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Details.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/DetailsCus.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Edit.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/History.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Index 2.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Index.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/IndexCus.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Success.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bill_Details/Create.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bill_Details/Delete.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bill_Details/Details.cshtml.g.cs
@@ -216,6 +219,9 @@
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Index.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Users/Login.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Create.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Delete.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Details.cshtml.g.cs
+/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Edit.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Index.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs
@@ -228,6 +234,3 @@
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.pdb
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Fashion_shop.genruntimeconfig.cache
 /Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/ref/Fashion_shop.dll
-/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Edit.cshtml.g.cs
-/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Voucher/Details.cshtml.g.cs
-/Users/phamcongly/Documents/GitHub/Fashion_shop/Fashion_shop/Fashion_shop/obj/Debug/net5.0/Razor/Views/Bills/Success.cshtml.g.cs

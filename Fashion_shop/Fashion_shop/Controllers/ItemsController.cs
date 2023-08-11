@@ -255,7 +255,7 @@ namespace Fashion_shop.Controllers
             var item = await _context.Item.FindAsync(id);
             _context.Item.Remove(item);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(IndexAd));
         }
 
         private bool ItemExists(int id)

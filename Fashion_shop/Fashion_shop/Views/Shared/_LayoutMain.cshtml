@@ -80,7 +80,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="@Url.Action("DetailsUser", "Users")">Xem thông tin</a>
-                            <a class="dropdown-item" href="@Url.Action("#", "#")">Lịch sử đơn hàng</a>
+                            <a class="dropdown-item" href="@Url.Action("History", "Bills")">Lịch sử đơn hàng</a>
                             <a class="dropdown-item" href="@Url.Action("Logout", "Users")">Đăng xuất</a>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             ÁO
                         </button>
                         <div class="dropdown-menu" style="font-family: SVN-Proxima Nova, sans-serif !important" ;>
-                            <a class="dropdown-item" href="@Url.Action("SearchByCategory", "Home", new { category = 1 })" style="border-top: 1px solid #ecf0f1;">ÁO POLO</a>
+                            <a class="dropdown-item" href="@Url.Action("SearchByCategory", "Home", new { category = 1 })" style="border-top: 1px solid #ecf0f1;">ÁO KHOÁC</a>
                             <a class="dropdown-item" href="@Url.Action("SearchByCategory", "Home", new { category = 2 })" style="border-top: 1px solid #ecf0f1;">ÁO THUN</a>
                             <a class="dropdown-item" href="@Url.Action("SearchByCategory", "Home", new { category = 3 })" style="border-top: 1px solid #ecf0f1;">ÁO SƠ MI</a>
                             <a class="dropdown-item" href="@Url.Action("SearchByCategory", "Home", new { category = 4 })" style="border-top: 1px solid #ecf0f1;">ÁO TANKTOP</a>
@@ -186,7 +186,7 @@
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">TL Shop</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>

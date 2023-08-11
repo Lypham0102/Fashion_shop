@@ -40,6 +40,9 @@
                             case 3:
                                 <text>Đã giao hàng</text>
                                 break;
+                            case -1:
+                                <text>Đã hủy</text>
+                                break;
                             default:
                                 <text>Trạng thái không xác định</text>
                                 break;
@@ -50,11 +53,18 @@
                     <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
                     <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
                 </td>
-                <td>
-                    <form method="post" action='@Url.Action("UpdateStatus", "Bills")'>
-                        @Html.Hidden("id", item.id)
-                        <button type="submit" class="highlight">Accept</button>
-                    </form>
+                <td style="display: flex;">
+                    @if (item.Status == 1)
+                    {
+                        <form method="post" action='@Url.Action("UpdateStatus", "Bills")' style="margin-right: 10px;">
+                            @Html.Hidden("id", item.id)
+                            <button type="submit" class="highlight">Accept</button>
+                        </form>
+                        <form method="post" action='@Url.Action("CancelBillAd", "Bills")'>
+                            @Html.Hidden("billId", item.id)
+                            <button type="submit" class="highlight">Hủy</button>
+                        </form>
+                    }
                 </td>
 
             </tr>

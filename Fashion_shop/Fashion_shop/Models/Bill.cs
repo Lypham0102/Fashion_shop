@@ -18,6 +18,7 @@ namespace Fashion_shop.Models
 
         [AllowNull]
         public int User_id { get; set; }
+        public string Address { get; set; }
         public Bill() {
 
         }

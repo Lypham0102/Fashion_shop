@@ -120,7 +120,31 @@ namespace Fashion_shop.Controllers
 
             return View(voucher);
         }
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
+            var item = await _context.Voucher
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return View(item);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var item = await _context.Voucher.FindAsync(id);
+            _context.Voucher.Remove(item);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 
