@@ -14,11 +14,11 @@
         <tr>
             <th> Tên</th>
             <th> Email </th>
-            <th> Date </th>
-            <th> PhoneNumber </th>
-            <th> Address </th>
-            <th> Status </th>
-            <th> Custom </th>
+            <th> NGÀY SINH </th>
+            <th> SỐ ĐIỆN THOẠI </th>
+            <th> ĐỊA CHỈ </th>
+            <th> TRẠNG THÁI </th>
+            <th> CÀI ĐẶT </th>
             
         </tr>
     </thead>
@@ -41,9 +41,27 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Status)
-                </td>
+              
+                @{
+                    switch (item.Status)
+                    {
+                        case -1:
+                            <td>
+                                Tạm khóa
+                            </td>
+                            break;
+                        case 0:
+                            <td>
+                                Admin
+                            </td>
+                            break;
+                        case 1:
+                            <td>
+                                Đang hoạt động
+                            </td>
+                            break;
+                    }
+                }
                 <td style="width:160px; display: flex; align-items: center;">
                     @*<button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>*@
                     <button class="highlight" style="margin-left: 5px;" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
