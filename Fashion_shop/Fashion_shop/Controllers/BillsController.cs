@@ -629,6 +629,7 @@ namespace Fashion_shop.Controllers
         {
             return View();
         }
+
         [Authorize(Policy = "UserOnly")]
         public async Task<IActionResult> History()
         {
@@ -636,6 +637,7 @@ namespace Fashion_shop.Controllers
             List<Bill> bills = await _context.Bill.Where(b => b.User_id == userId).ToListAsync();
             return View(bills);
         }
+
         public async Task<IActionResult> DetailsCus(int? id)
         {
             var billId = int.Parse(id.ToString());

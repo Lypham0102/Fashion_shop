@@ -2,64 +2,70 @@
 
 @{
     ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
 <link rel="stylesheet" href="css/View/Users/Index.css">
 <h1 style="text-align: center;">Thêm khách hàng</h1>
 <h4 style="text-align: center;">Thông tin khách hàng</h4>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 <hr />
 <div class="row justify-content-center">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <label asp-for="Name" class="control-label">TÊN</label>
+                <input asp-for="Name" class="form-control" required />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
+                <label asp-for="Email" class="control-label">ĐỊA CHỈ MAIL</label>
+                <input asp-for="Email" type="email" class="form-control" required />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control" />
+                <label asp-for="Username" class="control-label">TÊN TÀI KHOẢN</label>
+                <input asp-for="Username" class="form-control" required />
                 <span asp-validation-for="Username" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
+                <label asp-for="Password" class="control-label">MẬT KHẨU</label>
+                <input asp-for="Password" type="password" class="form-control" required />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
+                <label name="ConfirmPass" class="control-label">NHẬP LẠI MẬT KHẨU</label>
+                <input name="ConfirmPass" type="password" class="form-control" required />
+                <span name="ConfirmPass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">SỐ ĐIỆN THOẠI</label>
+                <input asp-for="PhoneNumber" type="tel" class="form-control" placeholder="Enter phone number" data-inputmask="'mask': '0(99) 999-9999'" required>
                 <span asp-validation-for="PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Address" class="control-label"></label>
-                <input asp-for="Address" class="form-control" />
+                <label asp-for="Address" class="control-label">ĐỊA CHỈ</label>
+                <input asp-for="Address" class="form-control" required />
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
+                <label asp-for="Gender" class="control-label">GIỚI TÍNH</label>
+                <input asp-for="Gender" class="form-control" required />
                 <span asp-validation-for="Gender" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Bank" class="control-label"></label>
-                <input asp-for="Bank" class="form-control" />
+                <label asp-for="Bank" class="control-label">TÊN NGÂN HÀNG</label>
+                <input asp-for="Bank" class="form-control" required />
                 <span asp-validation-for="Bank" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CardNumber" class="control-label"></label>
-                <input asp-for="CardNumber" class="form-control" />
+                <label asp-for="CardNumber" class="control-label">SỐ THỂ NGÂN HÀNG</label>
+                <input asp-for="CardNumber" type="tel" class="form-control" required />
                 <span asp-validation-for="CardNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Date_of_birth" class="control-label"></label>
-                <input asp-for="Date_of_birth" class="form-control" />
+                <label asp-for="Date_of_birth" class="control-label">Ngày sinh</label>
+                <input asp-for="Date_of_birth" class="form-control" required />
                 <span asp-validation-for="Date_of_birth" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -74,3 +80,17 @@
 </div>
 
 
+@*<script>
+    // Add an event listener to validate date of birth on change
+    document.getElementById('dob').addEventListener('change', function () {
+        var inputDate = new Date(this.value);
+        var currentDate = new Date();
+        var minDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
+
+        if (inputDate > minDate) {
+            this.setCustomValidity("Must be at least 18 years old.");
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+</script>*@

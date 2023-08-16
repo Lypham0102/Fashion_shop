@@ -14,10 +14,18 @@
         <tr>
             <th> Tên</th>
             <th> Email </th>
+<<<<<<< HEAD
             <th> Date </th>
             <th> PhoneNumber </th>
             <th> Address </th>
             <th> Custom </th>
+=======
+            <th> NGÀY SINH </th>
+            <th> SỐ ĐIỆN THOẠI </th>
+            <th> ĐỊA CHỈ </th>
+            <th> TRẠNG THÁI </th>
+            <th> CÀI ĐẶT </th>
+>>>>>>> f5b519d2f667d9435fb9c8cdcc323dd11501a76c
             
         </tr>
     </thead>
@@ -40,8 +48,32 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Address)
                 </td>
+<<<<<<< HEAD
+=======
+              
+                @{
+                    switch (item.Status)
+                    {
+                        case -1:
+                            <td>
+                                Tạm khóa
+                            </td>
+                            break;
+                        case 0:
+                            <td>
+                                Admin
+                            </td>
+                            break;
+                        case 1:
+                            <td>
+                                Đang hoạt động
+                            </td>
+                            break;
+                    }
+                }
+>>>>>>> f5b519d2f667d9435fb9c8cdcc323dd11501a76c
                 <td style="width:160px; display: flex; align-items: center;">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
+                    @*<button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>*@
                     <button class="highlight" style="margin-left: 5px;" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
                 </td>
 

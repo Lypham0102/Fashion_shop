@@ -14,11 +14,11 @@
     <thead>
         <tr>
             <th> Tên</th>
-            <th> Start </th>
-            <th> End_dates </th>
-            <th> Count </th>
-            <th> Discount </th>
-            <th> Custom </th>
+            <th> Ngày bắt đầu </th>
+            <th> Ngày kết thúc </th>
+            <th> Số lượng </th>
+            <th> Giảm giá </th>
+            <th> Cài đặt </th>
         </tr>
     </thead>
     <tbody>
@@ -41,9 +41,9 @@
                     @Html.DisplayFor(modelItem => item.Discount)
                 </td>
                 <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Delete", new { id= item.id })'">Delete</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Cài đặt</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Chi tiết</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Delete", new { id= item.id })'">Xóa</button>
                 </td>
             </tr>
         }

@@ -13,9 +13,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th> Date </th>
-                <th> Status </th>
-                <th> Custom </th>
+                <th> Ngày đặt </th>
+                <th> TÌNH TRẠNG </th>
+                <th> CHỈNH SỬA </th>
             </tr>
         </thead>
         <tbody>
@@ -48,12 +48,12 @@
                         }
                     </td>
                     <td>
-                        <button class="highlight" onclick="location.href='@Url.Action("DetailsCus", new { id = item.id })'">Details</button>
+                        <button class="highlight" onclick="location.href='@Url.Action("DetailsCus", new { id = item.id })'">CHI TIẾT</button>
                         @if (item.Status == 1)
                         {
                             <form method="post" asp-action="CancelBill" style="display: inline;">
                                 <input type="hidden" name="billId" value="@item.id" />
-                                <button type="button" class="highlight" style="margin-left: 10px;" onclick="showConfirmPopup(this)">Hủy</button>
+                                <button type="button" class="highlight" style="margin-left: 10px;" onclick="showConfirmPopup(this)">HỦY</button>
                             </form>
                         }
                     </td>
