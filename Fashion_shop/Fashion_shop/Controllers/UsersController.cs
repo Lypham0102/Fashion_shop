@@ -207,23 +207,24 @@ namespace Fashion_shop.Controllers
                 if (existingUser != null)
                 {
                     ModelState.AddModelError("Username", "The username or email is already in use.");
-                    return View(user);
+                    return Json(new { success = false, message = "The username or email is already in use." });
                 }
                 DateTime userbd = user.Date_of_birth;
                 TimeSpan t = DateTime.Now.Subtract(userbd)  ;
                 if (  t.TotalDays < (16*360))
                 {
                     ModelState.AddModelError("Date_of_birth", "Read our policy for more information about age restriction");
-                    return View(user);
+                    return Json(new { success = false, message = "Hãy đọc chính sách về giới hạn độ tuổi" });
                 }
                 user.Password = Bcrypt.HashPassword(user.Password);
                 user.Status = 1;
                 _context.Add(user);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Json(new { success = true, message = "Successfully Sign up" });
+                //return RedirectToAction(nameof(Index));
             }
 
-            return View(user);
+            return Json(new { success = false, message = "Model invalid" });
         }
         // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)

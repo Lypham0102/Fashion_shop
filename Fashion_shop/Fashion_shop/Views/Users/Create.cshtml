@@ -4,14 +4,14 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_LayoutMain.cshtml";
 }
-<link rel="stylesheet" href="css/View/Users/Index.css">
-<h1 style="text-align: center;">Thêm khách hàng</h1>
-<h4 style="text-align: center;">Thông tin khách hàng</h4>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+<link rel="stylesheet" href="~/css/View/Users/Index.css">
+<h1 style="text-align: center;">Đăng ký tài khoản</h1>
+@*<h4 style="text-align: center;">Thông tin khách hàng</h4>*@
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>*@
 <hr />
 <div class="row justify-content-center">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action ="Create" id="signupForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label">TÊN</label>
@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label name="ConfirmPass" class="control-label">NHẬP LẠI MẬT KHẨU</label>
                 <input name="ConfirmPass" type="password" class="form-control" required />
-                <span name="ConfirmPass" class="text-danger"></span>
+                <span name="ConfirmPass" id="ConfirmPass"class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label">SỐ ĐIỆN THOẠI</label>
@@ -69,7 +69,7 @@
                 <span asp-validation-for="Date_of_birth" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <button onclick="signup()" type="button" value="Create" class="btn btn-primary">ĐĂNG KÝ</button>
             </div>
         </form>
     </div>
@@ -94,3 +94,40 @@
         }
     });
 </script>*@
+<script>
+    function signup() {
+        var form = $('#signupForm')[0];
+        var formData = new FormData(form);
+        var url = "/Users/CREATE";
+        var passtext = document.getElementById("ConfirmPass");
+        var password = formData.get("Password");
+        var confirmPass = formData.get("ConfirmPass");
+        if (password !== confirmPass) {
+            console.error("Passwords do not match");
+            passtext.textContent = "Passwords do not match";
+            return; // Exit the function without sending the form
+        }
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response.success) {
+                    console.log(response.message);
+                    window.location.href = "/Users/Login";
+                    // Optionally, you can redirect or display a success message
+                } else {
+                    console.error(response.message);
+                    // Optionally, you can display an error message
+                }
+            },
+            error: function (error) {
+                console.error("Error creating user:", error);
+                // Optionally, you can display an error message
+            }
+        });
+    }
+</script>
