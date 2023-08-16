@@ -1,34 +1,30 @@
 ﻿<Properties StartupConfiguration="{C61217ED-C83B-4C8C-9F29-A4015B92DD23}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Users/Details.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets">
     <Files>
       <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="46" Column="25" IsPinned="True" />
-      <File FileName="Fashion_shop/Controllers/BillsController.cs" Line="125" Column="45" />
+      <File FileName="Fashion_shop/Controllers/BillsController.cs" />
       <File FileName="Fashion_shop/Models/Cart_Details.cs" />
       <File FileName="Fashion_shop/Views/Bills/Cart.cshtml" />
       <File FileName="Fashion_shop/Data/AppDBContext.cs" />
-      <File FileName="Fashion_shop/Views/Users/Index.cshtml" Line="42" Column="22" />
+      <File FileName="Fashion_shop/Views/Users/Index.cshtml" />
       <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="77" Column="27" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="266" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Fashion_shop">
-            <Node name="Fashion_shop">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True" />
+          <Node name="Fashion_shop" expanded="True">
+            <Node name="Fashion_shop" expanded="True">
               <Node name="Views" expanded="True">
                 <Node name="Items" expanded="True" />
-                <Node name="Users" expanded="True">
-                  <Node name="Details.cshtml" selected="True" />
-                </Node>
+                <Node name="Users" expanded="True" />
               </Node>
             </Node>
           </Node>

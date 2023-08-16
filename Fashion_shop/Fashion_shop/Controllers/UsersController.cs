@@ -85,7 +85,6 @@ namespace Fashion_shop.Controllers
             }
             return View(User);
         }
-
         // Action để đăng xuất
         public IActionResult Logout()
         {
@@ -108,6 +107,61 @@ namespace Fashion_shop.Controllers
 
             return View(user);
         }
+
+        public IActionResult Logup()
+        {
+            var user = new User(); // Tạo đối tượng User mới
+            return View(user);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logup([Bind("Name, Email, Gender, Username, Password, PhoneNumber, Address, Bank, CardNumber, Date_of_birth")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingUser = await _context.User.FirstOrDefaultAsync(u => u.Username == user.Username || u.Email == user.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError("Username", "The username or email is already in use.");
+                    return View(user);
+                }
+
+                // Calculate age
+                DateTime userbd = user.Date_of_birth;
+                TimeSpan t = DateTime.Now.Subtract(userbd);
+                if (t.TotalDays < (16 * 360))
+                {
+                    ModelState.AddModelError("Date_of_birth", "Read our policy for more information about age restriction");
+                    return View(user);
+                }
+
+                // Hash the password before saving
+                user.Password = Bcrypt.HashPassword(user.Password);
+                user.Status = 1;
+
+                _context.Add(user);
+                await _context.SaveChangesAsync();
+
+                // Automatically log in the user after successful registration
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Role, Role.User.ToString()) // Assuming newly registered users are assigned the "User" role
+        };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(user);
+        }
+
 
         // GET: Users
         [Authorize(Policy = "AdminOnly")]
