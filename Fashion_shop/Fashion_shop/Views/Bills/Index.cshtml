@@ -10,11 +10,11 @@
 <table class="table">
     <thead>
         <tr>
-            <th> ID</th>
-            <th> Date </th>
-            <th> Status </th>
-            <th> Custom </th>
-            <th> Confirm </th>
+            <th> Mã </th>
+            <th> Ngày </th>
+            <th> Tình trạng </th>
+            <th> Tùy chọn </th>
+            <th> Xác nhận </th>
         </tr>
     </thead>
     <tbody>
@@ -50,15 +50,14 @@
                     }
                 </td>
                 <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Details</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Details", new { id = item.id })'">Chi tiết</button>
                 </td>
                 <td style="display: flex;">
                     @if (item.Status == 1)
                     {
                         <form method="post" action='@Url.Action("UpdateStatus", "Bills")' style="margin-right: 10px;">
                             @Html.Hidden("id", item.id)
-                            <button type="submit" class="highlight">Accept</button>
+                            <button type="submit" class="highlight">Xác nhận</button>
                         </form>
                         <form method="post" action='@Url.Action("CancelBillAd", "Bills")'>
                             @Html.Hidden("billId", item.id)

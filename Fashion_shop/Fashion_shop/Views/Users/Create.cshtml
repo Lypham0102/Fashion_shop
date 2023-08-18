@@ -1,17 +1,147 @@
 ﻿@model Fashion_shop.Models.User
 
-@{
-    ViewData["Title"] = "Create";
-    Layout = "~/Views/Shared/_LayoutMain.cshtml";
-}
-<link rel="stylesheet" href="~/css/View/Users/Index.css">
-<h1 style="text-align: center;">Đăng ký tài khoản</h1>
+    @{
+        ViewData["Title"] = "Create";
+        Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    }
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <title>Đăng ký</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/css/View/Users/Index.css" />
+    </head>
+    <body class="img js-fullheight" style="color:white;background-image: url(/img/bg.jpg)">
+        <section class="ftco-section">
+            <div class="container" style="background-color: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; width: 900px;">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h1 class="heading-section">Đăng ký</h1>
+                    </div>
+                </div>
+                <hr />
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <form asp-action="Create" id="signupForm">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label">TÊN</label>
+                                <input asp-for="Name" class="form-control" required />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label">ĐỊA CHỈ MAIL</label>
+                                <input asp-for="Email" type="email" class="form-control" required />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Username" class="control-label">TÊN TÀI KHOẢN</label>
+                                <input asp-for="Username" class="form-control" required />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label">MẬT KHẨU</label>
+                                <input asp-for="Password" type="password" class="form-control" required />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label name="ConfirmPass" class="control-label">NHẬP LẠI MẬT KHẨU</label>
+                                <input name="ConfirmPass" type="password" class="form-control" required />
+                                <span name="ConfirmPass" id="ConfirmPass" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PhoneNumber" class="control-label">SỐ ĐIỆN THOẠI</label>
+                                <input asp-for="PhoneNumber" type="tel" class="form-control" placeholder="Enter phone number" data-inputmask="'mask': '0(99) 999-9999'" required>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label">ĐỊA CHỈ</label>
+                                <input asp-for="Address" class="form-control" required />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Gender" class="control-label">GIỚI TÍNH</label>
+                                <input asp-for="Gender" class="form-control" required />
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Bank" class="control-label">TÊN NGÂN HÀNG</label>
+                                <input asp-for="Bank" class="form-control" required />
+                                <span asp-validation-for="Bank" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CardNumber" class="control-label">SỐ THỂ NGÂN HÀNG</label>
+                                <input asp-for="CardNumber" type="tel" class="form-control" required />
+                                <span asp-validation-for="CardNumber" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Date_of_birth" class="control-label">Ngày sinh</label>
+                                <input asp-for="Date_of_birth" class="form-control" required />
+                                <span asp-validation-for="Date_of_birth" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <button onclick="signup()" type="button" value="Create" class="btn btn-primary">ĐĂNG KÝ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <a asp-action="Index">Back to List</a>
+                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+                <script>
+                        function signup() {
+                        var form = $('#signupForm')[0];
+                        var formData = new FormData(form);
+                        var url = "/Users/Create";
+                        var passtext = document.getElementById("ConfirmPass");
+                        var password = formData.get("Password");
+                        var confirmPass = formData.get("ConfirmPass");
+                        if (password !== confirmPass) {
+                            console.error("Passwords do not match");
+                        passtext.textContent = "Passwords do not match";
+                        return; // Exit the function without sending the form
+                        }
+
+                        $.ajax({
+                            type: "POST",
+                        url: url,
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (response) {
+                                if (response.success) {
+                            console.log(response.message);
+                        window.location.href = "/Users/Login";
+                                    // Optionally, you can redirect or display a success message
+                                } else {
+                            console.error(response.message);
+                                    // Optionally, you can display an error message
+                                }
+                            },
+                        error: function (error) {
+                            console.error("Error creating user:", error);
+                                // Optionally, you can display an error message
+                            }
+                        });
+                    }</script>
+            </div>
+        </section>
+    </body>
+    </html>
+
+@*<link rel="stylesheet" href="~/css/View/Users/Index.css">
+<h1 style="text-align: center;">Đăng ký tài khoản</h1>-->*@
 @*<h4 style="text-align: center;">Thông tin khách hàng</h4>*@
 @*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>*@
-<hr />
+<!--<hr />
 <div class="row justify-content-center">
     <div class="col-md-4">
-        <form asp-action ="Create" id="signupForm">
+        <form asp-action="Create" id="signupForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label">TÊN</label>
@@ -36,7 +166,7 @@
             <div class="form-group">
                 <label name="ConfirmPass" class="control-label">NHẬP LẠI MẬT KHẨU</label>
                 <input name="ConfirmPass" type="password" class="form-control" required />
-                <span name="ConfirmPass" id="ConfirmPass"class="text-danger"></span>
+                <span name="ConfirmPass" id="ConfirmPass" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="PhoneNumber" class="control-label">SỐ ĐIỆN THOẠI</label>
@@ -77,28 +207,27 @@
 
 <div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div>-->
 
 
 @*<script>
-    // Add an event listener to validate date of birth on change
-    document.getElementById('dob').addEventListener('change', function () {
-        var inputDate = new Date(this.value);
-        var currentDate = new Date();
-        var minDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
+        // Add an event listener to validate date of birth on change
+        document.getElementById('dob').addEventListener('change', function () {
+            var inputDate = new Date(this.value);
+            var currentDate = new Date();
+            var minDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
 
-        if (inputDate > minDate) {
-            this.setCustomValidity("Must be at least 18 years old.");
-        } else {
-            this.setCustomValidity('');
-        }
-    });
-</script>*@
-<script>
-    function signup() {
+            if (inputDate > minDate) {
+                this.setCustomValidity("Must be at least 18 years old.");
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>*@
+<!--<script>function signup() {
         var form = $('#signupForm')[0];
         var formData = new FormData(form);
-        var url = "/Users/CREATE";
+        var url = "/Users/Create";
         var passtext = document.getElementById("ConfirmPass");
         var password = formData.get("Password");
         var confirmPass = formData.get("ConfirmPass");
@@ -129,5 +258,4 @@
                 // Optionally, you can display an error message
             }
         });
-    }
-</script>
+    }</script>-->

@@ -19,13 +19,12 @@
         <div class="container" style="background-color: rgba(255, 255, 255, 0.2); padding: 20px; border-radius: 10px; width: 900px;">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
-                    <h1 class="heading-section">Login</h1>
+                    <h1 class="heading-section">Đăng nhập</h1>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
-                        <h3 class="mb-4 text-center">Have an account?</h3>
                         <form asp-action="Login" method="post" class="signin-form">
                             <div asp-validation-summary="All"></div>
                             <div class="form-group">
@@ -45,14 +44,10 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="#" style="color: #fff">Quên mật khẩu</a>
-                                    <a href="@Url.Action("CREATE","Users")" style="color: #fff">Đăng ký</a>
-                                </div>
                             </div>
                         </form>
                         <div class="form-group text-center">
-                            <a href="@Url.Action("Logup", "Users")" class="btn btn-secondary">Create an Account</a>
+                            <a href="@Url.Action("Create", "Users")" class="btn btn-secondary">Create an Account</a>
                         </div>
                         <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
                         <div class="social d-flex text-center">

@@ -1,30 +1,56 @@
 ﻿<Properties StartupConfiguration="{C61217ED-C83B-4C8C-9F29-A4015B92DD23}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Fashion__shop PreferredExecutionTarget="/Applications/Brave Browser.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Fashion_shop/Views/Users/Index.cshtml">
     <Files>
       <File FileName="Fashion_shop/Views/Items/Index.cshtml" Line="46" Column="25" IsPinned="True" />
       <File FileName="Fashion_shop/Controllers/BillsController.cs" />
       <File FileName="Fashion_shop/Models/Cart_Details.cs" />
-      <File FileName="Fashion_shop/Views/Bills/Cart.cshtml" />
+      <File FileName="Fashion_shop/Views/Bills/Cart.cshtml" Line="61" Column="89" />
       <File FileName="Fashion_shop/Data/AppDBContext.cs" />
-      <File FileName="Fashion_shop/Views/Users/Index.cshtml" />
-      <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="77" Column="27" />
-      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="266" Column="5" />
+      <File FileName="Fashion_shop/Views/Users/Index.cshtml" Line="64" Column="123" />
+      <File FileName="Fashion_shop/Views/Users/Details.cshtml" Line="66" Column="42" />
+      <File FileName="../../../../../../usr/local/share/dotnet/sdk/7.0.304/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="Fashion_shop/Controllers/HomeController.cs" />
+      <File FileName="Fashion_shop/Startup.cs" />
+      <File FileName="Fashion_shop/appsettings.json" />
+      <File FileName="Fashion_shop/Controllers/UsersController.cs" />
+      <File FileName="Fashion_shop/Views/Users/Login.cshtml" Line="17" Column="4" />
+      <File FileName="Fashion_shop/Models/User.cs" />
+      <File FileName="Fashion_shop/Views/Users/Create.cshtml" Line="16" Column="68" />
+      <File FileName="Fashion_shop/Views/Users/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Bill_Details/Edit.cshtml" />
+      <File FileName="Fashion_shop/Views/Bill_Details/Delete.cshtml" />
+      <File FileName="Fashion_shop/Views/Home/Index.cshtml" />
+      <File FileName="Fashion_shop/Views/Users/Edit.cshtml" Line="17" Column="91" />
+      <File FileName="Fashion_shop/Views/Shared/_Layout.cshtml" Line="92" Column="31" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutAdmin.cshtml" Line="41" Column="67" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutLogin.cshtml" Line="1" Column="1" />
+      <File FileName="Fashion_shop/Views/Shared/_LayoutMain.cshtml" Line="105" Column="128" />
+      <File FileName="Fashion_shop/Views/Home/Privacy.cshtml" />
+      <File FileName="Fashion_shop/Views/Home/SearchResult.cshtml" />
+      <File FileName="Fashion_shop/Views/Items/Create.cshtml" Line="12" Column="39" />
+      <File FileName="Fashion_shop/Views/Users/DetailsUser.cshtml" Line="23" Column="33" />
+      <File FileName="Fashion_shop/Views/Items/IndexAd.cshtml" Line="41" Column="120" />
+      <File FileName="Fashion_shop/Views/Bills/Index.cshtml" Line="60" Column="77" />
+      <File FileName="Fashion_shop/Views/Bills/Details.cshtml" Line="35" Column="53" />
+      <File FileName="Fashion_shop/Views/Voucher/Details.cshtml" Line="42" Column="39" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Fashion_shop" expanded="True">
-            <Node name="Fashion_shop" expanded="True">
+            <Node name="Fashion_shop">
               <Node name="Views" expanded="True">
-                <Node name="Items" expanded="True" />
-                <Node name="Users" expanded="True" />
+                <Node name="Users" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True">
+                  <Node name="View" expanded="True">
+                    <Node name="Bill" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -32,4 +58,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

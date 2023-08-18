@@ -12,11 +12,11 @@
 <table class="table">
     <thead>
         <tr>
-            <th style="width:160px"> Name</th>
-            <th style="width:160px"> Brand </th>
-            <th style="width:160px"> Count </th>
-            <th style="width:160px"> Price </th>
-            <th style="width:160px"> Custom </th>
+            <th style="width:160px"> Tên </th>
+            <th style="width:160px"> Hãng </th>
+            <th style="width:160px"> Số lượng </th>
+            <th style="width:160px"> Giá </th>
+            <th style="width:160px"> Tùy chọn </th>
         </tr>
     </thead>
     <tbody>
@@ -36,9 +36,9 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td style="width:160px">
-                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Edit</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("DetailsAd", new { id = item.id })'">Details</button>
-                    <button class="highlight" onclick="location.href='@Url.Action("Delete", new { id = item.id })'">Delete</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Edit", new { id= item.id })'">Chỉnh sửa</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("DetailsAd", new { id = item.id })'">Chi tiết</button>
+                    <button class="highlight" onclick="location.href='@Url.Action("Delete", new { id = item.id })'">Xóa</button>
                 </td>
             </tr>
         }

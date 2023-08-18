@@ -31,7 +31,7 @@
                                 <div class="col-2"><img class="img-fluid" src="~/img_items/@item.Image"></div>
                                 <div class="col">
                                     <div class="row text-muted">@item.ItemName </div>
-                                    <div class="row"> Color: @item.ColorName - Size: @item.SizeName</div><!-- NAME   -->
+                                    <div class="row"> Màu: @item.ColorName - Kích thước: @item.SizeName</div><!-- NAME   -->
                                 </div>
                                 <div class="col">
                                     <!-- Thay method="get" thành method="post" -->
@@ -58,7 +58,7 @@
                 <div class="col-md-4 summary">                            
                     <form asp-action="PayMent" method="post">
                         <p>PHƯƠNG THỨC GIAO HÀNG</p>
-                        <select><option class="text-muted">Store Staff - FREE</option></select>
+                        <select><option class="text-muted">Nhân viên cửa hàng - Miễn phí</option></select>
                         <!-- Thêm ô nhập địa chỉ -->
                         <p>ĐỊA CHỈ GIAO HÀNG</p>
                         <input id="Address" name="Address" placeholder="Nhập địa chỉ giao hàng">
